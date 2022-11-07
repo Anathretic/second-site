@@ -1,0 +1,30 @@
+@media (min-width: 992px) {
+    .header {
+        background-image: url('/img/header_big.jpg');
+
+        &__heading {
+            font-size: 10rem;
+        }
+    }
+
+    .catchthedreams {
+        &__box {
+            margin: 5em 0;
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                margin-bottom: 2.5em;
+            }
+        }
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+        }
+    }
+}

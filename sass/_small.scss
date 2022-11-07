@@ -1,0 +1,29 @@
+@media (min-width: 576px) {
+    .catchthedreams {
+        &__box {
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-text {
+                width: 55%;
+
+                &--right {
+                    text-align: right;
+                }
+            }
+
+            &-img {
+                width: 40%;
+
+                &--right {
+                    order: 1;
+                }
+            }
+        }
+
+        &__img {
+            margin-bottom: 0;
+            max-height: 300px;
+        }
+    }
+}

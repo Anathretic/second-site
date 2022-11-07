@@ -11,6 +11,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -33,16 +34,31 @@ body {
     background-color: colors.$white-color;
 
     &-left {
-        bottom: 0;
-        left: -50%;
+        bottom: -1px;
+        left: -50px;
         transform: skew(45deg);
     }
 
     &-right {
         top: 0;
-        right: -50%;
-        transform: skew(45deg)
+        right: -50px;
+        transform: skew(45deg);
     }
+}
+
+.section-padding {
+    padding: 6em 2em;
+}
+
+.section-heading {
+    position: relative;
+    margin-bottom: 2em;
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: colors.$special-color;
+    letter-spacing: 2px;
 }
 
 .header {
@@ -94,4 +110,25 @@ body {
         background-color: rgba(0,0,0,0.4);
     }
 
+}
+
+.catchthedreams {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin: 2em 0;
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    &__title {
+        margin-bottom: 0.5em;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+    }
 }
