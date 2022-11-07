@@ -97,7 +97,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .catchthedreams__box {
@@ -107,13 +107,17 @@ body {
 }
 .catchthedreams__img {
   width: 100%;
+  margin-top: 0.25em;
   margin-bottom: 1em;
 }
 .catchthedreams__title {
   margin-bottom: 0.5em;
+  color: #87A2FB;
+  font-weight: 300;
 }
 .catchthedreams__text {
   font-size: 1.4rem;
+  margin-left: 0.15em;
 }
 
 @media (min-width: 576px) {
