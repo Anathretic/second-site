@@ -1,6 +1,8 @@
+@use 'colors';
+
 @media (min-width: 992px) {
     .header {
-        background-image: url('/img/header_big.jpg');
+        background-image: colors.$shadow, url('/img/header_big.jpg');
 
         &__heading {
             font-size: 10rem;
@@ -25,6 +27,20 @@
 
         &__text {
             font-size: 1.6rem;
+        }
+    }
+
+    .hero-img {
+        padding: 40rem 2em;
+        background-image: colors.$shadow, url('/img/hero-img_big.jpg');
+
+        &__title {
+            font-size: 7.2rem;
+        }
+
+        hr {
+            width: 60%;
+            max-width: 900px;
         }
     }
 }
