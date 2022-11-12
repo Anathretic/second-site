@@ -24,6 +24,30 @@ body {
   max-width: 1200px;
 }
 
+.btn-special-animation {
+  position: relative;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  z-index: 0;
+}
+.btn-special-animation::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  z-index: -1;
+}
+.btn-special-animation:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .white-block {
   position: absolute;
   height: 40px;
@@ -36,7 +60,7 @@ body {
   transform: skew(45deg);
 }
 .white-block-right {
-  top: 0;
+  top: -1px;
   right: -50px;
   transform: skew(45deg);
 }
@@ -65,7 +89,7 @@ body {
   padding: 2em;
   height: 100vh;
   text-align: center;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/header_small.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/header_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -92,6 +116,9 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
+.header__btn::before {
+  background-color: #3f0897;
+}
 
 .catchthedreams__box {
   display: flex;
@@ -116,7 +143,7 @@ body {
 .hero-img {
   position: relative;
   padding: 10em 2em;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/hero-img_small.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/hero-img_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -157,13 +184,13 @@ body {
   transition: transform 1s, opacity 1s;
 }
 .islands__card-img--first {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/cards-first-img.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/cards-first-img.jpg");
 }
 .islands__card-img--second {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/cards-second-img.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/cards-second-img.jpg");
 }
 .islands__card-img--third {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/cards-third-img.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/cards-third-img.jpg");
 }
 .islands__card-img-title {
   font-family: "Dancing Script", cursive;
@@ -226,6 +253,61 @@ body {
   color: #EEEEEE;
   cursor: pointer;
 }
+.islands__card-info-btn::before {
+  background-color: #3f0897;
+}
+
+.offers {
+  position: relative;
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/offers-small.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.offers .section-heading {
+  color: #EEEEEE;
+}
+.offers__option {
+  margin: 1em 0;
+  box-shadow: 5px 5px 10px #2e2e2e;
+  background-color: #EEEEEE;
+  overflow: hidden;
+}
+.offers__option-img {
+  width: 100%;
+}
+.offers__option-info {
+  padding: 2em;
+  background-color: #EEEEEE;
+  z-index: 10;
+}
+.offers__option-title {
+  margin-bottom: 0.5em;
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: #87A2FB;
+}
+.offers__option-text {
+  margin-left: 0.1em;
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+}
+.offers__option-btn {
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1em;
+  padding: 0.8em;
+  width: 100%;
+  color: #EEEEEE;
+  background-color: #6F38C5;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.offers__option-btn::before {
+  background-color: #3f0897;
+}
 
 @media (min-width: 576px) {
   .catchthedreams__box {
@@ -248,11 +330,31 @@ body {
     margin-bottom: 0;
     max-height: 300px;
   }
+  .offers__option {
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option-title {
+    margin-bottom: 0.5em;
+    font-size: 3rem;
+  }
+  .offers__option-text {
+    font-size: 1.5rem;
+  }
+  .offers__option-btn {
+    padding: 1em;
+  }
 }
 @media (min-width: 768px) {
   .white-block {
     height: 50px;
     width: 45%;
+  }
+  .section-heading {
+    font-size: 3.6rem;
+  }
+  .section-padding {
+    padding: 8em 2em;
   }
   .header__heading {
     font-size: 6.6rem;
@@ -263,8 +365,11 @@ body {
   .header__btn {
     font-size: 1.8rem;
   }
-  .dreams__text {
-    font-size: 1.8rem;
+  .catchthedreams__title {
+    font-size: 2.4rem;
+  }
+  .catchthedreams__text {
+    font-size: 1.6rem;
   }
   .hero-img {
     padding: 30rem 2em;
@@ -285,10 +390,38 @@ body {
     margin: 1em;
     width: 45%;
   }
+  .offers__option {
+    display: flex;
+    margin: 2em 0;
+    width: 100%;
+  }
+  .offers__option-img {
+    max-width: 450px;
+    width: 50%;
+    height: auto;
+  }
+  .offers__option-img--right {
+    order: 1;
+  }
+  .offers__option-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .offers__option-heading {
+    margin-bottom: 0.5em;
+    font-size: 3.6rem;
+  }
 }
 @media (min-width: 992px) {
+  .section-heading {
+    font-size: 4.2rem;
+  }
+  .section-padding {
+    padding: 10em 2em;
+  }
   .header {
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/header_big.jpg");
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/header_big.jpg");
   }
   .header__heading {
     font-size: 10rem;
@@ -310,7 +443,7 @@ body {
   }
   .hero-img {
     padding: 40rem 2em;
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/hero-img_big.jpg");
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/hero-img_big.jpg");
   }
   .hero-img__title {
     font-size: 7.2rem;
@@ -318,6 +451,17 @@ body {
   .hero-img hr {
     width: 60%;
     max-width: 900px;
+  }
+  .offers {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/offers_big.jpg");
+  }
+  .offers__option-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+  }
+  .offers__option-text {
+    font-size: 1.5rem;
   }
 }
 @media (min-width: 1100px) {

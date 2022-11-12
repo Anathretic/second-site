@@ -5,6 +5,14 @@
         width: 45%;
     }
 
+    .section-heading {
+        font-size: 3.6rem;
+    }
+
+    .section-padding {
+        padding: 8em 2em;
+    }
+
     .header {
         &__heading {
             font-size: 6.6rem;
@@ -19,9 +27,13 @@
         }
     }
 
-    .dreams {
+    .catchthedreams {
+        &__title {
+            font-size: 2.4rem;
+        }
+
         &__text {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
     }
 
@@ -49,5 +61,34 @@
             margin: 1em;
             width: 45%;
         }
+    }
+
+    .offers {
+        &__option {
+            display: flex;
+            margin: 2em 0;
+            width: 100%;
+
+            &-img {
+                max-width: 450px;
+                width: 50%;
+                height: auto;
+
+                &--right {
+                    order: 1;
+                }
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &-heading {
+                margin-bottom: 0.5em;
+                font-size: 3.6rem;
+            }
+        } 
     }
 }

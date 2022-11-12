@@ -1,8 +1,16 @@
 @use 'colors';
 
 @media (min-width: 992px) {
+	.section-heading {
+        font-size: 4.2rem;
+    }
+
+    .section-padding {
+        padding: 10em 2em;
+    }
+	
 	.header {
-		background-image: colors.$shadow, url('/img/header_big.jpg');
+		background-image: colors.$shadow, url('../img/header_big.jpg');
 
 		&__heading {
 			font-size: 10rem;
@@ -32,7 +40,7 @@
 
 	.hero-img {
 		padding: 40rem 2em;
-		background-image: colors.$shadow, url('/img/hero-img_big.jpg');
+		background-image: colors.$shadow, url('../img/hero-img_big.jpg');
 
 		&__title {
 			font-size: 7.2rem;
@@ -41,6 +49,21 @@
 		hr {
 			width: 60%;
 			max-width: 900px;
+		}
+	}
+
+	.offers {
+		background-image: colors.$shadow, url('../img/offers_big.jpg');
+
+		&__option {
+			&-img {
+				object-fit: cover;
+				height: 300px;
+			}
+
+			&-text {
+				font-size: 1.5rem;
+			}
 		}
 	}
 }
