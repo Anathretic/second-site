@@ -1,6 +1,13 @@
 @use 'colors';
 
 @media (min-width: 992px) {
+	.nav {
+		.burger-btn {
+			top: 5rem;
+			right: 5rem;
+		}
+	}
+
 	.section-heading {
         font-size: 4.2rem;
     }

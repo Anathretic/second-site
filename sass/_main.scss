@@ -20,6 +20,10 @@ body {
 	color: colors.$black-color;
 }
 
+.scroll-block {
+	overflow: hidden;
+}
+
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
@@ -42,7 +46,7 @@ body {
 		height: 100%;
 		transform: scaleX(0);
 		transform-origin: right;
-		transition: transform .3s;
+		transition: transform 0.3s;
 		z-index: -1;
 	}
 
@@ -82,8 +86,125 @@ body {
 	font-weight: 300;
 	text-transform: uppercase;
 	text-align: center;
-	color: colors.$special-color;
+	color: colors.$main-color;
 	letter-spacing: 2px;
+}
+
+.nav {
+	.burger-btn {
+		position: fixed;
+		top: 2rem;
+		right: 2rem;
+		padding: 1em;
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+		z-index: 1000;
+
+		&:focus {
+			outline: none;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			border-radius: 8px;
+		}
+
+		&:hover {
+			.burger-btn__bars::after,
+			.burger-btn__bars::before {
+				width: 100%;
+			}
+		}
+
+		&__box {
+			position: relative;
+			width: 5rem;
+			height: 4rem;
+		}
+
+		&__bars,
+		&__bars::after,
+		&__bars::before {
+			content: '';
+			position: absolute;
+			right: 0;
+			height: 4px;
+			background-color: colors.$main-color;
+			transition: width 0.3s;
+		}
+
+		&__bars {
+			width: 100%;
+
+			&::after {
+				top: 13px;
+				width: 70%;
+			}
+
+			&::before {
+				top: 27px;
+				width: 40%;
+				transition-delay: 0.1s;
+			}
+		}
+	}
+
+	&__box {
+		position: fixed;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		width: 100%;
+		transform: translateX(100%);
+		transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+		background-image: colors.$blue-gradient;
+		z-index: 100;
+
+		&--active {
+			transform: translateX(0);
+		}
+
+		&-item {
+			content: '';
+			position: relative;
+			display: block;
+			margin: 0.5em 0;
+			padding: 0.5em 2em;
+			font-size: 2.8rem;
+			color: colors.$main-color;
+			text-decoration: none;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 3px;
+				height: 100%;
+				transform: scaleY(0);
+				background-color: colors.$main-color;
+				transition: transform 0.3s;
+			}
+
+			&:hover::before {
+				transform: scaleY(1);
+			}
+		}
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+	animation: navItemsAnimation 1s both;
 }
 
 .header {
