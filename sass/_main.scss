@@ -117,7 +117,7 @@ body {
 		&__box {
 			position: relative;
 			width: 5rem;
-			height: 4rem;
+			height: 3rem;
 		}
 
 		&__bars,
@@ -140,7 +140,7 @@ body {
 			}
 
 			&::before {
-				top: 27px;
+				top: 26px;
 				width: 40%;
 				transition-delay: 0.1s;
 			}
@@ -515,6 +515,57 @@ body {
 		&-text {
 			margin-bottom: 1em;
 			font-size: 1.4rem;
+		}
+	}
+}
+
+.contact {
+	position: relative;
+	background-color: colors.$light-dark;
+	overflow: hidden;
+
+	.white-block-left {
+		background-color: colors.$dark;
+	}
+
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+
+	&__form-input,
+	&__form-textarea {
+		margin-bottom: 2em;
+		padding: 0.6em 1.2em;
+		border: none;
+		border-radius: 8px;
+		font-size: 1.6rem;
+	}
+
+	&__form-textarea {
+		min-width: 100%;
+		resize: vertical;
+	}
+
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		color: colors.$white-color;
+		background-color: colors.$special-color;
+		border: none;
+		border-radius: 8px;
+		cursor: pointer;
+
+		&::before {
+			background-color: colors.$special-btn-color;
 		}
 	}
 }
