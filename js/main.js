@@ -2,8 +2,6 @@ const body = document.querySelector('body')
 const nav = document.querySelector('.nav__box')
 const navBtn = document.querySelector('.burger-btn')
 const allNavItems = document.querySelectorAll('.nav__box-item')
-const navBtnBars = document.querySelector('.burger-btn__bars')
-const allSections = document.querySelectorAll('.section')
 
 const handleNav = () => {
     nav.classList.toggle('nav__box--active')
