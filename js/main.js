@@ -2,6 +2,7 @@ const body = document.querySelector('body')
 const nav = document.querySelector('.nav__box')
 const navBtn = document.querySelector('.burger-btn')
 const allNavItems = document.querySelectorAll('.nav__box-item')
+const footerYear = document.querySelector('.footer__year')
 
 const handleNav = () => {
     nav.classList.toggle('nav__box--active')
@@ -41,4 +42,10 @@ const scrollBlockNavBtn = () => {
     }
 }
 
+const currentYear = () => {
+    const date = new Date().getFullYear()
+    footerYear.innerText = date
+}
+
+currentYear()
 navBtn.addEventListener('click', handleNav)

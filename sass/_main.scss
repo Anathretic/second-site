@@ -569,3 +569,54 @@ body {
 		}
 	}
 }
+
+.footer {
+	color: colors.$white-color;
+	background-color: colors.$dark;
+	
+
+	.wrapper {
+		padding: 6em 2em 2em;
+	}
+
+	&__box {
+		font-size: 1.4rem;
+
+		&-desktop {
+			display: none;
+		}
+
+		&-title {
+			margin-bottom: 1em;
+			font-size: 3rem;
+			text-transform: uppercase;
+		}
+
+		&-social {
+			margin: 2em 0 1em;
+		}
+
+		&-link {
+			padding: 0 0.3em;
+			font-size: 3.6rem;
+			color: colors.$white-color;
+			text-decoration: none;
+			transition: color .3s;
+			
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:hover {
+				color: colors.$main-color;
+			}
+
+		}
+	}
+
+	&__bottom-text {
+		padding: 2em;
+		text-align: center;
+	}
+	
+}
