@@ -199,7 +199,7 @@ body {
   padding: 2em;
   height: 100vh;
   text-align: center;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/header_small.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/header_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -253,7 +253,7 @@ body {
 .hero-img {
   position: relative;
   padding: 10em 2em;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/hero-img_small.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -294,13 +294,13 @@ body {
   transition: transform 1s, opacity 1s;
 }
 .islands__card-img--first {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/cards-first-img.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-first-img.jpg");
 }
 .islands__card-img--second {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/cards-second-img.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-second-img.jpg");
 }
 .islands__card-img--third {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/cards-third-img.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-third-img.jpg");
 }
 .islands__card-img-title {
   font-family: "Dancing Script", cursive;
@@ -369,7 +369,7 @@ body {
 
 .offers {
   position: relative;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/offers-small.jpg");
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/offers-small.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -682,7 +682,7 @@ body {
     padding: 10em 2em;
   }
   .header {
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/header_big.jpg");
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/header_big.jpg");
   }
   .header__heading {
     font-size: 10rem;
@@ -704,7 +704,7 @@ body {
   }
   .hero-img {
     padding: 40rem 2em;
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/hero-img_big.jpg");
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img_big.jpg");
   }
   .hero-img__title {
     font-size: 7.2rem;
@@ -714,7 +714,7 @@ body {
     max-width: 900px;
   }
   .offers {
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("../img/offers_big.jpg");
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/offers_big.jpg");
   }
   .offers__option-img {
     -o-object-fit: cover;
