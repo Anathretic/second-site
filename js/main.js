@@ -54,13 +54,17 @@ const msgBtnAction = () => {
         userEmail.value = ''
         userMsg.value = ''
 
+        setTimeout(() => {
+            contactHeading.textContent = 'contact us!'
+        }, 3000)
+
     } else {
         contactHeading.textContent = 'Need more..'
-    }
 
-    setTimeout(() => {
-        contactHeading.textContent = 'contact us!'
-    }, 3000)
+        setTimeout(() => {
+            contactHeading.textContent = 'contact us!'
+        }, 3000)
+    }
 }
 
 const currentYear = () => {
