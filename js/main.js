@@ -41,30 +41,26 @@ const handleNav = () => {
     scrollBlockNavBtn()
 }
 
-const deleteAnimation = () => {
-    allNavItems.forEach(item => {
-        item.classList.remove('nav-items-animation')
-    })
-}
-
 const msgBtnAction = () => {
-    if(userName.value !== '' && userEmail.value !== '' && userMsg.value !== '') {
-        contactHeading.textContent = 'sent!'
+    if(userName.value !== '' && userMsg.value !== '' && userEmail.value !== '') {
+        contactHeading.textContent = 'sent!',
         userName.value = ''
         userEmail.value = ''
         userMsg.value = ''
 
-        setTimeout(() => {
-            contactHeading.textContent = 'contact us!'
-        }, 3000)
-
     } else {
-        contactHeading.textContent = 'Need more..'
-
-        setTimeout(() => {
-            contactHeading.textContent = 'contact us!'
-        }, 3000)
+        contactHeading.textContent = 'need more..'
     }
+
+    setTimeout(() => {
+        contactHeading.textContent = 'contact us!'
+    }, 3000)
+}
+
+const deleteAnimation = () => {
+    allNavItems.forEach(item => {
+        item.classList.remove('nav-items-animation')
+    })
 }
 
 const currentYear = () => {

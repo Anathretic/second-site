@@ -534,38 +534,40 @@ body {
 		flex-direction: column;
 	}
 
-	&__form-label {
-		margin-bottom: 0.5em;
-		text-transform: uppercase;
-	}
+	&__form {
+		&-label {
+			margin-bottom: 0.5em;
+			text-transform: uppercase;
+		}
 
-	&__form-input,
-	&__form-textarea {
-		margin-bottom: 2em;
-		padding: 0.6em 1.2em;
-		border: none;
-		border-radius: 8px;
-		font-size: 1.6rem;
-	}
+		&-input,
+		&-textarea {
+			margin-bottom: 2em;
+			padding: 0.6em 1.2em;
+			border: none;
+			border-radius: 8px;
+			font-size: 1.6rem;
+		}
 
-	&__form-textarea {
-		min-width: 100%;
-		resize: vertical;
-	}
+		&-textarea {
+			min-width: 100%;
+			resize: vertical;
+		}
 
-	&__form-btn {
-		align-self: flex-end;
-		padding: 1em;
-		width: 100%;
-		max-width: 300px;
-		color: colors.$white-color;
-		background-color: colors.$special-color;
-		border: none;
-		border-radius: 8px;
-		cursor: pointer;
+		&-btn {
+			align-self: flex-end;
+			padding: 1em;
+			width: 100%;
+			max-width: 300px;
+			color: colors.$white-color;
+			background-color: colors.$special-color;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
 
-		&::before {
-			background-color: colors.$special-btn-color;
+			&::before {
+				background-color: colors.$special-btn-color;
+			}
 		}
 	}
 }
@@ -573,7 +575,6 @@ body {
 .footer {
 	color: colors.$white-color;
 	background-color: colors.$dark;
-	
 
 	.wrapper {
 		padding: 6em 2em 2em;
@@ -601,8 +602,8 @@ body {
 			font-size: 3.6rem;
 			color: colors.$white-color;
 			text-decoration: none;
-			transition: color .3s;
-			
+			transition: color 0.3s;
+
 			&:first-child {
 				padding-left: 0;
 			}
@@ -610,7 +611,6 @@ body {
 			&:hover {
 				color: colors.$main-color;
 			}
-
 		}
 	}
 
@@ -618,5 +618,4 @@ body {
 		padding: 2em;
 		text-align: center;
 	}
-	
 }
