@@ -3,6 +3,12 @@
 @media (min-width: 992px) {
 	.nav {
 		height: 150px;
+
+		&__icon {
+			top: 4rem;
+			left: 5rem;
+		}
+
 		.burger-btn {
 			top: 5rem;
 			right: 5rem;
@@ -10,13 +16,13 @@
 	}
 
 	.section-heading {
-        font-size: 4.2rem;
-    }
+		font-size: 4.2rem;
+	}
 
-    .section-padding {
-        padding: 10em 2em;
-    }
-	
+	.section-padding {
+		padding: 10em 2em;
+	}
+
 	.header {
 		background-image: colors.$shadow, url('../img/header_big.jpg');
 

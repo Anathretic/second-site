@@ -97,6 +97,22 @@ body {
 	z-index: 999;
 	background-image: colors.$nav-gradient;
 
+	&__icon {
+		position: absolute;
+		top: 1rem;
+		left: 2rem;
+		padding: 1em;
+
+		&-text {
+			font-family: 'Dancing Script', cursive;
+			font-size: 4rem;
+			color: colors.$main-color;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-shadow: 1px 1px 1px black;
+		}
+	}
+
 	.burger-btn {
 		position: fixed;
 		top: 2rem;
