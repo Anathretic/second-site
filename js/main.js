@@ -54,7 +54,7 @@ const msgBtnAction = () => {
 
     setTimeout(() => {
         contactHeading.textContent = 'contact us!'
-    }, 3000)
+    }, 2500)
 }
 
 const deleteAnimation = () => {
@@ -69,5 +69,8 @@ const currentYear = () => {
 }
 
 currentYear()
-contactBtn.addEventListener('click', msgBtnAction)
+contactBtn.addEventListener('click', e => {
+    e.preventDefault()
+    msgBtnAction()
+})
 navBtn.addEventListener('click', handleNav)
