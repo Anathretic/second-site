@@ -3,11 +3,13 @@ const nav = document.querySelector('.nav__box')
 const navBtn = document.querySelector('.burger-btn')
 const allNavItems = document.querySelectorAll('.nav__box-item')
 const footerYear = document.querySelector('.footer__year')
-const userName = document.querySelector('#name')
-const userEmail = document.querySelector('#email')
-const userMsg = document.querySelector('#msg')
+const contactUsername = document.querySelector('#name')
+const contactUserEmail = document.querySelector('#email')
+const contactUserMsg = document.querySelector('#msg')
 const contactBtn = document.querySelector('.contact__form-btn')
 const contactHeading = document.querySelector('.contact h2')
+const emailCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
+
 
 const handleNavItemsAnimation = () => {
     let delayTime = 0;
@@ -42,14 +44,14 @@ const handleNav = () => {
 }
 
 const msgBtnAction = () => {
-    if(userName.value !== '' && userMsg.value !== '' && userEmail.value !== '') {
+    if(contactUsername.value !== '' && contactUserMsg.value !== '' && emailCheck.test(contactUserEmail.value)) {
         contactHeading.textContent = 'sent!',
-        userName.value = ''
-        userEmail.value = ''
-        userMsg.value = ''
+        contactUsername.value = ''
+        contactUserEmail.value = ''
+        contactUserMsg.value = ''
 
     } else {
-        contactHeading.textContent = 'need more..'
+        contactHeading.textContent = 'check the form..'
     }
 
     setTimeout(() => {
@@ -69,6 +71,7 @@ const currentYear = () => {
 }
 
 currentYear()
+
 contactBtn.addEventListener('click', e => {
     e.preventDefault()
     msgBtnAction()
