@@ -9,9 +9,15 @@
 			left: 5rem;
 		}
 
-		.burger-btn {
+		.burger-btn-desktop {
 			top: 5rem;
 			right: 5rem;
+		}
+
+		&__desktop {
+			&-box {
+				height: 150px;
+			}
 		}
 	}
 
@@ -55,12 +61,13 @@
 	.hero-img {
 		background-image: colors.$shadow, url('../img/hero-img_big.jpg');
 	}
-	
+
 	.hero-img--second {
 		background-image: colors.$shadow, url('../img/hero-img-2_big.jpg');
 	}
 
-	.hero-img, .hero-img--second {
+	.hero-img,
+	.hero-img--second {
 		padding: 40rem 2em;
 
 		&__title {

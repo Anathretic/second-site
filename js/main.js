@@ -1,7 +1,11 @@
 const body = document.querySelector('body')
-const nav = document.querySelector('.nav__box')
-const navBtn = document.querySelector('.burger-btn')
-const allNavItems = document.querySelectorAll('.nav__box-item')
+const mobileNav = document.querySelector('.nav__mobile-box')
+const mobileNavBtn = document.querySelector('.burger-btn')
+const mobileAllNavItems = document.querySelectorAll('.nav__mobile-box-item')
+const desktopNav = document.querySelector('.nav__desktop-box')
+const desktopNavBtn = document.querySelector('.burger-btn-desktop')
+const desktopAllNavItems = document.querySelectorAll('.nav__desktop-box-item')
+const navIcon = document.querySelector('.nav__icon')
 const footerYear = document.querySelector('.footer__year')
 const contactUsername = document.querySelector('#name')
 const contactUserEmail = document.querySelector('#email')
@@ -10,37 +14,61 @@ const contactBtn = document.querySelector('.contact__form-btn')
 const contactHeading = document.querySelector('.contact h2')
 const emailCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
 
+const mobileBlock = () => {
+    if(mobileNav.classList.contains('nav__mobile-box--active')) {
+        if(body.classList.contains('scroll-block')) {
+            body.classList.remove('scroll-block')
+        } else {
+            body.classList.add('scroll-block')
+        }
+    }
+}
 
-const handleNavItemsAnimation = () => {
+const handleDesktopNavItemsAnimation = () => {
     let delayTime = 0;
 
-    allNavItems.forEach(item => {
+    desktopAllNavItems.forEach(item => {
         item.classList.toggle('nav-items-animation')
         item.style.animationDelay = '.' + delayTime + 's';
         delayTime++;
     })
 }
 
-const scrollBlockNavBtn = () => {
-    if(body.classList.contains('scroll-block')) {
-        body.classList.remove('scroll-block')
-    } else {
-        body.classList.add('scroll-block')
-    }
+const handleDesktopNav = () => {
+    desktopNav.classList.toggle('nav__desktop-box--active')
+
+    desktopAllNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+            desktopNav.classList.remove('nav__desktop-box--active')
+        })
+    })
+
+    handleDesktopNavItemsAnimation()
 }
 
-const handleNav = () => {
-    nav.classList.toggle('nav__box--active')
+const handleMobileNavItemsAnimation = () => {
+    let delayTime = 0;
 
-    allNavItems.forEach(item => {
+    mobileAllNavItems.forEach(item => {
+        item.classList.toggle('nav-items-animation')
+        item.style.animationDelay = '.' + delayTime + 's';
+        delayTime++;
+    })
+}
+
+const handleMobileNav = () => {
+    mobileNav.classList.toggle('nav__mobile-box--active')
+    body.classList.remove('scroll-block')
+
+    mobileAllNavItems.forEach(item => {
         item.addEventListener('click', () => {
-            nav.classList.remove('nav__box--active')
+            mobileNav.classList.remove('nav__mobile-box--active')
             body.classList.remove('scroll-block')
         })
     })
 
-    handleNavItemsAnimation()
-    scrollBlockNavBtn()
+    handleMobileNavItemsAnimation()
+    mobileBlock()
 }
 
 const msgBtnAction = () => {
@@ -59,8 +87,14 @@ const msgBtnAction = () => {
     }, 2500)
 }
 
-const deleteAnimation = () => {
-    allNavItems.forEach(item => {
+const deleteMobileAnimation = () => {
+    mobileAllNavItems.forEach(item => {
+        item.classList.remove('nav-items-animation')
+    })
+}
+
+const deleteDesktopAnimation = () => {
+    desktopAllNavItems.forEach(item => {
         item.classList.remove('nav-items-animation')
     })
 }
@@ -76,4 +110,11 @@ contactBtn.addEventListener('click', e => {
     e.preventDefault()
     msgBtnAction()
 })
-navBtn.addEventListener('click', handleNav)
+
+
+navIcon.addEventListener('click', () => {
+    mobileNav.classList.remove('nav__mobile-box--active')
+    desktopNav.classList.remove('nav__desktop-box--active')
+})
+mobileNavBtn.addEventListener('click', handleMobileNav)
+desktopNavBtn.addEventListener('click', handleDesktopNav)
