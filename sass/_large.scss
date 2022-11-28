@@ -53,8 +53,15 @@
 	}
 
 	.hero-img {
-		padding: 40rem 2em;
 		background-image: colors.$shadow, url('../img/hero-img_big.jpg');
+	}
+	
+	.hero-img--second {
+		background-image: colors.$shadow, url('../img/hero-img-2_big.jpg');
+	}
+
+	.hero-img, .hero-img--second {
+		padding: 40rem 2em;
 
 		&__title {
 			font-size: 7.2rem;

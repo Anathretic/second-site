@@ -273,9 +273,16 @@ body {
 }
 
 .hero-img {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img_small.jpg");
+}
+
+.hero-img--second {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img-2_small.jpg");
+}
+
+.hero-img, .hero-img--second {
   position: relative;
   padding: 10em 2em;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -283,12 +290,12 @@ body {
   color: #EEEEEE;
   overflow: hidden;
 }
-.hero-img__title {
+.hero-img__title, .hero-img--second__title {
   font-family: "Dancing Script", cursive;
   font-size: 4.8rem;
   margin-bottom: 0.5em;
 }
-.hero-img__text {
+.hero-img__text, .hero-img--second__text {
   padding: 1em 0;
 }
 
@@ -623,14 +630,14 @@ body {
   .catchthedreams__text {
     font-size: 1.6rem;
   }
-  .hero-img {
+  .hero-img, .hero-img--second {
     padding: 30rem 2em;
   }
-  .hero-img hr {
+  .hero-img hr, .hero-img--second hr {
     margin: 0 auto;
     width: 70%;
   }
-  .hero-img__text {
+  .hero-img__text, .hero-img--second__text {
     font-size: 2.2rem;
   }
   .islands__cards {
@@ -732,13 +739,18 @@ body {
     font-size: 1.6rem;
   }
   .hero-img {
-    padding: 40rem 2em;
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img_big.jpg");
   }
-  .hero-img__title {
+  .hero-img--second {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img-2_big.jpg");
+  }
+  .hero-img, .hero-img--second {
+    padding: 40rem 2em;
+  }
+  .hero-img__title, .hero-img--second__title {
     font-size: 7.2rem;
   }
-  .hero-img hr {
+  .hero-img hr, .hero-img--second hr {
     width: 60%;
     max-width: 900px;
   }

@@ -302,9 +302,16 @@ body {
 }
 
 .hero-img {
+	background-image: colors.$shadow, url('../img/hero-img_small.jpg');
+}
+
+.hero-img--second {
+	background-image: colors.$shadow, url('../img/hero-img-2_small.jpg');
+}
+
+.hero-img, .hero-img--second {
 	position: relative;
 	padding: 10em 2em;
-	background-image: colors.$shadow, url('../img/hero-img_small.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
