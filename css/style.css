@@ -509,6 +509,7 @@ body {
   text-transform: uppercase;
 }
 .contact__form-input, .contact__form-textarea {
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 2em;
   padding: 0.6em 1.2em;
   border: none;
