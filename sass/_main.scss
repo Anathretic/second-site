@@ -117,7 +117,8 @@ body {
 		}
 	}
 
-	.burger-btn, .burger-btn-desktop {
+	.burger-btn,
+	.burger-btn-desktop {
 		position: fixed;
 		top: 2rem;
 		right: 2rem;
@@ -155,7 +156,7 @@ body {
 			height: 4px;
 			background-color: colors.$main-color;
 			transition: width 0.3s;
-			border: 1px solid rgb(0,0,0);
+			border: 1px solid rgb(0, 0, 0);
 		}
 
 		&__bars {
@@ -191,11 +192,11 @@ body {
 			transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 			background-image: colors.$blue-gradient;
 			z-index: 100;
-	
+
 			&--active {
 				transform: translateX(0);
 			}
-	
+
 			&-item {
 				position: relative;
 				display: block;
@@ -204,7 +205,7 @@ body {
 				font-size: 2.8rem;
 				color: colors.$main-color;
 				text-decoration: none;
-	
+
 				&::before {
 					content: '';
 					position: absolute;
@@ -216,7 +217,7 @@ body {
 					background-color: colors.$main-color;
 					transition: transform 0.3s;
 				}
-	
+
 				&:hover::before {
 					transform: scaleY(1);
 				}
@@ -239,6 +240,14 @@ body {
 	animation: navItemsAnimation 1s both;
 }
 
+.header-img {
+	background-image: colors.$shadow, url('../img/header_small.jpg');
+}
+
+.header-img-tocatoca {
+	background-image: colors.$shadow, url('../img/cards-first-img.jpg');
+}
+
 .header {
 	position: relative;
 	display: flex;
@@ -248,7 +257,6 @@ body {
 	padding: 2em;
 	height: 100vh;
 	text-align: center;
-	background-image: colors.$shadow, url('../img/header_small.jpg');
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
@@ -276,7 +284,7 @@ body {
 		font-size: 1.6rem;
 		border: none;
 		border-radius: 1rem;
-		background: colors.$special-color;
+		background-color: colors.$special-color;
 		text-decoration: none;
 		text-transform: uppercase;
 
@@ -308,6 +316,34 @@ body {
 	&__text {
 		font-size: 1.4rem;
 		margin-left: 0.15em;
+	}
+
+	&__special {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 3em 0em;
+
+		&-text {
+			font-size: 1.4rem;
+		}
+
+		&-btn {
+			margin-top: 2em;
+			padding: 0.8em 1.6em;
+			font-size: 1.6rem;
+			border: none;
+			border-radius: 1rem;
+			background-color: colors.$special-color;
+			color: colors.$white-color;
+			text-decoration: none;
+			text-transform: uppercase;
+	
+			&::before {
+				background-color: colors.$special-btn-color;
+			}
+		}
 	}
 }
 
@@ -436,7 +472,7 @@ body {
 					font-size: 1.4rem;
 					border-bottom: 1px solid colors.$white-color;
 
-					&:last-child {
+					&:last-child{
 						border-bottom: none;
 					}
 				}

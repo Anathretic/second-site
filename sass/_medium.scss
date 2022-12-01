@@ -109,6 +109,16 @@
 		&__text {
 			font-size: 1.6rem;
 		}
+
+		&__special {
+			&-text {
+				font-size: 1.6rem;
+			}
+	
+			&-btn {
+				font-size: 1.8rem;
+			}
+		}
 	}
 
 	.hero-img,

@@ -108,7 +108,8 @@ body {
   text-decoration: none;
   text-shadow: 1px 1px 1px black;
 }
-.nav .burger-btn, .nav .burger-btn-desktop {
+.nav .burger-btn,
+.nav .burger-btn-desktop {
   position: fixed;
   top: 2rem;
   right: 2rem;
@@ -118,22 +119,28 @@ body {
   cursor: pointer;
   z-index: 1000;
 }
-.nav .burger-btn:focus, .nav .burger-btn-desktop:focus {
+.nav .burger-btn:focus,
+.nav .burger-btn-desktop:focus {
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
 }
 .nav .burger-btn:hover .burger-btn__bars::after,
-.nav .burger-btn:hover .burger-btn__bars::before, .nav .burger-btn-desktop:hover .burger-btn__bars::after,
+.nav .burger-btn:hover .burger-btn__bars::before,
+.nav .burger-btn-desktop:hover .burger-btn__bars::after,
 .nav .burger-btn-desktop:hover .burger-btn__bars::before {
   width: 102.5%;
 }
-.nav .burger-btn__box, .nav .burger-btn-desktop__box {
+.nav .burger-btn__box,
+.nav .burger-btn-desktop__box {
   position: relative;
   width: 5rem;
   height: 3rem;
 }
-.nav .burger-btn__bars, .nav .burger-btn__bars::after, .nav .burger-btn__bars::before, .nav .burger-btn-desktop__bars, .nav .burger-btn-desktop__bars::after, .nav .burger-btn-desktop__bars::before {
+.nav .burger-btn__bars, .nav .burger-btn__bars::after, .nav .burger-btn__bars::before,
+.nav .burger-btn-desktop__bars,
+.nav .burger-btn-desktop__bars::after,
+.nav .burger-btn-desktop__bars::before {
   content: "";
   position: absolute;
   right: -1px;
@@ -142,14 +149,17 @@ body {
   transition: width 0.3s;
   border: 1px solid rgb(0, 0, 0);
 }
-.nav .burger-btn__bars, .nav .burger-btn-desktop__bars {
+.nav .burger-btn__bars,
+.nav .burger-btn-desktop__bars {
   width: 100%;
 }
-.nav .burger-btn__bars::after, .nav .burger-btn-desktop__bars::after {
+.nav .burger-btn__bars::after,
+.nav .burger-btn-desktop__bars::after {
   top: 13px;
   width: 70%;
 }
-.nav .burger-btn__bars::before, .nav .burger-btn-desktop__bars::before {
+.nav .burger-btn__bars::before,
+.nav .burger-btn-desktop__bars::before {
   top: 26px;
   width: 40%;
   transition-delay: 0.1s;
@@ -219,6 +229,14 @@ body {
           animation: navItemsAnimation 1s both;
 }
 
+.header-img {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/header_small.jpg");
+}
+
+.header-img-tocatoca {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-first-img.jpg");
+}
+
 .header {
   position: relative;
   display: flex;
@@ -228,7 +246,6 @@ body {
   padding: 2em;
   height: 100vh;
   text-align: center;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/header_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -251,7 +268,7 @@ body {
   font-size: 1.6rem;
   border: none;
   border-radius: 1rem;
-  background: #6F38C5;
+  background-color: #6F38C5;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -277,6 +294,30 @@ body {
 .catchthedreams__text {
   font-size: 1.4rem;
   margin-left: 0.15em;
+}
+.catchthedreams__special {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em 0em;
+}
+.catchthedreams__special-text {
+  font-size: 1.4rem;
+}
+.catchthedreams__special-btn {
+  margin-top: 2em;
+  padding: 0.8em 1.6em;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #6F38C5;
+  color: #EEEEEE;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.catchthedreams__special-btn::before {
+  background-color: #3f0897;
 }
 
 .hero-img {
@@ -697,6 +738,12 @@ body {
   .catchthedreams__text {
     font-size: 1.6rem;
   }
+  .catchthedreams__special-text {
+    font-size: 1.6rem;
+  }
+  .catchthedreams__special-btn {
+    font-size: 1.8rem;
+  }
   .hero-img,
 .hero-img--second {
     padding: 30rem 2em;
@@ -790,8 +837,11 @@ body {
   .section-padding {
     padding: 10em 2em;
   }
-  .header {
+  .header-img {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/header_big.jpg");
+  }
+  .header-img-tocatoca {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-first-img_big.jpg");
   }
   .header__heading {
     font-size: 10rem;

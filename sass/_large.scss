@@ -29,9 +29,15 @@
 		padding: 10em 2em;
 	}
 
-	.header {
+	.header-img {
 		background-image: colors.$shadow, url('../img/header_big.jpg');
+	}
 
+	.header-img-tocatoca {
+		background-image: colors.$shadow, url('../img/cards-first-img_big.jpg');
+	}
+
+	.header {
 		&__heading {
 			font-size: 10rem;
 		}
