@@ -400,6 +400,7 @@ body {
   border: none;
   background-color: #6F38C5;
   color: #EEEEEE;
+  text-decoration: none;
   cursor: pointer;
 }
 .islands__card-info-btn::before {
