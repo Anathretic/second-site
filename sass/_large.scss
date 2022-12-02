@@ -41,6 +41,10 @@
 		background-image: colors.$shadow, url('../img/cards-second-img_big.jpg');
 	}
 
+	.header-img-tunga {
+		background-image: colors.$shadow, url('../img/cards-third-img_big.jpg');
+	}
+
 	.header {
 		&__heading {
 			font-size: 10rem;

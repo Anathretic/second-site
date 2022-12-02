@@ -16,6 +16,8 @@ const tempTocaToca = document.querySelector('.temp')
 const humTocaToca = document.querySelector('.hum')
 const tempBora = document.querySelector('.temp-nd')
 const humBora = document.querySelector('.hum-nd')
+const tempTunga = document.querySelector('.temp-rd')
+const humTunga = document.querySelector('.hum-rd')
 const emailCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
 
 const API_CORD = 'https://api.openweathermap.org/data/2.5/weather?lat='
@@ -57,8 +59,26 @@ const weatherAppBora = () => {
     .catch(() => (warning.textContent = 'Error!'))
 }
 
+const weatherAppTunga = () => {
+	const x = '25.0582'
+	const y = '-77.3430'
+	const URL = API_CORD + x + API_CORD2 + y + API_KEY + API_UNITS
+
+	axios
+    .get(URL)
+    .then(res => {
+		const temp = res.data.main.temp
+		const hum = res.data.main.humidity
+
+        tempTunga.textContent = Math.floor(temp) + '°C'
+        humTunga.textContent = hum + '%'
+	})
+    .catch(() => (warning.textContent = 'Error!'))
+}
+
 weatherAppTocaToca()
 weatherAppBora()
+weatherAppTunga()
 
 const mobileBlock = () => {
 	if (mobileNav.classList.contains('nav__mobile-box--active')) {
