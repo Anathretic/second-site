@@ -237,6 +237,10 @@ body {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-first-img.jpg");
 }
 
+.header-img-bora {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-second-img.jpg");
+}
+
 .header {
   position: relative;
   display: flex;
@@ -842,6 +846,9 @@ body {
   }
   .header-img-tocatoca {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-first-img_big.jpg");
+  }
+  .header-img-bora {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-second-img_big.jpg");
   }
   .header__heading {
     font-size: 10rem;

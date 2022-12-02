@@ -12,8 +12,10 @@ const contactUserEmail = document.querySelector('#email')
 const contactUserMsg = document.querySelector('#msg')
 const contactBtn = document.querySelector('.contact__form-btn')
 const contactHeading = document.querySelector('.contact h2')
-const tempToApp = document.querySelector('.temp')
-const humToApp = document.querySelector('.hum')
+const tempTocaToca = document.querySelector('.temp')
+const humTocaToca = document.querySelector('.hum')
+const tempBora = document.querySelector('.temp-nd')
+const humBora = document.querySelector('.hum-nd')
 const emailCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
 
 const API_CORD = 'https://api.openweathermap.org/data/2.5/weather?lat='
@@ -21,7 +23,7 @@ const API_CORD2 = '&lon='
 const API_KEY = '&appid=407ced3d1d71207809d280573934ac8f'
 const API_UNITS = '&units=metric'
 
-const weatherApp = () => {
+const weatherAppTocaToca = () => {
 	const x = '21.3069'
 	const y = '-157.8583'
 	const URL = API_CORD + x + API_CORD2 + y + API_KEY + API_UNITS
@@ -32,13 +34,31 @@ const weatherApp = () => {
 		const temp = res.data.main.temp
 		const hum = res.data.main.humidity
 
-        tempToApp.textContent = Math.floor(temp) + '°C'
-        humToApp.textContent = hum + '%'
+        tempTocaToca.textContent = Math.floor(temp) + '°C'
+        humTocaToca.textContent = hum + '%'
 	})
     .catch(() => (warning.textContent = 'Error!'))
 }
 
-weatherApp()
+const weatherAppBora = () => {
+	const x = '19.3500'
+	const y = '-81.2000'
+	const URL = API_CORD + x + API_CORD2 + y + API_KEY + API_UNITS
+
+	axios
+    .get(URL)
+    .then(res => {
+		const temp = res.data.main.temp
+		const hum = res.data.main.humidity
+
+        tempBora.textContent = Math.floor(temp) + '°C'
+        humBora.textContent = hum + '%'
+	})
+    .catch(() => (warning.textContent = 'Error!'))
+}
+
+weatherAppTocaToca()
+weatherAppBora()
 
 const mobileBlock = () => {
 	if (mobileNav.classList.contains('nav__mobile-box--active')) {
