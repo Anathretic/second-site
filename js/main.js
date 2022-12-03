@@ -12,12 +12,15 @@ const contactUserEmail = document.querySelector('#email')
 const contactUserMsg = document.querySelector('#msg')
 const contactBtn = document.querySelector('.contact__form-btn')
 const contactHeading = document.querySelector('.contact h2')
-const tempTocaToca = document.querySelector('.temp')
-const humTocaToca = document.querySelector('.hum')
-const tempBora = document.querySelector('.temp-nd')
-const humBora = document.querySelector('.hum-nd')
-const tempTunga = document.querySelector('.temp-rd')
-const humTunga = document.querySelector('.hum-rd')
+const tempTocaToca = document.querySelector('.temperature')
+const humTocaToca = document.querySelector('.humidity')
+const weatherTocaToca = document.querySelector('.weather')
+const tempBora = document.querySelector('.temperature-nd')
+const humBora = document.querySelector('.humidity-nd')
+const weatherBora = document.querySelector('.weather-nd')
+const tempTunga = document.querySelector('.temperature-rd')
+const humTunga = document.querySelector('.humidity-rd')
+const weatherTunga = document.querySelector('.weather-rd')
 const emailCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
 
 const API_CORD = 'https://api.openweathermap.org/data/2.5/weather?lat='
@@ -35,9 +38,11 @@ const weatherAppTocaToca = () => {
     .then(res => {
 		const temp = res.data.main.temp
 		const hum = res.data.main.humidity
+		const status = Object.assign({},...res.data.weather)
 
         tempTocaToca.textContent = Math.floor(temp) + '°C'
         humTocaToca.textContent = hum + '%'
+		weatherTocaToca.textContent = status.main
 	})
     .catch(() => (warning.textContent = 'Error!'))
 }
@@ -52,9 +57,11 @@ const weatherAppBora = () => {
     .then(res => {
 		const temp = res.data.main.temp
 		const hum = res.data.main.humidity
+		const status = Object.assign({},...res.data.weather)
 
         tempBora.textContent = Math.floor(temp) + '°C'
         humBora.textContent = hum + '%'
+		weatherBora.textContent = status.main
 	})
     .catch(() => (warning.textContent = 'Error!'))
 }
@@ -69,9 +76,11 @@ const weatherAppTunga = () => {
     .then(res => {
 		const temp = res.data.main.temp
 		const hum = res.data.main.humidity
+		const status = Object.assign({},...res.data.weather)
 
         tempTunga.textContent = Math.floor(temp) + '°C'
         humTunga.textContent = hum + '%'
+		weatherTunga.textContent = status.main
 	})
     .catch(() => (warning.textContent = 'Error!'))
 }
