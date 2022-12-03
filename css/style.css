@@ -233,15 +233,15 @@ body {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/header_small.jpg");
 }
 
-.header-img-tocatoca {
+.header-img-first {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-first-img.jpg");
 }
 
-.header-img-bora {
+.header-img-second {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-second-img.jpg");
 }
 
-.header-img-tunga {
+.header-img-third {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-third-img.jpg");
 }
 
@@ -284,36 +284,36 @@ body {
   background-color: #3f0897;
 }
 
-.catchthedreams__box {
+.content__box {
   display: flex;
   flex-direction: column;
   margin: 2em 0;
 }
-.catchthedreams__img {
+.content__img {
   width: 100%;
   margin-top: 0.25em;
   margin-bottom: 1em;
 }
-.catchthedreams__title {
+.content__title {
   margin-bottom: 0.5em;
   color: #87A2FB;
   font-weight: 300;
 }
-.catchthedreams__text {
+.content__text {
   font-size: 1.4rem;
   margin-left: 0.15em;
 }
-.catchthedreams__special {
+.content__special {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 3em 0em;
 }
-.catchthedreams__special-text {
+.content__special-text {
   font-size: 1.4rem;
 }
-.catchthedreams__special-btn {
+.content__special-btn {
   margin-top: 2em;
   padding: 0.8em 1.6em;
   font-size: 1.6rem;
@@ -324,7 +324,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
 }
-.catchthedreams__special-btn::before {
+.content__special-btn::before {
   background-color: #3f0897;
 }
 
@@ -456,58 +456,6 @@ body {
   background-color: #3f0897;
 }
 
-.offers {
-  position: relative;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/offers-small.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-}
-.offers .section-heading {
-  color: #EEEEEE;
-}
-.offers__option {
-  margin: 1em 0;
-  box-shadow: 5px 5px 10px #2e2e2e;
-  background-color: #EEEEEE;
-  overflow: hidden;
-}
-.offers__option-img {
-  width: 100%;
-}
-.offers__option-info {
-  padding: 2em;
-  background-color: #EEEEEE;
-  z-index: 10;
-}
-.offers__option-title {
-  margin-bottom: 0.5em;
-  font-size: 2.4rem;
-  font-weight: 300;
-  color: #87A2FB;
-}
-.offers__option-text {
-  margin-left: 0.1em;
-  margin-bottom: 0.5em;
-  font-size: 1.3rem;
-}
-.offers__option-btn {
-  text-align: center;
-  text-decoration: none;
-  margin-top: 1em;
-  padding: 0.8em;
-  width: 100%;
-  color: #EEEEEE;
-  background-color: #6F38C5;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-.offers__option-btn::before {
-  background-color: #3f0897;
-}
-
 .reviews__box {
   position: relative;
   margin: 2em;
@@ -625,39 +573,25 @@ body {
 }
 
 @media (min-width: 576px) {
-  .catchthedreams__box {
+  .content__box {
     flex-direction: row;
     justify-content: space-between;
   }
-  .catchthedreams__box-text {
+  .content__box-text {
     width: 55%;
   }
-  .catchthedreams__box-text--right {
+  .content__box-text--right {
     text-align: right;
   }
-  .catchthedreams__box-img {
+  .content__box-img {
     width: 40%;
   }
-  .catchthedreams__box-img--right {
+  .content__box-img--right {
     order: 1;
   }
-  .catchthedreams__img {
+  .content__img {
     margin-bottom: 0;
     max-height: 300px;
-  }
-  .offers__option {
-    margin: 2em 0;
-    width: 100%;
-  }
-  .offers__option-title {
-    margin-bottom: 0.5em;
-    font-size: 3rem;
-  }
-  .offers__option-text {
-    font-size: 1.5rem;
-  }
-  .offers__option-btn {
-    padding: 1em;
   }
 }
 @media (max-width: 767px) {
@@ -740,16 +674,16 @@ body {
   .header__btn {
     font-size: 1.8rem;
   }
-  .catchthedreams__title {
+  .content__title {
     font-size: 2.4rem;
   }
-  .catchthedreams__text {
+  .content__text {
     font-size: 1.6rem;
   }
-  .catchthedreams__special-text {
+  .content__special-text {
     font-size: 1.6rem;
   }
-  .catchthedreams__special-btn {
+  .content__special-btn {
     font-size: 1.8rem;
   }
   .hero-img,
@@ -773,28 +707,6 @@ body {
   .islands__card {
     margin: 1em;
     width: 45%;
-  }
-  .offers__option {
-    display: flex;
-    margin: 2em 0;
-    width: 100%;
-  }
-  .offers__option-img {
-    max-width: 450px;
-    width: 50%;
-    height: auto;
-  }
-  .offers__option-img--right {
-    order: 1;
-  }
-  .offers__option-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .offers__option-heading {
-    margin-bottom: 0.5em;
-    font-size: 3.6rem;
   }
   .footer__boxes {
     display: flex;
@@ -848,31 +760,31 @@ body {
   .header-img {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/header_big.jpg");
   }
-  .header-img-tocatoca {
+  .header-img-first {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-first-img_big.jpg");
   }
-  .header-img-bora {
+  .header-img-second {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-second-img_big.jpg");
   }
-  .header-img-tunga {
+  .header-img-third {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-third-img_big.jpg");
   }
   .header__heading {
     font-size: 10rem;
   }
-  .catchthedreams__box {
+  .content__box {
     margin: 5em 0;
   }
-  .catchthedreams__box-text {
+  .content__box-text {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 2.5em;
   }
-  .catchthedreams__title {
+  .content__title {
     font-size: 3rem;
   }
-  .catchthedreams__text {
+  .content__text {
     font-size: 1.6rem;
   }
   .hero-img {
@@ -893,17 +805,6 @@ body {
 .hero-img--second hr {
     width: 60%;
     max-width: 900px;
-  }
-  .offers {
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/offers_big.jpg");
-  }
-  .offers__option-img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 300px;
-  }
-  .offers__option-text {
-    font-size: 1.5rem;
   }
 }
 @media (min-width: 1100px) {

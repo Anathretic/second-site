@@ -1,5 +1,5 @@
 @media (min-width: 576px) {
-    .catchthedreams {
+    .content {
         &__box {
             flex-direction: row;
             justify-content: space-between;
@@ -24,25 +24,6 @@
         &__img {
             margin-bottom: 0;
             max-height: 300px;
-        }
-    }
-    .offers {
-        &__option {
-            margin: 2em 0;
-            width: 100%;
-
-            &-title {
-                margin-bottom: 0.5em;
-                font-size: 3rem;
-            }
-
-            &-text {
-                font-size: 1.5rem;
-            }
-
-            &-btn {
-                padding: 1em;
-            }
         }
     }
 }

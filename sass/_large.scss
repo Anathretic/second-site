@@ -33,15 +33,15 @@
 		background-image: colors.$shadow, url('../img/header_big.jpg');
 	}
 
-	.header-img-tocatoca {
+	.header-img-first {
 		background-image: colors.$shadow, url('../img/cards-first-img_big.jpg');
 	}
 
-	.header-img-bora {
+	.header-img-second {
 		background-image: colors.$shadow, url('../img/cards-second-img_big.jpg');
 	}
 
-	.header-img-tunga {
+	.header-img-third {
 		background-image: colors.$shadow, url('../img/cards-third-img_big.jpg');
 	}
 
@@ -51,7 +51,7 @@
 		}
 	}
 
-	.catchthedreams {
+	.content {
 		&__box {
 			margin: 5em 0;
 
@@ -91,21 +91,6 @@
 		hr {
 			width: 60%;
 			max-width: 900px;
-		}
-	}
-
-	.offers {
-		background-image: colors.$shadow, url('../img/offers_big.jpg');
-
-		&__option {
-			&-img {
-				object-fit: cover;
-				height: 300px;
-			}
-
-			&-text {
-				font-size: 1.5rem;
-			}
 		}
 	}
 }

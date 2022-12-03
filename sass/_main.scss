@@ -244,15 +244,15 @@ body {
 	background-image: colors.$shadow, url('../img/header_small.jpg');
 }
 
-.header-img-tocatoca {
+.header-img-first {
 	background-image: colors.$shadow, url('../img/cards-first-img.jpg');
 }
 
-.header-img-bora {
+.header-img-second {
 	background-image: colors.$shadow, url('../img/cards-second-img.jpg');
 }
 
-.header-img-tunga {
+.header-img-third {
 	background-image: colors.$shadow, url('../img/cards-third-img.jpg');
 }
 
@@ -302,7 +302,7 @@ body {
 	}
 }
 
-.catchthedreams {
+.content {
 	&__box {
 		display: flex;
 		flex-direction: column;
@@ -500,66 +500,6 @@ body {
 				&::before {
 					background-color: colors.$special-btn-color;
 				}
-			}
-		}
-	}
-}
-
-.offers {
-	position: relative;
-	background-image: colors.$shadow, url('../img/offers-small.jpg');
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-	overflow: hidden;
-
-	.section-heading {
-		color: colors.$white-color;
-	}
-
-	&__option {
-		margin: 1em 0;
-		box-shadow: 5px 5px 10px #2e2e2e;
-		background-color: colors.$white-color;
-		overflow: hidden;
-
-		&-img {
-			width: 100%;
-		}
-
-		&-info {
-			padding: 2em;
-			background-color: colors.$white-color;
-			z-index: 10;
-		}
-
-		&-title {
-			margin-bottom: 0.5em;
-			font-size: 2.4rem;
-			font-weight: 300;
-			color: colors.$main-color;
-		}
-
-		&-text {
-			margin-left: 0.1em;
-			margin-bottom: 0.5em;
-			font-size: 1.3rem;
-		}
-
-		&-btn {
-			text-align: center;
-			text-decoration: none;
-			margin-top: 1em;
-			padding: 0.8em;
-			width: 100%;
-			color: colors.$white-color;
-			background-color: colors.$special-color;
-			border-radius: 8px;
-			border: none;
-			cursor: pointer;
-
-			&::before {
-				background-color: colors.$special-btn-color;
 			}
 		}
 	}
