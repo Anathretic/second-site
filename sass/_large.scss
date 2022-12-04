@@ -45,6 +45,10 @@
 		background-image: colors.$shadow, url('../img/cards-third-img_big.jpg');
 	}
 
+	.header-img-book {
+		background-image: colors.$shadow, url('../img/book-it/book-it-hero-img_big.jpg');
+	}
+
 	.header {
 		&__heading {
 			font-size: 10rem;

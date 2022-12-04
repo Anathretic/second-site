@@ -256,6 +256,10 @@ body {
 	background-image: colors.$shadow, url('../img/cards-third-img.jpg');
 }
 
+.header-img-book {
+	background-image: colors.$shadow, url('../img/book-it/book-it-hero-img_small.jpg');
+}
+
 .header {
 	position: relative;
 	display: flex;
@@ -298,6 +302,51 @@ body {
 
 		&::before {
 			background-color: colors.$special-btn-color;
+		}
+	}
+}
+
+.book {
+	position: relative;
+	overflow: hidden;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+
+		&-form {
+			&-label {
+				text-transform: uppercase;
+			}
+	
+			&-input,
+			&-select {
+				font-family: 'Montserrat', sans-serif;
+				margin-top: 0.5em;
+				margin-bottom: 2em;
+				padding: 0.6em 1.2em;
+				border: none;
+				border-radius: 8px;
+				font-size: 1.6rem;
+				width: 100%;
+			}
+	
+			&-btn {
+				align-self: flex-end;
+				margin-top: 3em;
+				padding: 1em;
+				width: 100%;
+				max-width: 300px;
+				color: colors.$white-color;
+				background-color: colors.$special-color;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+	
+				&::before {
+					background-color: colors.$special-btn-color;
+				}
+			}
 		}
 	}
 }
@@ -347,7 +396,7 @@ body {
 			color: colors.$white-color;
 			text-decoration: none;
 			text-transform: uppercase;
-	
+
 			&::before {
 				background-color: colors.$special-btn-color;
 			}
@@ -480,7 +529,7 @@ body {
 					font-size: 1.4rem;
 					border-bottom: 1px solid colors.$white-color;
 
-					&:last-child{
+					&:last-child {
 						border-bottom: none;
 					}
 				}

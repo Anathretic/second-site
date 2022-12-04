@@ -245,6 +245,10 @@ body {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-third-img.jpg");
 }
 
+.header-img-book {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/book-it/book-it-hero-img_small.jpg");
+}
+
 .header {
   position: relative;
   display: flex;
@@ -281,6 +285,43 @@ body {
   text-transform: uppercase;
 }
 .header__btn::before {
+  background-color: #3f0897;
+}
+
+.book {
+  position: relative;
+  overflow: hidden;
+}
+.book__box {
+  display: flex;
+  flex-direction: column;
+}
+.book__box-form-label {
+  text-transform: uppercase;
+}
+.book__box-form-input, .book__box-form-select {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  width: 100%;
+}
+.book__box-form-btn {
+  align-self: flex-end;
+  margin-top: 3em;
+  padding: 1em;
+  width: 100%;
+  max-width: 300px;
+  color: #EEEEEE;
+  background-color: #6F38C5;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.book__box-form-btn::before {
   background-color: #3f0897;
 }
 
@@ -768,6 +809,9 @@ body {
   }
   .header-img-third {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-third-img_big.jpg");
+  }
+  .header-img-book {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/book-it/book-it-hero-img_big.jpg");
   }
   .header__heading {
     font-size: 10rem;
