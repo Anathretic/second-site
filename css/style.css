@@ -593,6 +593,9 @@ body {
   font-size: 3rem;
   text-transform: uppercase;
 }
+.footer__box-title a {
+  color: #EEEEEE;
+}
 .footer__box-social {
   margin: 2em 0 1em;
 }

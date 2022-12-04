@@ -668,6 +668,10 @@ body {
 			margin-bottom: 1em;
 			font-size: 3rem;
 			text-transform: uppercase;
+
+			a {
+				color: colors.$white-color;
+			}
 		}
 
 		&-social {
