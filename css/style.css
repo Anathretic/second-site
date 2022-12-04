@@ -352,10 +352,11 @@ body {
   padding: 3em 0em;
 }
 .content__special-text {
+  text-align: center;
   font-size: 1.4rem;
 }
 .content__special-btn {
-  margin-top: 2em;
+  margin: 2em 0;
   padding: 0.8em 1.6em;
   font-size: 1.6rem;
   border: none;
