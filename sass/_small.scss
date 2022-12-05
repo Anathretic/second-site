@@ -1,29 +1,42 @@
+@media (min-width: 400px) {
+	.book {
+		&__box {
+			&-form {
+				&-popup {
+					width: 380px;
+					height: 150px;
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 576px) {
-    .content {
-        &__box {
-            flex-direction: row;
-            justify-content: space-between;
+	.content {
+		&__box {
+			flex-direction: row;
+			justify-content: space-between;
 
-            &-text {
-                width: 55%;
+			&-text {
+				width: 55%;
 
-                &--right {
-                    text-align: right;
-                }
-            }
+				&--right {
+					text-align: right;
+				}
+			}
 
-            &-img {
-                width: 40%;
+			&-img {
+				width: 40%;
 
-                &--right {
-                    order: 1;
-                }
-            }
-        }
+				&--right {
+					order: 1;
+				}
+			}
+		}
 
-        &__img {
-            margin-bottom: 0;
-            max-height: 300px;
-        }
-    }
+		&__img {
+			margin-bottom: 0;
+			max-height: 300px;
+		}
+	}
 }

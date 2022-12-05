@@ -6,6 +6,12 @@
 	}
 }
 
+@media (min-width: 570px) {
+	.show-popup {
+		top: 70%;
+	}
+}
+
 @media (min-width: 768px) {
 	.white-block {
 		height: 50px;
@@ -145,6 +151,21 @@
 		&__card {
 			margin: 1em;
 			width: 45%;
+		}
+	}
+
+	.book {
+		&__box {
+			&-form {
+				&-popup {
+					width: 540px;
+					height: 150px;
+
+					&-header {
+						font-size: 1.8rem;
+					}
+				}
+			}
 		}
 	}
 
