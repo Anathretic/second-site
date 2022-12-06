@@ -260,6 +260,10 @@ body {
 	background-image: colors.$shadow, url('../img/book-it/book-it-hero-img_small.jpg');
 }
 
+.header-img-other {
+	background-image: colors.$shadow, url('../img/other-islands-hero_small.jpg');
+}
+
 .header {
 	position: relative;
 	display: flex;
@@ -530,6 +534,30 @@ body {
 			&--third {
 				background-image: colors.$shadow, url('../img/cards-third-img.jpg');
 			}
+			
+			&--four {
+				background-image: colors.$shadow, url('../img/other-islands/banana-island.jpg');
+			}
+			
+			&--five {
+				background-image: colors.$shadow, url('../img/other-islands/coco-island.jpg');
+			}
+			
+			&--six {
+				background-image: colors.$shadow, url('../img/other-islands/tiki-taka-island.jpg');
+			}
+			
+			&--seven {
+				background-image: colors.$shadow, url('../img/other-islands/ivory-island.jpg');
+			}
+			
+			&--eight {
+				background-image: colors.$shadow, url('../img/other-islands/togo-island.jpg');
+			}
+			
+			&--nine {
+				background-image: colors.$shadow, url('../img/other-islands/pearl-island.jpg');
+			}
 
 			&-title {
 				font-family: 'Dancing Script', cursive;
@@ -606,6 +634,10 @@ body {
 				&::before {
 					background-color: colors.$special-btn-color;
 				}
+			}
+
+			&-other {
+				font-size: 1.8rem;
 			}
 		}
 	}
