@@ -53,6 +53,10 @@
 		background-image: colors.$shadow, url('../img/other-islands-hero_big.jpg');
 	}
 
+	.header-img-aboutus {
+		background-image: colors.$shadow, url('../img/about-us_big.jpg');
+	}
+
 	.header {
 		&__heading {
 			font-size: 10rem;
