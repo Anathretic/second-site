@@ -406,6 +406,9 @@ body {
   color: #87A2FB;
   font-weight: 300;
 }
+.content__title a {
+  color: #6F38C5;
+}
 .content__text {
   font-size: 1.4rem;
   margin-left: 0.15em;

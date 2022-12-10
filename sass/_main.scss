@@ -438,6 +438,10 @@ body {
 		margin-bottom: 0.5em;
 		color: colors.$main-color;
 		font-weight: 300;
+
+		a {
+			color: colors.$special-color;
+		}
 	}
 
 	&__text {
