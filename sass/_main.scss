@@ -268,6 +268,10 @@ body {
 	background-image: colors.$shadow, url('../img/about-us_small.jpg');
 }
 
+.header-img-team {
+	background-image: colors.$shadow, url('../img/team_small.jpg');
+}
+
 .header {
 	position: relative;
 	display: flex;
@@ -426,6 +430,8 @@ body {
 		width: 100%;
 		margin-top: 0.25em;
 		margin-bottom: 1em;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
 	}
 
 	&__title {

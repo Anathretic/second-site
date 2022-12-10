@@ -57,6 +57,10 @@
 		background-image: colors.$shadow, url('../img/about-us_big.jpg');
 	}
 
+	.header-img-team {
+		background-image: colors.$shadow, url('../img/team_big.jpg');
+	}
+
 	.header {
 		&__heading {
 			font-size: 10rem;
