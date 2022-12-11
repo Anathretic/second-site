@@ -5,9 +5,7 @@ const inputPhoneNumber = document.querySelector('#book-phone-number')
 const inputEmail = document.querySelector('#book-email')
 const inputIsland = document.querySelector('#book-island')
 const inputCompany = document.querySelector('#book-company')
-const bookPopup = document.querySelector('.book__box-form-popup')
-const bookBtn = document.querySelector('.book__box-form-btn')
-const bookPopupBtn = document.querySelector('.book__box-form-popup-btn')
+const bookFormBtn = document.querySelector('.book__box-form-btn')
 const numberMinValue = 9
 const numberCheck = /[0-9]/
 const emailBookCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
@@ -16,13 +14,16 @@ const inputsArray = [inputName, inputLastName, inputPhoneNumber, inputEmail]
 
 const selectsArray = [inputIsland, inputCompany]
 
+const goHome = () => {
+    window.location.href = 'index.html'
+}
+
 const checkInput = () => {
-    if(inputName.value !== '' && inputLastName.value !== '' && numberCheck.test(inputPhoneNumber.value) && inputPhoneNumber.value.length >= numberMinValue && emailBookCheck.test(inputEmail.value) && inputIsland.value !== 0 && inputCompany.value !== 0) {
-        bookPopup.classList.add('show-popup')
-        body.classList.add('body-block')
-        bookBtn.disabled = true
-        bookBtn.classList.remove('btn-special-animation')
-        bookBtn.style.cursor = 'default'
+    if(inputName.value !== '' && inputLastName.value !== '' && numberCheck.test(inputPhoneNumber.value) && inputPhoneNumber.value.length >= numberMinValue && emailBookCheck.test(inputEmail.value) && inputIsland.value > 0 && inputCompany.value > 0) {
+        bookFormBtn.disabled = true
+        bookFormBtn.textContent = 'Sent! You will be redirected!'
+        bookFormBtn.classList.remove('btn-special-animation')
+        bookFormBtn.style.cursor = 'default'
         inputsArray.forEach(el => {
             el.value = ''
             el.disabled = true
@@ -31,25 +32,18 @@ const checkInput = () => {
             el.value = 0
             el.disabled = true
         })
+
+        setTimeout(goHome, 3000)
     } else {
-        bookBtn.textContent = 'Something is wrong.. Check the form!'
+        bookFormBtn.textContent = 'Something is wrong.. Check the form!'
 
         setTimeout(() => {
-            bookBtn.textContent = 'Book it!'
+            bookFormBtn.textContent = 'Book it!'
         }, 3000)
     }
 }
 
-const goHome = () => {
-    window.location.href = 'index.html'
-}
-
-bookBtn.addEventListener('click', e => {
+bookFormBtn.addEventListener('click', e => {
     e.preventDefault()
     checkInput()
-})
-
-bookPopupBtn.addEventListener('click', e => {
-    e.preventDefault()
-    goHome()
 })

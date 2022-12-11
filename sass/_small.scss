@@ -1,16 +1,3 @@
-@media (min-width: 400px) {
-	.book {
-		&__box {
-			&-form {
-				&-popup {
-					width: 380px;
-					height: 150px;
-				}
-			}
-		}
-	}
-}
-
 @media (min-width: 576px) {
 	.content {
 		&__box {
