@@ -16,7 +16,7 @@ const msgBtnAction = () => {
 	}
 
 	setTimeout(() => {
-		contactBtn.textContent = 'Send'
+		contactBtn.textContent = 'Send it!'
 	}, 2500)
 }
 

@@ -26,4 +26,22 @@
 			max-height: 300px;
 		}
 	}
+
+	.contact {
+		&__form {
+			&-btn {
+				max-width: 300px;
+			}
+		}
+	}
+
+	.book {
+		&__box {
+			&-form {
+				&-btn {
+					max-width: 300px;
+				}
+			}
+		}
+	}
 }

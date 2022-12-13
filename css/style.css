@@ -326,11 +326,11 @@ body {
   margin-top: 3em;
   padding: 1em;
   width: 100%;
-  max-width: 300px;
   color: #EEEEEE;
   background-color: #6F38C5;
   border: none;
   border-radius: 8px;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .book__box-form-btn::before {
@@ -611,11 +611,11 @@ body {
   align-self: flex-end;
   padding: 1em;
   width: 100%;
-  max-width: 300px;
   color: #EEEEEE;
   background-color: #6F38C5;
   border: none;
   border-radius: 8px;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .contact__form-btn::before {
@@ -684,6 +684,12 @@ body {
   .content__img {
     margin-bottom: 0;
     max-height: 300px;
+  }
+  .contact__form-btn {
+    max-width: 300px;
+  }
+  .book__box-form-btn {
+    max-width: 300px;
   }
 }
 @media (max-width: 767px) {
