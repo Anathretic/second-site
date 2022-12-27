@@ -1,4 +1,3 @@
-const body = document.querySelector('body')
 const inputName = document.querySelector('#book-name')
 const inputLastName = document.querySelector('#book-last-name')
 const inputPhoneNumber = document.querySelector('#book-phone-number')
@@ -10,37 +9,20 @@ const numberMinValue = 9
 const numberCheck = /[0-9]/
 const emailBookCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
 
-const inputsArray = [inputName, inputLastName, inputPhoneNumber, inputEmail]
-
-const selectsArray = [inputIsland, inputCompany]
+const checkInput = () => {
+    if(inputName.value !== '' && inputLastName.value !== '' && numberCheck.test(inputPhoneNumber.value) && inputPhoneNumber.value.length >= numberMinValue && emailBookCheck.test(inputEmail.value) && inputIsland.value !== '0' && inputCompany.value !== '0') {
+        alert(`Sent! You will be redirected!`)
+        goHome()
+    } else {
+        bookFormBtn.textContent = 'Something is wrong.. Check the form!'
+        setTimeout(() => {
+            bookFormBtn.textContent = 'Book it!'
+        }, 2500)
+    }
+}
 
 const goHome = () => {
     window.location.href = 'index.html'
-}
-
-const checkInput = () => {
-    if(inputName.value !== '' && inputLastName.value !== '' && numberCheck.test(inputPhoneNumber.value) && inputPhoneNumber.value.length >= numberMinValue && emailBookCheck.test(inputEmail.value) && inputIsland.value > 0 && inputCompany.value > 0) {
-        bookFormBtn.disabled = true
-        bookFormBtn.textContent = 'Sent! You will be redirected!'
-        bookFormBtn.classList.remove('btn-special-animation')
-        bookFormBtn.style.cursor = 'default'
-        inputsArray.forEach(el => {
-            el.value = ''
-            el.disabled = true
-        })
-        selectsArray.forEach(el => {
-            el.value = 0
-            el.disabled = true
-        })
-
-        setTimeout(goHome, 3000)
-    } else {
-        bookFormBtn.textContent = 'Something is wrong.. Check the form!'
-
-        setTimeout(() => {
-            bookFormBtn.textContent = 'Book it!'
-        }, 3000)
-    }
 }
 
 bookFormBtn.addEventListener('click', e => {
