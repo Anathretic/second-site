@@ -337,15 +337,6 @@ body {
   background-color: #3f0897;
 }
 
-.shadow-popup {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  z-index: 800;
-}
-
 .content__box {
   display: flex;
   flex-direction: column;
@@ -458,22 +449,22 @@ body {
 .islands__card-img--third {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-third-img.jpg");
 }
-.islands__card-img--four {
+.islands__card-img--fourth {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/banana-island.jpg");
 }
-.islands__card-img--five {
+.islands__card-img--fifth {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/coco-island.jpg");
 }
-.islands__card-img--six {
+.islands__card-img--sixth {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/tiki-taka-island.jpg");
 }
-.islands__card-img--seven {
+.islands__card-img--seventh {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/ivory-island.jpg");
 }
-.islands__card-img--eight {
+.islands__card-img--eighth {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/togo-island.jpg");
 }
-.islands__card-img--nine {
+.islands__card-img--nineth {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/pearl-island.jpg");
 }
 .islands__card-img-title {

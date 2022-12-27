@@ -363,15 +363,6 @@ body {
 	}
 }
 
-.shadow-popup {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.5);
-		overflow: hidden;
-		z-index: 800;
-}
-
 .content {
 	&__box {
 		display: flex;
@@ -502,27 +493,27 @@ body {
 				background-image: colors.$shadow, url('../img/cards-third-img.jpg');
 			}
 			
-			&--four {
+			&--fourth {
 				background-image: colors.$shadow, url('../img/other-islands/banana-island.jpg');
 			}
 			
-			&--five {
+			&--fifth {
 				background-image: colors.$shadow, url('../img/other-islands/coco-island.jpg');
 			}
 			
-			&--six {
+			&--sixth {
 				background-image: colors.$shadow, url('../img/other-islands/tiki-taka-island.jpg');
 			}
 			
-			&--seven {
+			&--seventh {
 				background-image: colors.$shadow, url('../img/other-islands/ivory-island.jpg');
 			}
 			
-			&--eight {
+			&--eighth {
 				background-image: colors.$shadow, url('../img/other-islands/togo-island.jpg');
 			}
 			
-			&--nine {
+			&--nineth {
 				background-image: colors.$shadow, url('../img/other-islands/pearl-island.jpg');
 			}
 
