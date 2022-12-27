@@ -11,7 +11,7 @@ const emailBookCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
 
 const checkInput = () => {
     if(inputName.value !== '' && inputLastName.value !== '' && numberCheck.test(inputPhoneNumber.value) && inputPhoneNumber.value.length >= numberMinValue && emailBookCheck.test(inputEmail.value) && inputIsland.value !== '0' && inputCompany.value !== '0') {
-        alert(`Sent! You will be redirected!`)
+        alert(`Sent! You will be redirected! Check your e-mail!`)
         goHome()
     } else {
         bookFormBtn.textContent = 'Something is wrong.. Check the form!'
