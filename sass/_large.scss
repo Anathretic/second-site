@@ -7,16 +7,32 @@
 		&__icon {
 			top: 4rem;
 			left: 5rem;
+
+			&-text {
+				font-size: 4rem;
+			}
+		}
+
+		.burger-btn {
+			&__box {
+				width: 5rem;
+				height: 3rem;
+			}
 		}
 
 		.burger-btn-desktop {
-			top: 5rem;
+			top: 4.5rem;
 			right: 5rem;
 		}
 
 		&__desktop {
 			&-box {
 				height: 150px;
+
+				&-item {
+					font-size: 3rem;
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
