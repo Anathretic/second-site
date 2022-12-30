@@ -2,36 +2,53 @@
 
 @media (min-width: 992px) {
 	.nav {
-		height: 150px;
+		.burger-btn,
+		&__mobile {
+			display: none;
+		}
 
 		&__icon {
-			top: 4rem;
-			left: 5rem;
-
 			&-text {
-				font-size: 4rem;
+				margin-bottom: 1em;
 			}
-		}
-
-		.burger-btn {
-			&__box {
-				width: 5rem;
-				height: 3rem;
-			}
-		}
-
-		.burger-btn-desktop {
-			top: 4.5rem;
-			right: 5rem;
 		}
 
 		&__desktop {
+			display: flex;
+	
 			&-box {
-				height: 150px;
+				top: 0;
+				display: flex;
+				align-items: center;
+				justify-content: end;
+				width: 100%;
+				height: 80px;
+				transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+				background: none;
 
 				&-item {
-					font-size: 3rem;
-					margin-bottom: 0;
+					position: relative;
+					margin: 0 0.5em 1em 0.5em;
+					padding: 0.5em 1em;
+					font-size: 2.6rem;
+					color: colors.$special-color;
+					text-decoration: none;
+
+					&::before {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 2px;
+						transform: scaleX(0);
+						background-color: colors.$special-color;
+						transition: transform 0.3s;
+					}
+
+					&:hover::before {
+						transform: scaleX(1);
+					}
 				}
 			}
 		}
