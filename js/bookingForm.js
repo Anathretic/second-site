@@ -22,7 +22,7 @@ const checkInput = () => {
 }
 
 const goHome = () => {
-    window.location.href = 'index.html'
+    window.location.href = '../index.html'
 }
 
 bookFormBtn.addEventListener('click', e => {
