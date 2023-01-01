@@ -130,7 +130,7 @@ body {
 }
 .nav .burger-btn:hover .burger-btn__bars::after,
 .nav .burger-btn:hover .burger-btn__bars::before {
-  width: 102.5%;
+  width: 100%;
 }
 .nav .burger-btn__box {
   position: relative;

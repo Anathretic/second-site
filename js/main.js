@@ -1,15 +1,35 @@
-const body = document.querySelector('body')
-const mobileNav = document.querySelector('.nav__mobile-box')
-const mobileNavBtn = document.querySelector('.burger-btn')
-const mobileAllNavItems = document.querySelectorAll('.nav__mobile-box-item')
-const navIcon = document.querySelector('.nav__icon')
+let BODY
+let MOBILE_NAV
+let MOBILE_NAV_BTN
+let MOBILE_ALL_NAV_ITEMS
+let NAV_ICON
+
+const main = () => {
+	prepareDOMElements()
+	prepareDOMEvents()
+}
+
+const prepareDOMElements = () => {
+	BODY = document.querySelector('body')
+	MOBILE_NAV = document.querySelector('.nav__mobile-box')
+	MOBILE_NAV_BTN = document.querySelector('.burger-btn')
+	MOBILE_ALL_NAV_ITEMS = document.querySelectorAll('.nav__mobile-box-item')
+	NAV_ICON = document.querySelector('.nav__icon')
+}
+
+const prepareDOMEvents = () => {
+	NAV_ICON.addEventListener('click', () => {
+		MOBILE_NAV.classList.remove('nav__mobile-box--active')
+	})
+	MOBILE_NAV_BTN.addEventListener('click', handleMobileNav)
+}
 
 const mobileBlock = () => {
-	if (mobileNav.classList.contains('nav__mobile-box--active')) {
-		if (body.classList.contains('scroll-block')) {
-			body.classList.remove('scroll-block')
+	if (MOBILE_NAV.classList.contains('nav__mobile-box--active')) {
+		if (BODY.classList.contains('scroll-block')) {
+			BODY.classList.remove('scroll-block')
 		} else {
-			body.classList.add('scroll-block')
+			BODY.classList.add('scroll-block')
 		}
 	}
 }
@@ -17,7 +37,7 @@ const mobileBlock = () => {
 const handleMobileNavItemsAnimation = () => {
 	let delayTime = 0
 
-	mobileAllNavItems.forEach(item => {
+	MOBILE_ALL_NAV_ITEMS.forEach(item => {
 		item.classList.toggle('nav-items-animation')
 		item.style.animationDelay = '.' + delayTime + 's'
 		delayTime++
@@ -25,13 +45,13 @@ const handleMobileNavItemsAnimation = () => {
 }
 
 const handleMobileNav = () => {
-	mobileNav.classList.toggle('nav__mobile-box--active')
-	body.classList.remove('scroll-block')
+	MOBILE_NAV.classList.toggle('nav__mobile-box--active')
+	BODY.classList.remove('scroll-block')
 
-	mobileAllNavItems.forEach(item => {
+	MOBILE_ALL_NAV_ITEMS.forEach(item => {
 		item.addEventListener('click', () => {
-			mobileNav.classList.remove('nav__mobile-box--active')
-			body.classList.remove('scroll-block')
+			MOBILE_NAV.classList.remove('nav__mobile-box--active')
+			BODY.classList.remove('scroll-block')
 		})
 	})
 
@@ -40,12 +60,9 @@ const handleMobileNav = () => {
 }
 
 const deleteMobileAnimation = () => {
-	mobileAllNavItems.forEach(item => {
+	MOBILE_ALL_NAV_ITEMS.forEach(item => {
 		item.classList.remove('nav-items-animation')
 	})
 }
 
-navIcon.addEventListener('click', () => {
-	mobileNav.classList.remove('nav__mobile-box--active')
-})
-mobileNavBtn.addEventListener('click', handleMobileNav)
+document.addEventListener('DOMContentLoaded', main)

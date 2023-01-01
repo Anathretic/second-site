@@ -1,35 +1,52 @@
-const footerYear = document.querySelector('.footer__year')
-const contactUsername = document.querySelector('#name')
-const contactUserEmail = document.querySelector('#email')
-const contactUserMsg = document.querySelector('#msg')
-const contactBtn = document.querySelector('.contact__form-btn')
-const emailCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
+let FOOTER_YEAR
+let CONTACT_USERNAME
+let CONTACT_USER_EMAIL
+let CONTACT_USER_MSG
+let CONTACT_BTN
+let EMAIL_CHECK
+let INPUTS_ARR
 
-const inputsArr = [contactUsername, contactUserEmail, contactUserMsg]
+const contactAndFooterMain = () => {
+	conFooPrepareDOMElements()
+	conFooPrepareDOMEvents()
+}
+
+const conFooPrepareDOMElements = () => {
+	FOOTER_YEAR = document.querySelector('.footer__year')
+	CONTACT_USERNAME = document.querySelector('#name')
+	CONTACT_USER_EMAIL = document.querySelector('#email')
+	CONTACT_USER_MSG = document.querySelector('#msg')
+	CONTACT_BTN = document.querySelector('.contact__form-btn')
+	EMAIL_CHECK = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
+	INPUTS_ARR = [CONTACT_USERNAME, CONTACT_USER_EMAIL, CONTACT_USER_MSG]
+}
+
+const conFooPrepareDOMEvents = () => {
+	currentYear()
+	CONTACT_BTN.addEventListener('click', e => {
+		e.preventDefault()
+		msgBtnAction()
+	})
+}
 
 const msgBtnAction = () => {
-	if (contactUsername.value !== '' && contactUserMsg.value !== '' && emailCheck.test(contactUserEmail.value)) {
-		contactBtn.textContent = 'SENT!'
-		inputsArr.forEach(el => {
+	if (CONTACT_USERNAME.value !== '' && CONTACT_USER_MSG.value !== '' && EMAIL_CHECK.test(CONTACT_USER_EMAIL.value)) {
+		CONTACT_BTN.textContent = 'SENT!'
+		INPUTS_ARR.forEach(el => {
 			el.value = ''
 		})
 	} else {
-		contactBtn.textContent = 'Check the form..'
+		CONTACT_BTN.textContent = 'Check the form..'
 	}
 
 	setTimeout(() => {
-		contactBtn.textContent = 'Send it!'
+		CONTACT_BTN.textContent = 'Send it!'
 	}, 2500)
 }
 
 const currentYear = () => {
 	const date = new Date().getFullYear()
-	footerYear.innerText = date
+	FOOTER_YEAR.innerText = date
 }
 
-currentYear()
-
-contactBtn.addEventListener('click', e => {
-	e.preventDefault()
-	msgBtnAction()
-})
+document.addEventListener('DOMContentLoaded', contactAndFooterMain)
