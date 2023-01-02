@@ -241,6 +241,10 @@ body {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/team_small.jpg");
 }
 
+.header-img-work {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/work-with-us_small.jpg");
+}
+
 .header {
   position: relative;
   display: flex;
@@ -821,6 +825,9 @@ body {
   }
   .header-img-team {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/team_big.jpg");
+  }
+  .header-img-work {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/work-with-us_big.jpg");
   }
   .header__heading {
     font-size: 10rem;

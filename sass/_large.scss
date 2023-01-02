@@ -15,7 +15,7 @@
 
 		&__desktop {
 			display: flex;
-	
+
 			&-box {
 				top: 0;
 				display: flex;
@@ -92,6 +92,10 @@
 
 	.header-img-team {
 		background-image: colors.$shadow, url('../img/team_big.jpg');
+	}
+
+	.header-img-work {
+		background-image: colors.$shadow, url('../img/work-with-us_big.jpg');
 	}
 
 	.header {
