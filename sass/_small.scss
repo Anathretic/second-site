@@ -1,3 +1,15 @@
+@media (min-width: 500px) {
+	.content {
+		&__faq {
+			&-list {
+				&-menu {
+					max-height: 5em;
+				}
+			}
+		}
+	}
+}
+
 @media (min-width: 576px) {
 	.content {
 		&__box {

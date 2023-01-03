@@ -103,6 +103,10 @@
 		background-image: colors.$shadow, url('../img/work-with-us_big.jpg');
 	}
 
+	.header-img-faq {
+		background-image: colors.$shadow, url('../img/faq_big.jpg');
+	}
+
 	.header {
 		&__heading {
 			font-size: 10rem;

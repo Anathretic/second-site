@@ -245,6 +245,10 @@ body {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/work-with-us_small.jpg");
 }
 
+.header-img-faq {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/faq_small.jpg");
+}
+
 .header {
   position: relative;
   display: flex;
@@ -369,6 +373,40 @@ body {
 }
 .content__special-btn::before {
   background-color: #3f0897;
+}
+.content__faq {
+  position: relative;
+}
+.content__faq-input, .content__faq-list {
+  font-family: "Montserrat", sans-serif;
+}
+.content__faq-input {
+  margin-bottom: 0.5em;
+  width: 100%;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+.content__faq-list {
+  position: absolute;
+  width: 100%;
+}
+.content__faq-list-menu {
+  display: none;
+  background-color: #fff;
+  border-radius: 8px;
+  max-height: 6em;
+  overflow-y: scroll;
+}
+.content__faq-list-menu li {
+  padding: 0.5em;
+  margin-bottom: 8px;
+  list-style: none;
+}
+.content__faq-list-menu li a {
+  text-decoration: none;
+  color: #6F38C5;
 }
 
 .hero-img {
@@ -639,6 +677,11 @@ body {
   text-align: center;
 }
 
+@media (min-width: 500px) {
+  .content__faq-list-menu {
+    max-height: 5em;
+  }
+}
 @media (min-width: 576px) {
   .content__box {
     flex-direction: row;
@@ -832,6 +875,9 @@ body {
   }
   .header-img-work {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/work-with-us_big.jpg");
+  }
+  .header-img-faq {
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/faq_big.jpg");
   }
   .header__heading {
     font-size: 10rem;
