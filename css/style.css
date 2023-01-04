@@ -84,6 +84,10 @@ body {
   letter-spacing: 2px;
 }
 
+.special-heading {
+  margin-top: 4em;
+}
+
 .nav {
   position: fixed;
   width: 100%;
@@ -397,7 +401,7 @@ body {
   background-color: #fff;
   border-radius: 8px;
   max-height: 6em;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .content__faq-list-menu li {
   padding: 0.5em;
@@ -407,6 +411,21 @@ body {
 .content__faq-list-menu li a {
   text-decoration: none;
   color: #6F38C5;
+}
+.content__solutions {
+  margin-top: 1em;
+}
+.content__solutions-box {
+  text-align: center;
+  padding: 2em 0.5em;
+}
+.content__solutions-title {
+  margin-bottom: 2em;
+  font-weight: 300;
+  color: #87A2FB;
+}
+.content__solutions-text {
+  font-size: 1.4rem;
 }
 
 .hero-img {
@@ -747,6 +766,12 @@ body {
   .content__special-btn {
     font-size: 1.8rem;
   }
+  .content__solutions-title {
+    font-size: 2.4rem;
+  }
+  .content__solutions-text {
+    font-size: 1.6rem;
+  }
   .hero-img,
 .hero-img--second {
     padding: 30rem 2em;
@@ -895,6 +920,12 @@ body {
     font-size: 3rem;
   }
   .content__text {
+    font-size: 1.6rem;
+  }
+  .content__solutions-title {
+    font-size: 2.6rem;
+  }
+  .content__solutions-text {
     font-size: 1.6rem;
   }
   .hero-img {
