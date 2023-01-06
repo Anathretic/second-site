@@ -1,26 +1,41 @@
-const faqInput = document.querySelector('.content__faq-input')
-const faqInputList = document.querySelector('.content__faq-list-menu')
-const faqInputListLi = document.querySelectorAll('.content__faq-list-menu li')
+let FAQ_INPUT
+let FAQ_INPUT_LIST
+let FAQ_INPUT_LIST_LI
+
+const faqMain = () => {
+	faqPrepareDOMElements()
+	faqPrepareDOMEvents()
+}
+
+const faqPrepareDOMElements = () => {
+	FAQ_INPUT = document.querySelector('.content__faq-input')
+	FAQ_INPUT_LIST = document.querySelector('.content__faq-list-menu')
+	FAQ_INPUT_LIST_LI = document.querySelectorAll('.content__faq-list-menu li')
+}
+
+const faqPrepareDOMEvents = () => {
+    FAQ_INPUT.addEventListener('keyup', questionFilter)
+}
 
 const questionFilter = () => {
-    faqInputListLi.forEach(el => {
-        const match = new RegExp(faqInput.value, 'i').test(el.textContent)
-        if(!match) {
-            el.style.display = 'none'
-        } else {
-            el.style.display = 'block'
-            faqInputList.style.display = 'block'
-        }
-    })
+	FAQ_INPUT_LIST_LI.forEach(el => {
+		const match = new RegExp(FAQ_INPUT.value, 'i').test(el.textContent)
+		if (!match) {
+			el.style.display = 'none'
+		} else {
+			el.style.display = 'block'
+			FAQ_INPUT_LIST.style.display = 'block'
+		}
+	})
 
-    if(faqInput.value === '') {
-        faqInputList.style.display = 'none'
-    }
+	if (FAQ_INPUT.value === '') {
+		FAQ_INPUT_LIST.style.display = 'none'
+	}
 }
 
 const clearInput = () => {
-    faqInput.value = ''
-    faqInputList.style.display = 'none'
+	FAQ_INPUT.value = ''
+	FAQ_INPUT_LIST.style.display = 'none'
 }
 
-faqInput.addEventListener('keyup', questionFilter)
+document.addEventListener('DOMContentLoaded', faqMain)
