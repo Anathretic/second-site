@@ -14,10 +14,10 @@ html {
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 1.6rem;
 	background-color: colors.$white-color;
 	color: colors.$black-color;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
 }
 
 .scroll-block {
@@ -38,10 +38,10 @@ body {
 
 	&::before {
 		content: '';
-		display: block;
 		position: absolute;
 		top: 0;
 		left: 0;
+		display: block;
 		width: 100%;
 		height: 100%;
 		transform: scaleX(0);
@@ -58,8 +58,8 @@ body {
 
 .white-block {
 	position: absolute;
-	height: 40px;
 	width: 60%;
+	height: 40px;
 	background-color: colors.$white-color;
 
 	&-left {
@@ -82,11 +82,11 @@ body {
 .section-heading {
 	position: relative;
 	margin-bottom: 2em;
+	color: colors.$main-color;
 	font-size: 3rem;
 	font-weight: 300;
 	text-transform: uppercase;
 	text-align: center;
-	color: colors.$main-color;
 	letter-spacing: 2px;
 }
 
@@ -98,9 +98,9 @@ body {
 	position: fixed;
 	width: 100%;
 	height: 80px;
-	z-index: 990;
 	background-color: colors.$nav;
 	border-bottom: 1px solid rgb(126, 126, 126);
+	z-index: 990;
 
 	&__wrapper {
 		position: relative;
@@ -121,9 +121,9 @@ body {
 		z-index: 1000;
 
 		&-text {
+			color: colors.$special-color;
 			font-family: 'Dancing Script', cursive;
 			font-size: 3.2rem;
-			color: colors.$special-color;
 			text-transform: uppercase;
 			text-decoration: none;
 		}
@@ -192,9 +192,9 @@ body {
 			justify-content: center;
 			height: 100vh;
 			width: 100%;
+			background-color: colors.$nav;
 			transform: translateX(100%);
 			transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
-			background-color: colors.$nav;
 			z-index: 100;
 
 			&--active {
@@ -206,8 +206,8 @@ body {
 				display: block;
 				margin: 0.5em 0;
 				padding: 0.5em 2em;
-				font-size: 2.8rem;
 				color: colors.$special-color;
+				font-size: 2.8rem;
 				text-decoration: none;
 				transition: color 0.2s;
 			}
@@ -281,10 +281,10 @@ body {
 	flex-direction: column;
 	padding: 2em;
 	height: 100vh;
-	text-align: center;
 	background-size: cover;
 	background-position: center;
 	background-attachment: scroll;
+	text-align: center;
 
 	&__heading,
 	&__text,
@@ -306,10 +306,10 @@ body {
 	&__btn {
 		margin-top: 2em;
 		padding: 0.8em 1.6em;
-		font-size: 1.6rem;
+		background-color: colors.$special-color;
 		border: none;
 		border-radius: 1rem;
-		background-color: colors.$special-color;
+		font-size: 1.6rem;
 		text-decoration: none;
 		text-transform: uppercase;
 
@@ -334,14 +334,14 @@ body {
 
 			&-input,
 			&-select {
-				font-family: 'Montserrat', sans-serif;
 				margin-top: 0.5em;
 				margin-bottom: 2em;
 				padding: 0.6em 1.2em;
+				width: 100%;
 				border: none;
 				border-radius: 8px;
+				font-family: 'Montserrat', sans-serif;
 				font-size: 1.6rem;
-				width: 100%;
 			}
 
 			&-btn {
@@ -372,9 +372,9 @@ body {
 	}
 
 	&__img {
-		width: 100%;
 		margin-top: 0.25em;
 		margin-bottom: 1em;
+		width: 100%;
 		border-radius: 8px;
 		box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
 	}
@@ -390,8 +390,8 @@ body {
 	}
 
 	&__text {
-		font-size: 1.4rem;
 		margin-left: 0.15em;
+		font-size: 1.4rem;
 	}
 
 	&__special {
@@ -402,18 +402,18 @@ body {
 		padding: 3em 0em;
 
 		&-text {
-			text-align: center;
 			font-size: 1.4rem;
+			text-align: center;
 		}
 
 		&-btn {
 			margin: 2em 0;
 			padding: 0.8em 1.6em;
-			font-size: 1.6rem;
-			border: none;
-			border-radius: 1rem;
-			background-color: colors.$special-color;
 			color: colors.$white-color;
+			border: none;
+			background-color: colors.$special-color;
+			border-radius: 1rem;
+			font-size: 1.6rem;
 			text-decoration: none;
 			text-transform: uppercase;
 
@@ -433,8 +433,8 @@ body {
 
 		&-input {
 			margin-bottom: 0.5em;
-			width: 100%;
 			padding: 0.6em 1.2em;
+			width: 100%;
 			border: none;
 			border-radius: 8px;
 			font-size: 1.6rem;
@@ -446,14 +446,14 @@ body {
 
 			&-menu {
 				display: none;
+				max-height: 6em;
 				background-color: #fff;
 				border-radius: 8px;
-				max-height: 6em;
 				overflow-y: auto;
 
 				li {
-					padding: 0.5em;
 					margin-bottom: 8px;
+					padding: 0.5em;
 					list-style: none;
 
 					a {
@@ -469,14 +469,14 @@ body {
 		margin-top: 1em;
 
 		&-box {
-			text-align: center;
 			padding: 2em 0.5em;
+			text-align: center;
 		}
 
 		&-title {
 			margin-bottom: 2em;
-			font-weight: 300;
 			color: colors.$main-color;
+			font-weight: 300;
 		}
 
 		&-text {
@@ -497,17 +497,17 @@ body {
 .hero-img--second {
 	position: relative;
 	padding: 10em 2em;
+	color: colors.$white-color;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
 	text-align: center;
-	color: colors.$white-color;
 	overflow: hidden;
 
 	&__title {
+		margin-bottom: 0.5em;
 		font-family: 'Dancing Script', cursive;
 		font-size: 4.8rem;
-		margin-bottom: 0.5em;
 	}
 
 	&__text {
@@ -539,8 +539,8 @@ body {
 		&-img {
 			padding: 2em;
 			height: 100%;
-			border-radius: 8px;
 			background-size: cover;
+			border-radius: 8px;
 			transition: transform 1s, opacity 1s;
 
 			&--first {
@@ -631,8 +631,8 @@ body {
 
 				&-item {
 					padding: 1em;
-					font-size: 1.4rem;
 					border-bottom: 1px solid colors.$white-color;
+					font-size: 1.4rem;
 
 					&:last-child {
 						border-bottom: none;
@@ -643,11 +643,11 @@ body {
 			&-btn {
 				bottom: 2em;
 				padding: 1em;
-				border-radius: 8px;
 				width: 80%;
-				border: none;
-				background-color: colors.$special-color;
 				color: colors.$white-color;
+				background-color: colors.$special-color;
+				border-radius: 8px;
+				border: none;
 				text-decoration: none;
 				cursor: pointer;
 
@@ -685,15 +685,15 @@ body {
 			img {
 				width: 8rem;
 				height: 8rem;
-				object-fit: cover;
 				border-radius: 50%;
+				object-fit: cover;
 			}
 		}
 
 		&-quote {
 			margin: 1em;
-			font-size: 3rem;
 			color: colors.$main-color;
+			font-size: 3rem;
 		}
 
 		&-text {
@@ -726,11 +726,11 @@ body {
 
 		&-input,
 		&-textarea {
-			font-family: 'Montserrat', sans-serif;
 			margin-bottom: 2em;
 			padding: 0.6em 1.2em;
 			border: none;
 			border-radius: 8px;
+			font-family: 'Montserrat', sans-serif;
 			font-size: 1.6rem;
 		}
 
@@ -788,8 +788,8 @@ body {
 
 		&-link {
 			padding: 0 0.3em;
-			font-size: 3.6rem;
 			color: colors.$white-color;
+			font-size: 3.6rem;
 			text-decoration: none;
 			transition: color 0.3s;
 
