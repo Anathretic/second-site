@@ -12,10 +12,10 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.6rem;
   background-color: #EEEEEE;
   color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
 }
 
 .scroll-block {
@@ -36,10 +36,10 @@ body {
 }
 .btn-special-animation::before {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
   width: 100%;
   height: 100%;
   transform: scaleX(0);
@@ -54,8 +54,8 @@ body {
 
 .white-block {
   position: absolute;
-  height: 40px;
   width: 60%;
+  height: 40px;
   background-color: #EEEEEE;
 }
 .white-block-left {
@@ -76,11 +76,11 @@ body {
 .section-heading {
   position: relative;
   margin-bottom: 2em;
+  color: #87A2FB;
   font-size: 3rem;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  color: #87A2FB;
   letter-spacing: 2px;
 }
 
@@ -92,9 +92,10 @@ body {
   position: fixed;
   width: 100%;
   height: 80px;
-  z-index: 990;
   background-color: #EEEEEE;
   border-bottom: 1px solid rgb(126, 126, 126);
+  box-shadow: 0 0 10px #000000;
+  z-index: 990;
 }
 .nav__wrapper {
   position: relative;
@@ -107,21 +108,20 @@ body {
 }
 .nav__icon {
   position: absolute;
-  top: 0.5rem;
   left: 2rem;
   padding: 1em;
   z-index: 1000;
 }
 .nav__icon-text {
-  font-family: "Dancing Script", cursive;
-  font-size: 3.2rem;
   color: #6F38C5;
+  font-family: "Dancing Script", cursive;
+  font-size: 4rem;
   text-transform: uppercase;
   text-decoration: none;
 }
 .nav .burger-btn {
-  position: fixed;
-  top: 0.65rem;
+  position: absolute;
+  top: 1.1rem;
   right: 2rem;
   padding: 1em;
   background: none;
@@ -169,9 +169,9 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100%;
+  background-color: #EEEEEE;
   transform: translateX(100%);
   transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
-  background-color: #EEEEEE;
   z-index: 100;
 }
 .nav__mobile-box--active {
@@ -182,22 +182,13 @@ body {
   display: block;
   margin: 0.5em 0;
   padding: 0.5em 2em;
-  font-size: 2.8rem;
   color: #6F38C5;
+  font-size: 2.8rem;
   text-decoration: none;
   transition: color 0.2s;
 }
 .nav__mobile-box-item:hover {
   color: #3f0897;
-}
-
-@-webkit-keyframes navItemsAnimation {
-  from {
-    transform: translateX(200%);
-  }
-  to {
-    transform: translateX(0);
-  }
 }
 
 @keyframes navItemsAnimation {
@@ -209,8 +200,7 @@ body {
   }
 }
 .nav-items-animation {
-  -webkit-animation: navItemsAnimation 1s both;
-          animation: navItemsAnimation 1s both;
+  animation: navItemsAnimation 1s both;
 }
 
 .header-img {
@@ -233,10 +223,6 @@ body {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/book-it/book-it-hero-img_small.jpg");
 }
 
-.header-img-other {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands-hero_small.jpg");
-}
-
 .header-img-aboutus {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/about-us_small.jpg");
 }
@@ -249,10 +235,6 @@ body {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/work-with-us_small.jpg");
 }
 
-.header-img-faq {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/faq_small.jpg");
-}
-
 .header {
   position: relative;
   display: flex;
@@ -261,10 +243,10 @@ body {
   flex-direction: column;
   padding: 2em;
   height: 100vh;
-  text-align: center;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
+  text-align: center;
 }
 .header__heading, .header__text, .header__btn {
   color: #EEEEEE;
@@ -281,10 +263,10 @@ body {
 .header__btn {
   margin-top: 2em;
   padding: 0.8em 1.6em;
-  font-size: 1.6rem;
+  background-color: #6F38C5;
   border: none;
   border-radius: 1rem;
-  background-color: #6F38C5;
+  font-size: 1.6rem;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -304,14 +286,14 @@ body {
   text-transform: uppercase;
 }
 .book__box-form-input, .book__box-form-select {
-  font-family: "Montserrat", sans-serif;
   margin-top: 0.5em;
   margin-bottom: 2em;
   padding: 0.6em 1.2em;
+  width: 100%;
   border: none;
   border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-  width: 100%;
 }
 .book__box-form-btn {
   align-self: flex-end;
@@ -335,9 +317,9 @@ body {
   margin: 2em 0;
 }
 .content__img {
-  width: 100%;
   margin-top: 0.25em;
   margin-bottom: 1em;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
 }
@@ -350,8 +332,8 @@ body {
   color: #6F38C5;
 }
 .content__text {
-  font-size: 1.4rem;
   margin-left: 0.15em;
+  font-size: 1.4rem;
 }
 .content__special {
   display: flex;
@@ -361,71 +343,22 @@ body {
   padding: 3em 0em;
 }
 .content__special-text {
-  text-align: center;
   font-size: 1.4rem;
+  text-align: center;
 }
 .content__special-btn {
   margin: 2em 0;
   padding: 0.8em 1.6em;
-  font-size: 1.6rem;
-  border: none;
-  border-radius: 1rem;
-  background-color: #6F38C5;
   color: #EEEEEE;
+  border: none;
+  background-color: #6F38C5;
+  border-radius: 1rem;
+  font-size: 1.6rem;
   text-decoration: none;
   text-transform: uppercase;
 }
 .content__special-btn::before {
   background-color: #3f0897;
-}
-.content__faq {
-  position: relative;
-}
-.content__faq-input, .content__faq-list {
-  font-family: "Montserrat", sans-serif;
-}
-.content__faq-input {
-  margin-bottom: 0.5em;
-  width: 100%;
-  padding: 0.6em 1.2em;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.6rem;
-}
-.content__faq-list {
-  position: absolute;
-  width: 100%;
-}
-.content__faq-list-menu {
-  display: none;
-  background-color: #fff;
-  border-radius: 8px;
-  max-height: 6em;
-  overflow-y: auto;
-}
-.content__faq-list-menu li {
-  padding: 0.5em;
-  margin-bottom: 8px;
-  list-style: none;
-}
-.content__faq-list-menu li a {
-  text-decoration: none;
-  color: #6F38C5;
-}
-.content__solutions {
-  margin-top: 1em;
-}
-.content__solutions-box {
-  text-align: center;
-  padding: 2em 0.5em;
-}
-.content__solutions-title {
-  margin-bottom: 2em;
-  font-weight: 300;
-  color: #87A2FB;
-}
-.content__solutions-text {
-  font-size: 1.4rem;
 }
 
 .hero-img {
@@ -440,18 +373,18 @@ body {
 .hero-img--second {
   position: relative;
   padding: 10em 2em;
+  color: #EEEEEE;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   text-align: center;
-  color: #EEEEEE;
   overflow: hidden;
 }
 .hero-img__title,
 .hero-img--second__title {
+  margin-bottom: 0.5em;
   font-family: "Dancing Script", cursive;
   font-size: 4.8rem;
-  margin-bottom: 0.5em;
 }
 .hero-img__text,
 .hero-img--second__text {
@@ -477,8 +410,8 @@ body {
 .islands__card-img {
   padding: 2em;
   height: 100%;
-  border-radius: 8px;
   background-size: cover;
+  border-radius: 8px;
   transition: transform 1s, opacity 1s;
 }
 .islands__card-img--first {
@@ -489,24 +422,6 @@ body {
 }
 .islands__card-img--third {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/cards-third-img.jpg");
-}
-.islands__card-img--fourth {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/banana-island.jpg");
-}
-.islands__card-img--fifth {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/coco-island.jpg");
-}
-.islands__card-img--sixth {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/tiki-taka-island.jpg");
-}
-.islands__card-img--seventh {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/ivory-island.jpg");
-}
-.islands__card-img--eighth {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/togo-island.jpg");
-}
-.islands__card-img--nineth {
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands/pearl-island.jpg");
 }
 .islands__card-img-title {
   font-family: "Dancing Script", cursive;
@@ -553,8 +468,8 @@ body {
 }
 .islands__card-info-list-item {
   padding: 1em;
-  font-size: 1.4rem;
   border-bottom: 1px solid #EEEEEE;
+  font-size: 1.4rem;
 }
 .islands__card-info-list-item:last-child {
   border-bottom: none;
@@ -562,11 +477,11 @@ body {
 .islands__card-info-btn {
   bottom: 2em;
   padding: 1em;
-  border-radius: 8px;
   width: 80%;
-  border: none;
-  background-color: #6F38C5;
   color: #EEEEEE;
+  background-color: #6F38C5;
+  border-radius: 8px;
+  border: none;
   text-decoration: none;
   cursor: pointer;
 }
@@ -597,14 +512,14 @@ body {
 .reviews__box-img img {
   width: 8rem;
   height: 8rem;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 50%;
 }
 .reviews__box-quote {
   margin: 1em;
-  font-size: 3rem;
   color: #87A2FB;
+  font-size: 3rem;
 }
 .reviews__box-text {
   margin-bottom: 1em;
@@ -628,14 +543,15 @@ body {
   text-transform: uppercase;
 }
 .contact__form-input, .contact__form-textarea {
-  font-family: "Montserrat", sans-serif;
   margin-bottom: 2em;
   padding: 0.6em 1.2em;
   border: none;
   border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
 .contact__form-textarea {
+  min-height: 150px;
   min-width: 100%;
   resize: vertical;
 }
@@ -680,8 +596,8 @@ body {
 }
 .footer__box-link {
   padding: 0 0.3em;
-  font-size: 3.6rem;
   color: #EEEEEE;
+  font-size: 3.6rem;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -696,11 +612,6 @@ body {
   text-align: center;
 }
 
-@media (min-width: 500px) {
-  .content__faq-list-menu {
-    max-height: 5em;
-  }
-}
 @media (min-width: 576px) {
   .content__box {
     flex-direction: row;
@@ -736,8 +647,8 @@ body {
 }
 @media (min-width: 768px) {
   .white-block {
-    height: 50px;
     width: 45%;
+    height: 50px;
   }
   .section-heading {
     font-size: 3.6rem;
@@ -766,23 +677,17 @@ body {
   .content__special-btn {
     font-size: 1.8rem;
   }
-  .content__solutions-title {
-    font-size: 2.4rem;
-  }
-  .content__solutions-text {
-    font-size: 1.6rem;
-  }
   .hero-img,
-.hero-img--second {
+  .hero-img--second {
     padding: 30rem 2em;
   }
   .hero-img hr,
-.hero-img--second hr {
+  .hero-img--second hr {
     margin: 0 auto;
     width: 70%;
   }
   .hero-img__text,
-.hero-img--second__text {
+  .hero-img--second__text {
     font-size: 2.2rem;
   }
   .islands__cards {
@@ -850,23 +755,34 @@ body {
     position: relative;
     margin: 0 0.5em 1em 0.5em;
     padding: 0.5em 1em;
-    font-size: 2.6rem;
     color: #6F38C5;
+    font-size: 2.6rem;
     text-decoration: none;
   }
-  .nav__desktop-box-item::before {
+  .nav__desktop-box-item::after, .nav__desktop-box-item::before {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transform: scaleX(0);
-    background-color: #6F38C5;
-    transition: transform 0.3s;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: 0.3s;
   }
-  .nav__desktop-box-item:hover::before {
-    transform: scaleX(1);
+  .nav__desktop-box-item::after {
+    bottom: -2px;
+    right: -8px;
+    border-bottom: 2px solid #6F38C5;
+    border-right: 2px solid #6F38C5;
+  }
+  .nav__desktop-box-item::before {
+    top: -2px;
+    left: -8px;
+    border-top: 2px solid #6F38C5;
+    border-left: 2px solid #6F38C5;
+  }
+  .nav__desktop-box-item:hover::before, .nav__desktop-box-item:hover::after {
+    width: 50px;
+    height: 50%;
+    opacity: 1;
   }
   .section-heading {
     font-size: 4.2rem;
@@ -889,9 +805,6 @@ body {
   .header-img-book {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/book-it/book-it-hero-img_big.jpg");
   }
-  .header-img-other {
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/other-islands-hero_big.jpg");
-  }
   .header-img-aboutus {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/about-us_big.jpg");
   }
@@ -900,9 +813,6 @@ body {
   }
   .header-img-work {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/work-with-us_big.jpg");
-  }
-  .header-img-faq {
-    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/faq_big.jpg");
   }
   .header__heading {
     font-size: 10rem;
@@ -922,15 +832,6 @@ body {
   .content__text {
     font-size: 1.6rem;
   }
-  .content__faq-list-menu {
-    max-height: 8em;
-  }
-  .content__solutions-title {
-    font-size: 2.6rem;
-  }
-  .content__solutions-text {
-    font-size: 1.6rem;
-  }
   .hero-img {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img_big.jpg");
   }
@@ -938,15 +839,15 @@ body {
     background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../img/hero-img-2_big.jpg");
   }
   .hero-img,
-.hero-img--second {
+  .hero-img--second {
     padding: 40rem 2em;
   }
   .hero-img__title,
-.hero-img--second__title {
+  .hero-img--second__title {
     font-size: 7.2rem;
   }
   .hero-img hr,
-.hero-img--second hr {
+  .hero-img--second hr {
     width: 60%;
     max-width: 900px;
   }

@@ -39,20 +39,35 @@
 					font-size: 2.6rem;
 					text-decoration: none;
 
+					&::after,
 					&::before {
 						content: '';
 						position: absolute;
-						bottom: 0;
-						left: 0;
-						width: 100%;
-						height: 2px;
-						background-color: colors.$special-color;
-						transform: scaleX(0);
-						transition: transform 0.3s;
+						width: 0;
+						height: 0;
+						opacity: 0;
+						transition: 0.3s;
 					}
 
-					&:hover::before {
-						transform: scaleX(1);
+					&::after {
+						bottom: -2px;
+						right: -8px;
+						border-bottom: 2px solid colors.$special-color;
+						border-right: 2px solid colors.$special-color;
+					}
+
+					&::before {
+						top: -2px;
+						left: -8px;
+						border-top: 2px solid colors.$special-color;
+						border-left: 2px solid colors.$special-color;
+					}
+
+					&:hover::before,
+					&:hover::after {
+						width: 50px;
+						height: 50%;
+						opacity: 1;
 					}
 				}
 			}
@@ -87,10 +102,6 @@
 		background-image: colors.$shadow, url('../img/book-it/book-it-hero-img_big.jpg');
 	}
 
-	.header-img-other {
-		background-image: colors.$shadow, url('../img/other-islands-hero_big.jpg');
-	}
-
 	.header-img-aboutus {
 		background-image: colors.$shadow, url('../img/about-us_big.jpg');
 	}
@@ -101,10 +112,6 @@
 
 	.header-img-work {
 		background-image: colors.$shadow, url('../img/work-with-us_big.jpg');
-	}
-
-	.header-img-faq {
-		background-image: colors.$shadow, url('../img/faq_big.jpg');
 	}
 
 	.header {
@@ -131,24 +138,6 @@
 
 		&__text {
 			font-size: 1.6rem;
-		}
-
-		&__faq {
-			&-list {
-				&-menu {
-					max-height: 8em;
-				}
-			}
-		}
-
-		&__solutions {
-			&-title {
-				font-size: 2.6rem;
-			}
-	
-			&-text {
-				font-size: 1.6rem;
-			}
 		}
 	}
 

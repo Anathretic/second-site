@@ -100,6 +100,7 @@ body {
 	height: 80px;
 	background-color: colors.$nav;
 	border-bottom: 1px solid rgb(126, 126, 126);
+	box-shadow: 0 0 10px colors.$black-color;
 	z-index: 990;
 
 	&__wrapper {
@@ -115,7 +116,6 @@ body {
 
 	&__icon {
 		position: absolute;
-		top: 0.5rem;
 		left: 2rem;
 		padding: 1em;
 		z-index: 1000;
@@ -123,15 +123,15 @@ body {
 		&-text {
 			color: colors.$special-color;
 			font-family: 'Dancing Script', cursive;
-			font-size: 3.2rem;
+			font-size: 4rem;
 			text-transform: uppercase;
 			text-decoration: none;
 		}
 	}
 
 	.burger-btn {
-		position: fixed;
-		top: 0.65rem;
+		position: absolute;
+		top: 1.1rem;
 		right: 2rem;
 		padding: 1em;
 		background: none;
@@ -253,10 +253,6 @@ body {
 	background-image: colors.$shadow, url('../img/book-it/book-it-hero-img_small.jpg');
 }
 
-.header-img-other {
-	background-image: colors.$shadow, url('../img/other-islands-hero_small.jpg');
-}
-
 .header-img-aboutus {
 	background-image: colors.$shadow, url('../img/about-us_small.jpg');
 }
@@ -267,10 +263,6 @@ body {
 
 .header-img-work {
 	background-image: colors.$shadow, url('../img/work-with-us_small.jpg');
-}
-
-.header-img-faq {
-	background-image: colors.$shadow, url('../img/faq_small.jpg');
 }
 
 .header {
@@ -422,67 +414,6 @@ body {
 			}
 		}
 	}
-
-	&__faq {
-		position: relative;
-
-		&-input,
-		&-list {
-			font-family: 'Montserrat', sans-serif;
-		}
-
-		&-input {
-			margin-bottom: 0.5em;
-			padding: 0.6em 1.2em;
-			width: 100%;
-			border: none;
-			border-radius: 8px;
-			font-size: 1.6rem;
-		}
-
-		&-list {
-			position: absolute;
-			width: 100%;
-
-			&-menu {
-				display: none;
-				max-height: 6em;
-				background-color: #fff;
-				border-radius: 8px;
-				overflow-y: auto;
-
-				li {
-					margin-bottom: 8px;
-					padding: 0.5em;
-					list-style: none;
-
-					a {
-						text-decoration: none;
-						color: colors.$special-color;
-					}
-				}
-			}
-		}
-	}
-
-	&__solutions {
-		margin-top: 1em;
-
-		&-box {
-			padding: 2em 0.5em;
-			text-align: center;
-		}
-
-		&-title {
-			margin-bottom: 2em;
-			color: colors.$main-color;
-			font-weight: 300;
-		}
-
-		&-text {
-			font-size: 1.4rem;
-		}
-	}
 }
 
 .hero-img {
@@ -553,30 +484,6 @@ body {
 
 			&--third {
 				background-image: colors.$shadow, url('../img/cards-third-img.jpg');
-			}
-
-			&--fourth {
-				background-image: colors.$shadow, url('../img/other-islands/banana-island.jpg');
-			}
-
-			&--fifth {
-				background-image: colors.$shadow, url('../img/other-islands/coco-island.jpg');
-			}
-
-			&--sixth {
-				background-image: colors.$shadow, url('../img/other-islands/tiki-taka-island.jpg');
-			}
-
-			&--seventh {
-				background-image: colors.$shadow, url('../img/other-islands/ivory-island.jpg');
-			}
-
-			&--eighth {
-				background-image: colors.$shadow, url('../img/other-islands/togo-island.jpg');
-			}
-
-			&--nineth {
-				background-image: colors.$shadow, url('../img/other-islands/pearl-island.jpg');
 			}
 
 			&-title {
@@ -735,6 +642,7 @@ body {
 		}
 
 		&-textarea {
+			min-height: 150px;
 			min-width: 100%;
 			resize: vertical;
 		}

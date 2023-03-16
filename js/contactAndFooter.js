@@ -36,7 +36,7 @@ const msgBtnAction = () => {
 			el.value = ''
 		})
 	} else {
-		CONTACT_BTN.textContent = 'Check the form..'
+		CONTACT_BTN.textContent = 'Something is wrong.. Check the form!'
 	}
 
 	setTimeout(() => {
