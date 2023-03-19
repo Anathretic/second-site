@@ -30,35 +30,49 @@
         <section id="booking-form" class="book section-padding">
             <div class="wrapper">
                 <h2 class="section-heading">booking form</h2>
-                <div class="book__box">
-                    <form class="book__box-form">
-                        <label for="book-name" class="book__box-form-label">Name:</label>
-                        <input type="text" class="book__box-form-input" id="book-name" placeholder="Enter your name..">
-                        <label for="book-last-name" class="book__box-form-label">Last name:</label>
-                        <input type="text" class="book__box-form-input" id="book-last-name"
-                            placeholder="Enter your last name..">
-                        <label for="book-phone-number" class="book__box-form-label">Phone number:</label>
-                        <input type="text" class="book__box-form-input" id="book-phone-number"
-                            placeholder="Enter your phone number..">
-                        <label for="book-email" class="book__box-form-label">E-mail:</label>
-                        <input type="text" class="book__box-form-input" id="book-email"
-                            placeholder="Enter your e-mail..">
-                        <label for="book-island" class="book__box-form-label">Select island:</label>
-                        <select id="book-island" class="book__box-form-select">
-                            <option value="0" disabled selected>- select island -</option>
-                            <option value="1">Toca Toca</option>
-                            <option value="1">Bora</option>
-                            <option value="1">Tunga</option>
-                        </select>
-                        <label for="book-company" class="book__box-form-label">Choose company:</label>
-                        <select id="book-company" class="book__box-form-select">
-                            <option value="0" disabled selected>- select company -</option>
-                            <option value="1">Alone!</option>
-                            <option value="1">Couple!</option>
-                            <option value="1">Group of friends!</option>
-                        </select>
+                <div class="book__form">
+                    <form>
+                        <div class="book__form-box">
+                            <label for="book-name" class="book__form-box-label">Name:</label>
+                            <input type="text" class="book__form-box-input" id="book-name"
+                                placeholder="Enter your name..">
+                            <p class="book__form-box-error"></p>
+                        </div>
+                        <div class="book__form-box">
+                            <label for="book-last-name" class="book__form-box-label">Last name:</label>
+                            <input type="text" class="book__form-box-input" id="book-last-name"
+                                placeholder="Enter your last name..">
+                            <p class="book__form-box-error"></p>
+                        </div>
+                        <div class="book__form-box">
+                            <label for="book-phone-number" class="book__form-box-label">Phone number:</label>
+                            <input type="text" class="book__form-box-input" id="book-phone-number"
+                                placeholder="Enter your phone number..">
+                            <p class="book__form-box-error"></p>
+                        </div>
+                        <div class="book__form-box">
+                            <label for="book-email" class="book__form-box-label">E-mail:</label>
+                            <input type="text" class="book__form-box-input" id="book-email"
+                                placeholder="Enter your e-mail..">
+                            <p class="book__form-box-error"></p>
+                        </div>
+                        <div class="book__form-box">
+                            <label for="book-island" class="book__form-box-label">Select island:</label>
+                            <select id="book-island" class="book__form-box-select">
+                                <option value="0" disabled selected>- select island -</option>
+                                <option value="1">Toca Toca</option>
+                                <option value="1">Bora</option>
+                                <option value="1">Tunga</option>
+                            </select>
+                        </div>
+                        <div class="book__form-box">
+                            <label for="book-company" class="book__form-box-label">Amount of people:</label>
+                            <input type="number" class="book__form-box-input" id="book-amount"
+                                placeholder="Enter the numbers..">
+                            <p class="book__form-box-error"></p>
+                        </div>
                     </form>
-                    <button type="button" class="book__box-form-btn btn-special-animation">Book it!</button>
+                    <button type="button" class="book__form-box-btn btn-special-animation">Book now</button>
                 </div>
             </div>
         </section>
@@ -87,7 +101,8 @@
         <div class="wrapper">
             <div class="footer__boxes">
                 <div class="footer__box">
-                    <h3 class="footer__box-title"><a href="../index.html"><i class="fa-solid fa-hippo"></i></a> jp co.</h3>
+                    <h3 class="footer__box-title"><a href="../index.html"><i class="fa-solid fa-hippo"></i></a> jp co.
+                    </h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <div class="footer__box-social">
                         <a href="https://twitter.com/" target="_blank" class="footer__box-link"><i

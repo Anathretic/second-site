@@ -36,8 +36,8 @@
 	}
 
 	.book {
-		&__box {
-			&-form {
+		&__form {
+			&-box {
 				&-btn {
 					max-width: 300px;
 				}

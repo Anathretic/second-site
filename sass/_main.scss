@@ -315,11 +315,11 @@ body {
 	position: relative;
 	overflow: hidden;
 
-	&__box {
+	&__form {
 		display: flex;
 		flex-direction: column;
 
-		&-form {
+		&-box {
 			&-label {
 				text-transform: uppercase;
 			}
@@ -327,13 +327,27 @@ body {
 			&-input,
 			&-select {
 				margin-top: 0.5em;
-				margin-bottom: 2em;
 				padding: 0.6em 1.2em;
 				width: 100%;
 				border: none;
 				border-radius: 8px;
 				font-family: 'Montserrat', sans-serif;
 				font-size: 1.6rem;
+			}
+
+			&-input {
+				margin-bottom: 0.5em;
+			}
+
+			&-select {
+				margin-bottom: 2em;
+			}
+
+			&-error {
+				margin-bottom: 2em;
+				color: colors.$error-color;
+				font-size: 0.8em;
+				visibility: hidden;
 			}
 
 			&-btn {
@@ -353,6 +367,16 @@ body {
 				}
 			}
 		}
+	}
+}
+
+.warning {
+	.book__form-box-error {
+		visibility: visible;
+	}
+	
+	.book__form-box-input {
+		border: 1px solid colors.$error-color;
 	}
 }
 
