@@ -99,7 +99,7 @@ body {
 	position: fixed;
 	width: 100%;
 	height: 80px;
-	background-color: colors.$nav;
+	background-color: colors.$white-color;
 	border-bottom: 1px solid rgb(126, 126, 126);
 	box-shadow: 0 0 10px colors.$black-color;
 	z-index: 990;
@@ -187,7 +187,7 @@ body {
 			justify-content: center;
 			height: 100vh;
 			width: 100%;
-			background-color: colors.$nav;
+			background-color: colors.$white-color;
 			transform: translateX(100%);
 			transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 			z-index: 100;
