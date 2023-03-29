@@ -165,11 +165,15 @@ body {
 
 	&__icon {
 		position: absolute;
-		top: 6px;
+		top: 8px;
 		left: 2rem;
 		padding: 1em;
-		animation: rotate-right 55s infinite linear;
 		z-index: 1000;
+
+		img {
+			display: block;
+			animation: rotate-right 55s infinite linear;
+		}
 	}
 
 	.burger-btn {
