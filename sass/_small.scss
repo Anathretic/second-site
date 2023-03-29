@@ -1,4 +1,19 @@
 @media (min-width: 576px) {
+	.popup {
+		&__box {
+			width: 450px;
+			height: 200px;
+
+			&-text {
+				font-size: 2rem;
+			}
+	
+			&-btn {
+				font-size: 1.6rem;
+			}
+		}
+	}
+	
 	.content {
 		&__box {
 			flex-direction: row;

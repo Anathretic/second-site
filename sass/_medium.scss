@@ -12,6 +12,13 @@
 		height: 50px;
 	}
 
+	.popup {
+		&__box {
+			width: 500px;
+			height: 200px;
+		}
+	}
+
 	.section-heading {
 		font-size: 3.6rem;
 	}

@@ -1,6 +1,13 @@
 @use 'colors';
 
 @media (min-width: 992px) {
+	.popup {
+		&__box {
+			width: 600px;
+			height: 200px;
+		}
+	}
+
 	.nav {
 		.burger-btn,
 		&__mobile {

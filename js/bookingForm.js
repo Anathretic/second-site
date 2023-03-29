@@ -5,6 +5,8 @@ let INPUT_EMAIL
 let SELECT_ISLAND
 let INPUT_AMOUNT
 let BOOK_FORM_BTN
+let POPUP
+let POPUP_BTN
 let INPUTS_ARRAY
 
 const bookMain = () => {
@@ -20,6 +22,8 @@ const bookPrepareDOMElements = () => {
 	SELECT_ISLAND = document.querySelector('#book-island')
 	INPUT_AMOUNT = document.querySelector('#book-amount')
 	BOOK_FORM_BTN = document.querySelector('.book__form-box-btn')
+	POPUP = document.querySelector('.popup')
+	POPUP_BTN = document.querySelector('.popup__box-btn')
 	INPUTS_ARRAY = [INPUT_NAME, INPUT_LAST_NAME, INPUT_PHONE_NUMBER, INPUT_EMAIL, INPUT_AMOUNT]
 }
 
@@ -56,7 +60,6 @@ const clearAll = () => {
 	})
 	SELECT_ISLAND.value = '0'
 	SELECT_ISLAND.style.border = 'none'
-	
 }
 
 const checkForm = input => {
@@ -105,7 +108,7 @@ const checkAmount = input => {
 }
 
 const selectCheck = () => {
-	if(SELECT_ISLAND.value !== '0') {
+	if (SELECT_ISLAND.value !== '0') {
 		SELECT_ISLAND.style.border = 'none'
 	} else {
 		SELECT_ISLAND.style.border = '1px solid #ff0000'
@@ -113,6 +116,7 @@ const selectCheck = () => {
 }
 
 const checkErrors = () => {
+	const body = document.querySelector('body')
 	const allInputs = document.querySelectorAll('.book__form-box')
 	let errorCount = 0
 
@@ -123,9 +127,9 @@ const checkErrors = () => {
 	})
 
 	if (errorCount === 0 && SELECT_ISLAND.value !== '0') {
-		alert(`Sent! You will be redirected! Check your e-mail!`)
 		clearAll()
-		setTimeout(goHome, 300)
+		POPUP.style.display = 'block'
+		body.classList.add('scroll-block')
 	} else {
 		selectCheck()
 	}
