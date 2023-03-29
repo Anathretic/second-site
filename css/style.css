@@ -116,7 +116,7 @@ body {
 }
 .nav__icon {
   position: absolute;
-  top: 8px;
+  top: 6px;
   left: 2rem;
   padding: 1em;
   animation: rotate-right 55s infinite linear;
