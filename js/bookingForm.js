@@ -43,14 +43,15 @@ const bookPrepareDOMEvents = () => {
 const showError = (input, msg) => {
 	const formBox = input.parentElement
 	const errorMsg = formBox.querySelector('.book__form-box-error')
-
 	formBox.classList.add('warning')
 	errorMsg.textContent = msg
 }
 
 const clearError = input => {
 	const formBox = input.parentElement
+	const errorMsg = formBox.querySelector('.book__form-box-error')
 	formBox.classList.remove('warning')
+	errorMsg.textContent = ''
 }
 
 const clearAll = () => {
