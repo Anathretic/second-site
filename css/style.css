@@ -336,7 +336,7 @@ body {
   text-transform: uppercase;
 }
 .book__form-box-input, .book__form-box-select {
-  margin-top: 0.5em;
+  margin: 0.5em 0;
   padding: 0.6em 1.2em;
   width: 100%;
   background-color: #fff;
@@ -344,12 +344,6 @@ body {
   border-radius: 8px;
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
-}
-.book__form-box-input {
-  margin-bottom: 0.5em;
-}
-.book__form-box-select {
-  margin-bottom: 2em;
 }
 .book__form-box-error {
   margin-bottom: 2em;
@@ -376,7 +370,8 @@ body {
 .warning .book__form-box-error {
   visibility: visible;
 }
-.warning .book__form-box-input {
+.warning .book__form-box-input,
+.warning .book__form-box-select {
   border: 1px solid #ff0000;
 }
 

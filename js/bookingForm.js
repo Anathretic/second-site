@@ -35,6 +35,7 @@ const bookPrepareDOMEvents = () => {
 		checkCharacters(INPUT_PHONE_NUMBER)
 		checkNumber(INPUT_PHONE_NUMBER, 9)
 		checkMail(INPUT_EMAIL)
+		checkSelect(SELECT_ISLAND)
 		checkAmount(INPUT_AMOUNT)
 		checkErrors()
 	})
@@ -108,11 +109,11 @@ const checkAmount = input => {
 	}
 }
 
-const selectCheck = () => {
-	if (SELECT_ISLAND.value !== '0') {
-		SELECT_ISLAND.style.border = 'none'
+const checkSelect = select => {
+	if (select.value !== '0') {
+		clearError(select)
 	} else {
-		SELECT_ISLAND.style.border = '1px solid #ff0000'
+		showError(select, 'Choose the island..')
 	}
 }
 
@@ -127,12 +128,10 @@ const checkErrors = () => {
 		}
 	})
 
-	if (errorCount === 0 && SELECT_ISLAND.value !== '0') {
+	if (errorCount === 0) {
 		clearAll()
 		POPUP.style.display = 'block'
 		body.classList.add('scroll-block')
-	} else {
-		selectCheck()
 	}
 }
 

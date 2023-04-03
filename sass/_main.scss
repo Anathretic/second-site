@@ -373,7 +373,7 @@ body {
 
 			&-input,
 			&-select {
-				margin-top: 0.5em;
+				margin: 0.5em 0;
 				padding: 0.6em 1.2em;
 				width: 100%;
 				background-color: #fff;
@@ -381,14 +381,6 @@ body {
 				border-radius: 8px;
 				font-family: 'Montserrat', sans-serif;
 				font-size: 1.6rem;
-			}
-
-			&-input {
-				margin-bottom: 0.5em;
-			}
-
-			&-select {
-				margin-bottom: 2em;
 			}
 
 			&-error {
@@ -423,7 +415,8 @@ body {
 		visibility: visible;
 	}
 
-	.book__form-box-input {
+	.book__form-box-input,
+	.book__form-box-select {
 		border: 1px solid colors.$error-color;
 	}
 }
