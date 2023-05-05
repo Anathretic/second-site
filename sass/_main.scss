@@ -159,7 +159,7 @@ body {
 		max-width: 1600px;
 	}
 
-	&__desktop {
+	.nav-desktop {
 		display: none;
 	}
 
@@ -230,8 +230,8 @@ body {
 		}
 	}
 
-	&__mobile {
-		&-box {
+	.nav-mobile {
+		&__box {
 			position: fixed;
 			top: 0;
 			display: flex;
@@ -247,21 +247,21 @@ body {
 			&--active {
 				transform: translateX(0);
 			}
+		}
 
-			&-item {
-				position: relative;
-				display: block;
-				margin: 0.5em 0;
-				padding: 0.5em 2em;
-				color: colors.$special-color;
-				font-size: 2.8rem;
-				text-decoration: none;
-				transition: color 0.2s;
-			}
+		&__item {
+			position: relative;
+			display: block;
+			margin: 0.5em 0;
+			padding: 0.5em 2em;
+			color: colors.$special-color;
+			font-size: 2.8rem;
+			text-decoration: none;
+			transition: color 0.2s;
+		}
 
-			&-item:hover {
-				color: colors.$special-btn-color;
-			}
+		&__item:hover {
+			color: colors.$special-btn-color;
 		}
 	}
 }

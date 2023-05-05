@@ -155,7 +155,7 @@ body {
   width: 100%;
   max-width: 1600px;
 }
-.nav__desktop {
+.nav .nav-desktop {
   display: none;
 }
 .nav__icon {
@@ -211,7 +211,7 @@ body {
   width: 40%;
   transition-delay: 0.1s;
 }
-.nav__mobile-box {
+.nav .nav-mobile__box {
   position: fixed;
   top: 0;
   display: flex;
@@ -224,10 +224,10 @@ body {
   transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
   z-index: 100;
 }
-.nav__mobile-box--active {
+.nav .nav-mobile__box--active {
   transform: translateX(0);
 }
-.nav__mobile-box-item {
+.nav .nav-mobile__item {
   position: relative;
   display: block;
   margin: 0.5em 0;
@@ -237,7 +237,7 @@ body {
   text-decoration: none;
   transition: color 0.2s;
 }
-.nav__mobile-box-item:hover {
+.nav .nav-mobile__item:hover {
   color: #3f0897;
 }
 
@@ -810,13 +810,14 @@ body {
     width: 600px;
     height: 200px;
   }
-  .nav .burger-btn, .nav__mobile {
+  .nav .burger-btn,
+  .nav .nav-mobile {
     display: none;
   }
-  .nav__desktop {
+  .nav .nav-desktop {
     display: flex;
   }
-  .nav__desktop-box {
+  .nav .nav-desktop__box {
     top: 0;
     display: flex;
     align-items: center;
@@ -827,10 +828,10 @@ body {
     transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
     background: none;
   }
-  .nav__desktop-box--active {
+  .nav .nav-desktop__box--active {
     transform: translateX(0);
   }
-  .nav__desktop-box-item {
+  .nav .nav-desktop__item {
     position: relative;
     margin: 0 0.5em 1em 0.5em;
     padding: 0.5em 1em;
@@ -838,7 +839,7 @@ body {
     font-size: 2.6rem;
     text-decoration: none;
   }
-  .nav__desktop-box-item::after, .nav__desktop-box-item::before {
+  .nav .nav-desktop__item::after, .nav .nav-desktop__item::before {
     content: "";
     position: absolute;
     width: 0;
@@ -846,19 +847,19 @@ body {
     opacity: 0;
     transition: 0.3s;
   }
-  .nav__desktop-box-item::after {
+  .nav .nav-desktop__item::after {
     bottom: -2px;
     right: -8px;
     border-bottom: 2px solid #6f38c5;
     border-right: 2px solid #6f38c5;
   }
-  .nav__desktop-box-item::before {
+  .nav .nav-desktop__item::before {
     top: -2px;
     left: -8px;
     border-top: 2px solid #6f38c5;
     border-left: 2px solid #6f38c5;
   }
-  .nav__desktop-box-item:hover::before, .nav__desktop-box-item:hover::after {
+  .nav .nav-desktop__item:hover::before, .nav .nav-desktop__item:hover::after {
     width: 50px;
     height: 50%;
     opacity: 1;
