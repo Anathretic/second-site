@@ -155,9 +155,6 @@ body {
   width: 100%;
   max-width: 1600px;
 }
-.nav .nav-desktop {
-  display: none;
-}
 .nav__icon {
   position: absolute;
   top: 8px;
@@ -197,6 +194,7 @@ body {
   right: 0;
   height: 4px;
   background-color: #6f38c5;
+  border-radius: 8px;
   transition: width 0.3s;
 }
 .nav .burger-btn__bars {
@@ -210,6 +208,9 @@ body {
   top: 26px;
   width: 40%;
   transition-delay: 0.1s;
+}
+.nav .nav-desktop {
+  display: none;
 }
 .nav .nav-mobile__box {
   position: fixed;

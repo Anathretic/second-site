@@ -159,10 +159,6 @@ body {
 		max-width: 1600px;
 	}
 
-	.nav-desktop {
-		display: none;
-	}
-
 	&__icon {
 		position: absolute;
 		top: 8px;
@@ -211,6 +207,7 @@ body {
 			right: 0;
 			height: 4px;
 			background-color: colors.$special-color;
+			border-radius: 8px;
 			transition: width 0.3s;
 		}
 
@@ -228,6 +225,10 @@ body {
 				transition-delay: 0.1s;
 			}
 		}
+	}
+
+	.nav-desktop {
+		display: none;
 	}
 
 	.nav-mobile {
