@@ -10,11 +10,11 @@
 
 	.nav {
 		.burger-btn,
-		.nav-mobile {
+		&-mobile {
 			display: none;
 		}
 
-		.nav-desktop {
+		&-desktop {
 			display: flex;
 
 			&__box {
@@ -84,35 +84,35 @@
 	}
 
 	.header-img {
-		background-image: colors.$shadow, url('../img/header_big.jpg');
+		background-image: colors.$shadow, url('../img/header-images/homepage_big.jpg');
 	}
 
 	.header-img-first {
-		background-image: colors.$shadow, url('../img/cards-first-img_big.jpg');
+		background-image: colors.$shadow, url('../img/header-images/toca-toca_big.jpg');
 	}
 
 	.header-img-second {
-		background-image: colors.$shadow, url('../img/cards-second-img_big.jpg');
+		background-image: colors.$shadow, url('../img/header-images/bora_big.jpg');
 	}
 
 	.header-img-third {
-		background-image: colors.$shadow, url('../img/cards-third-img_big.jpg');
+		background-image: colors.$shadow, url('../img/header-images/tunga_big.jpg');
 	}
 
 	.header-img-book {
-		background-image: colors.$shadow, url('../img/book-it/book-it-hero-img_big.jpg');
+		background-image: colors.$shadow, url('../img/header-images/book-it_big.jpg');
 	}
 
 	.header-img-aboutus {
-		background-image: colors.$shadow, url('../img/about-us_big.jpg');
+		background-image: colors.$shadow, url('../img/header-images/about-us_big.jpg');
 	}
 
 	.header-img-team {
-		background-image: colors.$shadow, url('../img/team_big.jpg');
+		background-image: colors.$shadow, url('../img/header-images/team_big.jpg');
 	}
 
 	.header-img-work {
-		background-image: colors.$shadow, url('../img/work-with-us_big.jpg');
+		background-image: colors.$shadow, url('../img/header-images/work-with-us_big.jpg');
 	}
 
 	.header {
@@ -143,11 +143,11 @@
 	}
 
 	.hero-img {
-		background-image: colors.$shadow, url('../img/hero-img_big.jpg');
+		background-image: colors.$shadow, url('../img/hero-images/hero-img_big.jpg');
 	}
 
 	.hero-img--second {
-		background-image: colors.$shadow, url('../img/hero-img-2_big.jpg');
+		background-image: colors.$shadow, url('../img/hero-images/hero-img-2_big.jpg');
 	}
 
 	.hero-img,

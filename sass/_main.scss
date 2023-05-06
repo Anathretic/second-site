@@ -227,11 +227,11 @@ body {
 		}
 	}
 
-	.nav-desktop {
+	&-desktop {
 		display: none;
 	}
 
-	.nav-mobile {
+	&-mobile {
 		&__box {
 			position: fixed;
 			top: 0;
@@ -282,35 +282,35 @@ body {
 }
 
 .header-img {
-	background-image: colors.$shadow, url('../img/header_small.jpg');
+	background-image: colors.$shadow, url('../img/header-images/homepage_small.jpg');
 }
 
 .header-img-first {
-	background-image: colors.$shadow, url('../img/cards-first-img.jpg');
+	background-image: colors.$shadow, url('../img/header-images/toca-toca_small.jpg');
 }
 
 .header-img-second {
-	background-image: colors.$shadow, url('../img/cards-second-img.jpg');
+	background-image: colors.$shadow, url('../img/header-images/bora_small.jpg');
 }
 
 .header-img-third {
-	background-image: colors.$shadow, url('../img/cards-third-img.jpg');
+	background-image: colors.$shadow, url('../img/header-images/tunga_small.jpg');
 }
 
 .header-img-book {
-	background-image: colors.$shadow, url('../img/book-it/book-it-hero-img_small.jpg');
+	background-image: colors.$shadow, url('../img/header-images/book-it_small.jpg');
 }
 
 .header-img-aboutus {
-	background-image: colors.$shadow, url('../img/about-us_small.jpg');
+	background-image: colors.$shadow, url('../img/header-images/about-us_small.jpg');
 }
 
 .header-img-team {
-	background-image: colors.$shadow, url('../img/team_small.jpg');
+	background-image: colors.$shadow, url('../img/header-images/team_small.jpg');
 }
 
 .header-img-work {
-	background-image: colors.$shadow, url('../img/work-with-us_small.jpg');
+	background-image: colors.$shadow, url('../img/header-images/work-with-us_small.jpg');
 }
 
 .header {
@@ -483,11 +483,11 @@ body {
 }
 
 .hero-img {
-	background-image: colors.$shadow, url('../img/hero-img_small.jpg');
+	background-image: colors.$shadow, url('../img/hero-images/hero-img_small.jpg');
 }
 
 .hero-img--second {
-	background-image: colors.$shadow, url('../img/hero-img-2_small.jpg');
+	background-image: colors.$shadow, url('../img/hero-images/hero-img-2_small.jpg');
 }
 
 .hero-img,
@@ -541,15 +541,15 @@ body {
 			transition: transform 1s, opacity 1s;
 
 			&--first {
-				background-image: colors.$shadow, url('../img/cards-first-img.jpg');
+				background-image: colors.$shadow, url('../img/header-images/toca-toca_small.jpg');
 			}
 
 			&--second {
-				background-image: colors.$shadow, url('../img/cards-second-img.jpg');
+				background-image: colors.$shadow, url('../img/header-images/bora_small.jpg');
 			}
 
 			&--third {
-				background-image: colors.$shadow, url('../img/cards-third-img.jpg');
+				background-image: colors.$shadow, url('../img/header-images/tunga_small.jpg');
 			}
 
 			&-title {
