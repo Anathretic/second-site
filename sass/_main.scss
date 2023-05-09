@@ -373,58 +373,58 @@ body {
 	&__form {
 		display: flex;
 		flex-direction: column;
+	}
 
-		&-box {
-			&-label {
-				text-transform: uppercase;
-			}
+	&__box {
+		&-label {
+			text-transform: uppercase;
+		}
 
-			&-input,
-			&-select {
-				margin: 0.5em 0;
-				padding: 0.6em 1.2em;
-				width: 100%;
-				background-color: #fff;
-				border: none;
-				border-radius: 8px;
-				font-family: 'Montserrat', sans-serif;
-				font-size: 1.6rem;
-			}
+		&-input,
+		&-select {
+			margin: 0.5em 0;
+			padding: 0.6em 1.2em;
+			width: 100%;
+			background-color: #fff;
+			border: none;
+			border-radius: 8px;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.6rem;
+		}
 
-			&-error {
-				margin-bottom: 2em;
-				color: colors.$error-color;
-				font-size: 0.8em;
-				visibility: hidden;
-			}
+		&-error {
+			margin-bottom: 2em;
+			color: colors.$error-color;
+			font-size: 0.8em;
+			visibility: hidden;
+		}
 
-			&-btn {
-				align-self: flex-end;
-				margin-top: 3em;
-				padding: 1em;
-				width: 100%;
-				color: colors.$white-color;
-				background-color: colors.$special-color;
-				border: none;
-				border-radius: 8px;
-				font-size: 1.5rem;
-				cursor: pointer;
+		&-btn {
+			align-self: flex-end;
+			margin-top: 3em;
+			padding: 1em;
+			width: 100%;
+			color: colors.$white-color;
+			background-color: colors.$special-color;
+			border: none;
+			border-radius: 8px;
+			font-size: 1.5rem;
+			cursor: pointer;
 
-				&::before {
-					background-color: colors.$special-btn-color;
-				}
+			&::before {
+				background-color: colors.$special-btn-color;
 			}
 		}
 	}
 }
 
 .warning {
-	.book__form-box-error {
+	.book__box-error {
 		visibility: visible;
 	}
 
-	.book__form-box-input,
-	.book__form-box-select {
+	.book__box-input,
+	.book__box-select {
 		border: 1px solid colors.$error-color;
 	}
 }

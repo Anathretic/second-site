@@ -336,10 +336,10 @@ body {
   display: flex;
   flex-direction: column;
 }
-.book__form-box-label {
+.book__box-label {
   text-transform: uppercase;
 }
-.book__form-box-input, .book__form-box-select {
+.book__box-input, .book__box-select {
   margin: 0.5em 0;
   padding: 0.6em 1.2em;
   width: 100%;
@@ -349,13 +349,13 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
-.book__form-box-error {
+.book__box-error {
   margin-bottom: 2em;
   color: #ff0000;
   font-size: 0.8em;
   visibility: hidden;
 }
-.book__form-box-btn {
+.book__box-btn {
   align-self: flex-end;
   margin-top: 3em;
   padding: 1em;
@@ -367,15 +367,15 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.book__form-box-btn::before {
+.book__box-btn::before {
   background-color: #3f0897;
 }
 
-.warning .book__form-box-error {
+.warning .book__box-error {
   visibility: visible;
 }
-.warning .book__form-box-input,
-.warning .book__form-box-select {
+.warning .book__box-input,
+.warning .book__box-select {
   border: 1px solid #ff0000;
 }
 
@@ -714,7 +714,7 @@ body {
   .contact__form-btn {
     max-width: 300px;
   }
-  .book__form-box-btn {
+  .book__box-btn {
     max-width: 300px;
   }
 }

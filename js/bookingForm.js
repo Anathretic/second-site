@@ -21,7 +21,7 @@ const bookPrepareDOMElements = () => {
 	INPUT_EMAIL = document.querySelector('#book-email')
 	SELECT_ISLAND = document.querySelector('#book-island')
 	INPUT_AMOUNT = document.querySelector('#book-amount')
-	BOOK_FORM_BTN = document.querySelector('.book__form-box-btn')
+	BOOK_FORM_BTN = document.querySelector('.book__box-btn')
 	POPUP = document.querySelector('.popup')
 	POPUP_BTN = document.querySelector('.popup__box-btn')
 	INPUTS_ARRAY = [INPUT_NAME, INPUT_LAST_NAME, INPUT_PHONE_NUMBER, INPUT_EMAIL, INPUT_AMOUNT]
@@ -43,14 +43,14 @@ const bookPrepareDOMEvents = () => {
 
 const showError = (input, msg) => {
 	const formBox = input.parentElement
-	const errorMsg = formBox.querySelector('.book__form-box-error')
+	const errorMsg = formBox.querySelector('.book__box-error')
 	formBox.classList.add('warning')
 	errorMsg.textContent = msg
 }
 
 const clearError = input => {
 	const formBox = input.parentElement
-	const errorMsg = formBox.querySelector('.book__form-box-error')
+	const errorMsg = formBox.querySelector('.book__box-error')
 	formBox.classList.remove('warning')
 	errorMsg.textContent = ''
 }
@@ -119,7 +119,7 @@ const checkSelect = select => {
 
 const checkErrors = () => {
 	const body = document.querySelector('body')
-	const allInputs = document.querySelectorAll('.book__form-box')
+	const allInputs = document.querySelectorAll('.book__box')
 	let errorCount = 0
 
 	allInputs.forEach(el => {

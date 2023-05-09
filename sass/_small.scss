@@ -51,11 +51,9 @@
 	}
 
 	.book {
-		&__form {
-			&-box {
-				&-btn {
-					max-width: 300px;
-				}
+		&__box {
+			&-btn {
+				max-width: 300px;
 			}
 		}
 	}
