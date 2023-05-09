@@ -22,15 +22,44 @@
 
 <body>
 
+    <nav class="nav">
+        <div class="nav__wrapper">
+            <a class="nav__icon" href="#"><img src="../img/icons/sun_nav.svg" alt=""></a>
+            <button class="burger-btn">
+                <div class="burger-btn__box">
+                    <div class="burger-btn__bars"></div>
+                </div>
+            </button>
+            <div class="nav-mobile">
+                <div class="nav-mobile__box">
+                    <div class="nav-mobile__items">
+                        <a href="#sights" class="nav-mobile__item" onclick="deleteMobileAnimation()">Sights</a>
+                        <a href="#weather" class="nav-mobile__item" onclick="deleteMobileAnimation()">Weather</a>
+                        <a href="#contact" class="nav-mobile__item" onclick="deleteMobileAnimation()">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-desktop">
+                <div class="nav-desktop__box">
+                    <div class="nav-desktop__items">
+                        <a href="#sights" class="nav-desktop__item">Sights</a>
+                        <a href="#weather" class="nav-desktop__item">Weather</a>
+                        <a href="#contact" class="nav-desktop__item">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <header class="header header-img-second">
         <h1 class="header__heading">Bora Island</h1>
         <p class="header__text">Warm and cozy!</p>
-        <a href="#must-see" class="header__btn btn-special-animation">Check it!</a>
+        <a href="#sights" class="header__btn btn-special-animation">Check it!</a>
         <div class="white-block white-block-left"></div>
     </header>
 
     <main class="main">
-        <section id="must-see" class="content section-padding">
+        <section id="sights" class="content section-padding">
             <div class="wrapper">
                 <h2 class="section-heading">must see!</h2>
                 <div class="content__box">
@@ -72,7 +101,7 @@
             </div>
         </section>
 
-        <section class="hero-img section">
+        <section id="weather" class="hero-img section">
             <div class="white-block white-block-left"></div>
             <div class="white-block white-block-right"></div>
             <p class="hero-img__title">Actual weather</p>
@@ -118,7 +147,7 @@
             </div>
         </section>
 
-        <section class="contact section-padding" id="contact">
+        <section id="contact" class="contact section-padding">
             <div class="white-block white-block-left"></div>
             <div class="white-block white-block-right"></div>
             <h2 class="section-heading">Contact us!</h2>
@@ -176,6 +205,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="../js/navScript.js"></script>
     <script src="../js/weatherAppSecond.js"></script>
     <script src="../js/contactAndFooter.js"></script>
 </body>

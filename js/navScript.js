@@ -1,4 +1,5 @@
 let BODY
+let NAV
 let MOBILE_NAV
 let DESKTOP_NAV
 let MOBILE_NAV_BTN
@@ -14,6 +15,7 @@ const main = () => {
 
 const prepareDOMElements = () => {
 	BODY = document.querySelector('body')
+	NAV = document.querySelector('.nav')
 	MOBILE_NAV = document.querySelector('.nav-mobile__box')
 	DESKTOP_NAV = document.querySelector('.nav-desktop__box')
 	MOBILE_NAV_BTN = document.querySelector('.burger-btn')
@@ -24,6 +26,7 @@ const prepareDOMElements = () => {
 }
 
 const prepareDOMEvents = () => {
+	document.addEventListener('scroll', addBgToNav)
 	NAV_ICON.addEventListener('click', () => {
 		MOBILE_NAV.classList.remove('nav-mobile__box--active')
 	})
@@ -81,6 +84,14 @@ const deleteMobileAnimation = () => {
 	MOBILE_ALL_NAV_ITEMS.forEach(item => {
 		item.classList.remove('nav-items-animation')
 	})
+}
+
+const addBgToNav = () => {
+	if (window.scrollY > 50) {
+		NAV.classList.add('nav-bg')
+	} else {
+		NAV.classList.remove('nav-bg')
+	}
 }
 
 document.addEventListener('DOMContentLoaded', main)
