@@ -333,6 +333,13 @@ body {
 		z-index: 1;
 	}
 
+	&__heading,
+	&__text {
+		&--error {
+			color: colors.$black-color;
+		}
+	}
+
 	&__heading {
 		font-family: 'Dancing Script', cursive;
 		font-size: 4.8rem;

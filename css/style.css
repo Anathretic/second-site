@@ -303,6 +303,9 @@ body {
   color: #eeeeee;
   z-index: 1;
 }
+.header__heading--error, .header__text--error {
+  color: #000000;
+}
 .header__heading {
   font-family: "Dancing Script", cursive;
   font-size: 4.8rem;
