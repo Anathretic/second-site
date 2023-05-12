@@ -136,7 +136,7 @@ const checkErrors = () => {
 }
 
 const goHome = () => {
-	document.location.href = '/'
+	window.location.href = '/'
 }
 
 document.addEventListener('DOMContentLoaded', bookMain)
