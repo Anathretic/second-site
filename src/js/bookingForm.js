@@ -135,4 +135,8 @@ const checkErrors = () => {
 	}
 }
 
+const goHome = () => {
+	window.location.href = '../index.html'
+}
+
 document.addEventListener('DOMContentLoaded', bookMain)
