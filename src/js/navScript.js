@@ -29,6 +29,7 @@ const prepareDOMEvents = () => {
 	document.addEventListener('scroll', addBgToNav)
 	NAV_ICON.addEventListener('click', () => {
 		MOBILE_NAV.classList.remove('nav-mobile__box--active')
+		deleteMobileAnimation()
 	})
 	MOBILE_NAV_BTN.addEventListener('click', handleMobileNav)
 	handleDesktopNav()
