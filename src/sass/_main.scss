@@ -226,10 +226,6 @@ body {
 		}
 	}
 
-	&-desktop {
-		display: none;
-	}
-
 	&__list {
 		display: flex;
 		flex-direction: column;
@@ -283,10 +279,6 @@ body {
 	to {
 		transform: translateX(0);
 	}
-}
-
-.nav-items-animation {
-	animation: navItemsAnimation 1s both;
 }
 
 .nav-bg {
