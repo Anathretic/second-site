@@ -1,3 +1,11 @@
+@media (min-width: 400px) and (max-height: 300px) {
+    .nav {
+        &__item:first-of-type {
+            margin-top: 80px;
+        }
+    }
+}
+
 @media (min-width: 576px) {
 	.popup {
 		&__box {

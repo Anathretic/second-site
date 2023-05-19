@@ -9,68 +9,68 @@
 	}
 
 	.nav {
-		.burger-btn,
-		&-mobile {
+		.burger-btn {
 			display: none;
 		}
 
-		&-desktop {
-			display: flex;
+		&__list {
+			flex-direction: row;
+			justify-content: end;
+			position: absolute;
+			height: 80px;
+			padding: 0.5em;
+			background: none;
+			transform: translateX(0);
+			opacity: 1;
+			overflow: hidden;
+		}
 
-			&__box {
-				top: 0;
-				display: flex;
-				align-items: center;
-				justify-content: end;
-				width: 100%;
-				height: 80px;
-				transform: translateX(100%);
-				transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
-				background: none;
+		&__item {
+			margin-top: 0;
+			font-size: 2rem;
+		}
 
-				&--active {
-					transform: translateX(0);
-				}
+		&__item:first-of-type {
+			margin-top: 0;
+		}
+
+		&__link {
+			position: relative;
+			padding: 1em 1.2em;
+
+			&:hover {
+				color: colors.$main-color;
 			}
 
-			&__item {
-				position: relative;
-				margin: 0 0.5em 1em 0.5em;
-				padding: 0.5em 1em;
-				color: colors.$main-color;
-				font-size: 2.6rem;
-				text-decoration: none;
+			&::after,
+			&::before {
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				opacity: 0;
+				transition: 0.3s;
+			}
 
-				&::after,
-				&::before {
-					content: '';
-					position: absolute;
-					width: 0;
-					height: 0;
-					opacity: 0;
-					transition: 0.3s;
-				}
+			&::after {
+				bottom: 0;
+				right: 0;
+				border-bottom: 2px solid colors.$main-color;
+				border-right: 2px solid colors.$main-color;
+			}
 
-				&::after {
-					bottom: -2px;
-					right: -8px;
-					border-bottom: 2px solid colors.$main-color;
-					border-right: 2px solid colors.$main-color;
-				}
+			&::before {
+				top: 0;
+				left: 0;
+				border-top: 2px solid colors.$main-color;
+				border-left: 2px solid colors.$main-color;
+			}
 
-				&::before {
-					top: -2px;
-					left: -8px;
-					border-top: 2px solid colors.$main-color;
-					border-left: 2px solid colors.$main-color;
-				}
-
-				&:hover::before,
-				&:hover::after {
-					width: 50px;
-					height: 50%;
-					opacity: 1;
-				}
+			&:hover::before,
+			&:hover::after {
+				width: 50px;
+				height: 50%;
+				opacity: 1;
 			}
 		}
 	}
