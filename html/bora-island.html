@@ -16,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3d334fd4a.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="/dist/img/icons/sun_white.svg">
     <link rel="stylesheet" href="/dist/css/style.min.css">
 </head>
@@ -31,6 +32,7 @@
                 </div>
             </button>
             <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="/">home</a></li>
                 <li class="nav__item"><a class="nav__link" href="#sights">sights</a></li>
                 <li class="nav__item"><a class="nav__link" href="#weather">weather</a></li>
                 <li class="nav__item"><a class="nav__link" href="#contact">contact</a></li>
@@ -49,7 +51,7 @@
         <section id="sights" class="content section-padding">
             <div class="wrapper">
                 <h2 class="section-heading">must see!</h2>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="500">
                     <div class="content__box-img">
                         <img src="/dist/img/second-island/tropical forest.jpg" alt="Bora tropical forest"
                             class="content__img">
@@ -59,7 +61,7 @@
                         <p class="content__text">A visit to the forest can be a unique and unforgettable experience. While exploring the rich flora and fauna, from tall trees to colorful birds and elusive mammals. The sounds of the forest create an immersive environment that is both serene and exciting.</p>
                     </div>
                 </div>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
                         <img src="/dist/img/second-island/architecture.jpg" alt="Alley of the old town of Bora" class="content__img">
                     </div>
@@ -69,7 +71,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="700">
                     <div class="content__box-img">
                         <img src="/dist/img/second-island/beach.jpg" alt="Sunset at the beach"
                             class="content__img">
@@ -98,7 +100,7 @@
         <section class="content section-padding">
             <div class="wrapper">
                 <h2 class="section-heading">other events!</h2>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="500">
                     <div class="content__box-img">
                         <img src="/dist/img/second-island/offroad.jpg" alt="Off-road car" class="content__img">
                     </div>
@@ -107,7 +109,7 @@
                         <p class="content__text">Off-road racing can be an exciting adrenaline-filled experience. Wide open spaces and varied terrain, including dunes and rocky outcrops, provide drivers with a challenging and exciting route. The salty sea air and stunning ocean views create a picturesque backdrop for an exciting race.</p>
                     </div>
                 </div>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
                         <img src="/dist/img/second-island/diving.jpg" alt="Diving in the ocean" class="content__img">
                     </div>
@@ -119,7 +121,7 @@
                 </div>
                 <div class="content__special">
                     <a class="content__special-btn btn-special-animation" href="../html/book-it.html">Book it!</a>
-                    <p class="content__special-text">or <a href="/#islands">go back</a> and choose different island :)</p>
+                    <p class="content__special-text">or <a href="/">go back</a> and choose different island :)</p>
                 </div>
             </div>
         </section>
@@ -183,6 +185,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/dist/js/aos.min.js"></script>
     <script src="/dist/js/navScript.min.js"></script>
     <script src="/dist/js/weatherApp.min.js"></script>
     <script src="/dist/js/contactAndFooter.min.js"></script>

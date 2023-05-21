@@ -14,6 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:ital,wght@0,400;0,700;1,200&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3d334fd4a.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="dist/img/icons/sun_white.svg">
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
@@ -29,6 +30,7 @@
                 </div>
             </button>
             <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#dreams">why us?</a></li>
                 <li class="nav__item"><a class="nav__link" href="#islands">islands</a></li>
                 <li class="nav__item"><a class="nav__link" href="#reviews">reviews</a></li>
                 <li class="nav__item"><a class="nav__link" href="#contact">contact</a></li>
@@ -39,15 +41,15 @@
     <header class="header header-img">
         <h1 class="header__heading">Just Paradise</h1>
         <p class="header__text">Can we make you happy?</p>
-        <a href="#islands" class="header__btn btn-special-animation">yes!</a>
+        <a href="#islands" class="header__btn btn-special-animation">get start</a>
         <div class="white-block white-block-left"></div>
     </header>
 
     <main class="main">
-        <section class="content section-padding">
+        <section id="dreams" class="content section-padding">
             <div class="wrapper">
                 <h2 class="section-heading">Catch the dreams!</h2>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="500">
                     <div class="content__box-img">
                         <img src="dist/img/homepage/palm_small.jpg" alt="Palm trees on a tropical beach
                         "
@@ -58,7 +60,7 @@
                         <p class="content__text">The world is full of amazing sights that will take your breath away. Standing on top of a mountain or looking out at the vast ocean can give us a sense of perspective and remind us of the beauty and wonder of the world around us.</p>
                     </div>
                 </div>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
                         <img src="dist/img/homepage/houses_small.jpg" alt="Tropical houses by the sea"
                             class="content__img">
@@ -68,7 +70,7 @@
                         <p class="content__text">There is nothing better than a cozy atmosphere that makes us feel relaxed and satisfied. A cozy atmosphere can be found in many different places, from a rustic cabin in the woods to a quaint café in town. It's a feeling that encourages us to slow down and savor the moment, let go of worries and just be present in the moment.</p>
                     </div>
                 </div>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="700">
                     <div class="content__box-img">
                         <img src="dist/img/homepage/surf_small.jpg" alt="People who surf the wave"
                             class="content__img">
@@ -78,7 +80,7 @@
                         <p class="content__text">Beautiful memories are like treasures that we carry with us throughout our lives. They are moments of joy, love, and happiness that have touched our hearts and left an indelible mark on our souls.</p>
                     </div>
                 </div>
-                <div class="content__box">
+                <div class="content__box" data-aos="fade-up" data-aos-duration="800">
                     <div class="content__box-img content__box-img--right">
                         <img src="dist/img/homepage/couple_small.jpg" alt="Romantic kiss on the beach"
                             class="content__img">
@@ -104,7 +106,9 @@
             <div class="wrapper">
                 <h2 class="section-heading">Choose your island!</h2>
                 <div class="islands__cards">
-                    <div class="islands__card">
+                    <div class="islands__card" data-aos="flip-right"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1000">
                         <div class="islands__card-img islands__card-img--first">
                             <h3 class="islands__card-img-title">Toca Toca Island</h3>
                             <p class="islands__card-img-info"><i class="fa-solid fa-angles-right"></i></i>Check it!
@@ -123,7 +127,9 @@
                                 it!</a>
                         </div>
                     </div>
-                    <div class="islands__card">
+                    <div class="islands__card" data-aos="flip-right"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1100">
                         <div class="islands__card-img islands__card-img--second">
                             <h3 class="islands__card-img-title">Bora Island</h3>
                             <p class="islands__card-img-info"><i class="fa-solid fa-angles-right"></i>Check it!
@@ -143,7 +149,9 @@
                                 it!</a>
                         </div>
                     </div>
-                    <div class="islands__card">
+                    <div class="islands__card" data-aos="flip-right"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="1200">
                         <div class="islands__card-img islands__card-img--third">
                             <h3 class="islands__card-img-title">Tunga Island</h3>
                             <p class="islands__card-img-info"><i class="fa-solid fa-angles-right"></i>Check it!</p>
@@ -178,7 +186,7 @@
             <h2 class="section-heading">Your reviews!</h2>
             <div class="wrapper">
                 <div class="reviews__boxes">
-                    <div class="reviews__box">
+                    <div class="reviews__box" data-aos="fade-up" data-aos-duration="500">
                         <div class="reviews__box-img">
                             <img src="dist/img/homepage/woman1-reviews.jpg" alt="Anna Smith">
                         </div>
@@ -190,7 +198,7 @@
                             <p><strong>Anna Smith</strong></p>
                         </div>
                     </div>
-                    <div class="reviews__box">
+                    <div class="reviews__box" data-aos="fade-up" data-aos-duration="600">
                         <div class="reviews__box-img">
                             <img src="dist/img/homepage/man-reviews.jpg" alt="John Bread">
                         </div>
@@ -202,7 +210,7 @@
                             <p><strong>John Bread</strong></p>
                         </div>
                     </div>
-                    <div class="reviews__box">
+                    <div class="reviews__box" data-aos="fade-up" data-aos-duration="700">
                         <div class="reviews__box-img">
                             <img src="dist/img/homepage/woman2-reviews.jpg" alt="Whitney Williams">
                         </div>
@@ -275,6 +283,8 @@
         <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Just Paradise</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="dist/js/aos.min.js"></script>
     <script src="dist/js/navScript.min.js"></script>
     <script src="dist/js/contactAndFooter.min.js"></script>
 </body>
