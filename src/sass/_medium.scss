@@ -12,13 +12,6 @@
 		height: 50px;
 	}
 
-	.popup {
-		&__box {
-			width: 500px;
-			height: 200px;
-		}
-	}
-
 	.section-heading {
 		font-size: 3.6rem;
 	}
@@ -57,6 +50,22 @@
 	
 			&-btn {
 				font-size: 1.8rem;
+			}
+		}
+	}
+
+	.popup {
+		&__box {
+			&-icon {
+				right: 2rem;
+				padding: 1em;
+			}
+		}
+
+		&__message {
+			&-container {
+				width: 500px;
+				height: 200px;
 			}
 		}
 	}

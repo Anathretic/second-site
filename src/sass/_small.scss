@@ -1,35 +1,35 @@
-@media (min-width: 400px) and (max-height: 300px) {
-    .nav {
-        &__item:first-of-type {
-            margin-top: 40px;
-        }
-    }
-}
-
-@media (min-width: 400px) and (max-height: 370px) {
-    .nav {
-        &__item:first-of-type {
-            margin-top: 60px;
-        }
-    }
-}
-
-@media (min-width: 576px) {
+@media (max-width: 300px) {
 	.popup {
 		&__box {
-			width: 450px;
-			height: 200px;
+			margin: 1em;
+		}
 
-			&-text {
-				font-size: 2rem;
-			}
-	
-			&-btn {
-				font-size: 1.6rem;
+		&__message {
+			&-container {
+				width: 90%;
+				height: 200px;
 			}
 		}
 	}
-	
+}
+
+@media (min-width: 400px) and (max-height: 300px) {
+	.nav {
+		&__item:first-of-type {
+			margin-top: 40px;
+		}
+	}
+}
+
+@media (min-width: 400px) and (max-height: 370px) {
+	.nav {
+		&__item:first-of-type {
+			margin-top: 60px;
+		}
+	}
+}
+
+@media (min-width: 576px) {
 	.content {
 		&__box {
 			flex-direction: row;
@@ -58,16 +58,35 @@
 		}
 	}
 
-	.contact {
-		&__form {
+	.popup {
+		&__box {
 			&-btn {
-				max-width: 300px;
+				width: 300px;
+			}
+		}
+
+		&__message {
+			&-container {
+				width: 450px;
+				height: 200px;
+			}
+
+			&-text {
+				font-size: 2rem;
+			}
+
+			&-btn {
+				font-size: 1.6rem;
 			}
 		}
 	}
 
-	.book {
-		&__box {
+	.contact {
+		&__title {
+			padding: 1.5em;
+		}
+
+		&__form {
 			&-btn {
 				max-width: 300px;
 			}

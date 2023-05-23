@@ -1,34 +1,46 @@
+let BODY
+let NAV
+let CONTENT_BOOK_BTN
+let POPUP
+let POPUP_FORM
+let POPUP_MESSAGE
 let INPUT_NAME
 let INPUT_LAST_NAME
 let INPUT_PHONE_NUMBER
 let INPUT_EMAIL
 let SELECT_ISLAND
 let INPUT_AMOUNT
-let BOOK_FORM_BTN
-let POPUP
-let POPUP_BTN
+let POPUP_ICON
+let POPUP_FORM_BTN
 let INPUTS_ARRAY
 
-const bookMain = () => {
-	bookPrepareDOMElements()
-	bookPrepareDOMEvents()
+const popupMain = () => {
+	popupPrepareDOMElements()
+	popupPrepareDOMEvents()
 }
 
-const bookPrepareDOMElements = () => {
-	INPUT_NAME = document.querySelector('#book-name')
-	INPUT_LAST_NAME = document.querySelector('#book-last-name')
-	INPUT_PHONE_NUMBER = document.querySelector('#book-phone-number')
-	INPUT_EMAIL = document.querySelector('#book-email')
-	SELECT_ISLAND = document.querySelector('#book-island')
-	INPUT_AMOUNT = document.querySelector('#book-amount')
-	BOOK_FORM_BTN = document.querySelector('.book__box-btn')
+const popupPrepareDOMElements = () => {
+	BODY = document.querySelector('body')
+	NAV = document.querySelector('.nav')
+	CONTENT_BOOK_BTN = document.querySelector('.content__special-btn')
 	POPUP = document.querySelector('.popup')
-	POPUP_BTN = document.querySelector('.popup__box-btn')
+	POPUP_FORM = document.querySelector('.popup__form')
+	POPUP_MESSAGE = document.querySelector('.popup__message')
+	INPUT_NAME = document.querySelector('#popup-name')
+	INPUT_LAST_NAME = document.querySelector('#popup-last-name')
+	INPUT_PHONE_NUMBER = document.querySelector('#popup-phone-number')
+	INPUT_EMAIL = document.querySelector('#popup-email')
+	SELECT_ISLAND = document.querySelector('#popup-island')
+	INPUT_AMOUNT = document.querySelector('#popup-amount')
+	POPUP_ICON = document.querySelector('.popup__box-icon')
+	POPUP_FORM_BTN = document.querySelector('.popup__box-btn')
 	INPUTS_ARRAY = [INPUT_NAME, INPUT_LAST_NAME, INPUT_PHONE_NUMBER, INPUT_EMAIL, INPUT_AMOUNT]
 }
 
-const bookPrepareDOMEvents = () => {
-	BOOK_FORM_BTN.addEventListener('click', e => {
+const popupPrepareDOMEvents = () => {
+	CONTENT_BOOK_BTN.addEventListener('click', showPopup)
+	POPUP_ICON.addEventListener('click', closePopup)
+	POPUP_FORM_BTN.addEventListener('click', e => {
 		e.preventDefault()
 
 		checkForm(INPUTS_ARRAY)
@@ -39,18 +51,33 @@ const bookPrepareDOMEvents = () => {
 		checkAmount(INPUT_AMOUNT)
 		checkErrors()
 	})
+	selectHelper()
+}
+
+const showPopup = () => {
+	POPUP.classList.add('popup--active')
+	scrollBlock()
+}
+
+const closePopup = () => {
+	POPUP.classList.remove('popup--active')
+	setTimeout(() => {
+		BODY.classList.remove('scroll-block')
+		BODY.classList.remove('scroll-block-padding')
+		NAV.classList.remove('scroll-block-padding')
+	}, 150)
 }
 
 const showError = (input, msg) => {
 	const formBox = input.parentElement
-	const errorMsg = formBox.querySelector('.book__box-error')
+	const errorMsg = formBox.querySelector('.popup__box-error')
 	formBox.classList.add('warning')
 	errorMsg.textContent = msg
 }
 
 const clearError = input => {
 	const formBox = input.parentElement
-	const errorMsg = formBox.querySelector('.book__box-error')
+	const errorMsg = formBox.querySelector('.popup__box-error')
 	formBox.classList.remove('warning')
 	errorMsg.textContent = ''
 }
@@ -117,9 +144,18 @@ const checkSelect = select => {
 	}
 }
 
+const selectHelper = () => {
+	if (window.location.href.indexOf('toca') > -1) {
+		window.addEventListener('DOMContentLoaded', () => (SELECT_ISLAND.value = '1'))
+	} else if (window.location.href.indexOf('bora') > -1) {
+		window.addEventListener('DOMContentLoaded', () => (SELECT_ISLAND.value = '2'))
+	} else if (window.location.href.indexOf('tunga') > -1) {
+		window.addEventListener('DOMContentLoaded', () => (SELECT_ISLAND.value = '3'))
+	}
+}
+
 const checkErrors = () => {
-	const body = document.querySelector('body')
-	const allInputs = document.querySelectorAll('.book__box')
+	const allInputs = document.querySelectorAll('.popup__box')
 	let errorCount = 0
 
 	allInputs.forEach(el => {
@@ -130,9 +166,30 @@ const checkErrors = () => {
 
 	if (errorCount === 0) {
 		clearAll()
-		POPUP.style.display = 'block'
-		body.classList.add('scroll-block')
+		POPUP_MESSAGE.style.display = 'block'
+		POPUP_FORM.style.display = 'none'
+		POPUP.style.overflow = 'hidden'
 	}
 }
 
-document.addEventListener('DOMContentLoaded', bookMain)
+const scrollBlock = () => {
+	const documentWidth = document.documentElement.clientWidth
+	const windowWidth = window.innerWidth
+	const scrollBarWidth = windowWidth - documentWidth
+
+	if (POPUP.classList.contains('popup--active')) {
+		if (BODY.classList.contains('scroll-block')) {
+			BODY.classList.remove('scroll-block')
+		} else {
+			BODY.classList.add('scroll-block')
+		}
+	}
+
+	if (scrollBarWidth === 17) {
+		BODY.classList.add('scroll-block-padding')
+		NAV.classList.add('scroll-block-padding')
+	}
+}
+
+
+document.addEventListener('DOMContentLoaded', popupMain)

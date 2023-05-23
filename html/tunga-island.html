@@ -22,6 +22,58 @@
 </head>
 
 <body>
+    <div class="popup">
+        <div class="popup__message">
+            <div class="popup__message-container">
+                <div class="popup__message-text">Done! You will be redirected..</div>
+                <a class="popup__message-btn btn-special-animation" href="/">ok</a>
+            </div>
+        </div>
+        <div class="popup__form">
+            <form>
+                <div class="popup__title">booking form</div>
+                <div class="popup__box">
+                    <label for="popup-name" class="popup__box-label">Name:</label>
+                    <input type="text" class="popup__box-input" id="popup-name" placeholder="Enter your name..">
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-last-name" class="popup__box-label">Last name:</label>
+                    <input type="text" class="popup__box-input" id="popup-last-name"
+                        placeholder="Enter your last name..">
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-phone-number" class="popup__box-label">Phone number:</label>
+                    <input type="text" class="popup__box-input" id="popup-phone-number"
+                        placeholder="Enter your phone number..">
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-email" class="popup__box-label">E-mail:</label>
+                    <input type="text" class="popup__box-input" id="popup-email" placeholder="Enter your e-mail..">
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-island" class="popup__box-label">Select island:</label>
+                    <select id="popup-island" class="popup__box-select">
+                        <option value="0" disabled selected>- select island -</option>
+                        <option value="1">Toca Toca</option>
+                        <option value="2">Bora</option>
+                        <option value="3">Tunga</option>
+                    </select>
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-company" class="popup__box-label">Amount of people:</label>
+                    <input type="number" class="popup__box-input" id="popup-amount" placeholder="Enter the numbers..">
+                    <p class="popup__box-error"></p>
+                </div>
+            </form>
+            <div class="popup__box-icon"><i class="fa-solid fa-xmark"></i></div>
+            <button type="button" class="popup__box-btn btn-special-animation">Submit</button>
+        </div>
+    </div>
 
     <nav class="nav">
         <div class="nav__wrapper">
@@ -122,7 +174,7 @@
                     </div>
                 </div>
                 <div class="content__special">
-                    <a class="content__special-btn btn-special-animation" href="../html/book-it.html">Book it!</a>
+                    <button class="content__special-btn btn-special-animation">Book it!</button>
                     <p class="content__special-text">or <a href="/">go back</a> and choose different island :)</p>
                 </div>
             </div>
@@ -191,6 +243,7 @@
     <script src="/dist/js/aos.min.js"></script>
     <script src="/dist/js/navScript.min.js"></script>
     <script src="/dist/js/weatherApp.min.js"></script>
+    <script src="/dist/js/bookingForm.min.js"></script>
     <script src="/dist/js/contactAndFooter.min.js"></script>
 </body>
 

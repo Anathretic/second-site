@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Are you interested in ancient ruins, but on the other hand you love surfing? Check this offer!">
+    <meta name="description"
+        content="Are you interested in ancient ruins, but on the other hand you love surfing? Check this offer!">
     <meta name="keywords" content="surf_paradise, ancient_ruins, epic_parties">
     <title>Toca Toca Island - Just Paradise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +23,63 @@
 </head>
 
 <body>
+    <div class="popup">
+        <div class="popup__message">
+            <div class="popup__message-container">
+                <div class="popup__message-text">Done! You will be redirected..</div>
+                <a class="popup__message-btn btn-special-animation" href="/">ok</a>
+            </div>
+        </div>
+        <div class="popup__form">
+            <form>
+                <div class="popup__title">booking form</div>
+                <div class="popup__box">
+                    <label for="popup-name" class="popup__box-label">Name:</label>
+                    <input type="text" class="popup__box-input" id="popup-name" placeholder="Enter your name..">
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-last-name" class="popup__box-label">Last name:</label>
+                    <input type="text" class="popup__box-input" id="popup-last-name"
+                        placeholder="Enter your last name..">
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-phone-number" class="popup__box-label">Phone number:</label>
+                    <input type="text" class="popup__box-input" id="popup-phone-number"
+                        placeholder="Enter your phone number..">
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-email" class="popup__box-label">E-mail:</label>
+                    <input type="text" class="popup__box-input" id="popup-email" placeholder="Enter your e-mail..">
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-island" class="popup__box-label">Select island:</label>
+                    <select id="popup-island" class="popup__box-select">
+                        <option value="0" disabled selected>- select island -</option>
+                        <option value="1">Toca Toca</option>
+                        <option value="2">Bora</option>
+                        <option value="3">Tunga</option>
+                    </select>
+                    <p class="popup__box-error"></p>
+                </div>
+                <div class="popup__box">
+                    <label for="popup-company" class="popup__box-label">Amount of people:</label>
+                    <input type="number" class="popup__box-input" id="popup-amount" placeholder="Enter the numbers..">
+                    <p class="popup__box-error"></p>
+                </div>
+            </form>
+            <div class="popup__box-icon"><i class="fa-solid fa-xmark"></i></div>
+            <button type="button" class="popup__box-btn btn-special-animation">Submit</button>
+        </div>
+    </div>
 
     <nav class="nav">
         <div class="nav__wrapper">
-            <a onclick="mobileBlock()" class="nav__icon" href="#"><img src="/dist/img/icons/sun_nav.svg" alt="move to the top of the page"></a>
+            <a onclick="mobileBlock()" class="nav__icon" href="#"><img src="/dist/img/icons/sun_nav.svg"
+                    alt="move to the top of the page"></a>
             <button class="burger-btn">
                 <div class="burger-btn__box">
                     <div class="burger-btn__bars"></div>
@@ -58,16 +112,23 @@
                     </div>
                     <div class="content__box-text">
                         <h3 class="content__title">Secret ancient ruins</h3>
-                        <p class="content__text">Ruins, especially the ancient ones, have a special charm for many. They breathe mystery and the opportunity to discover something new and exciting. For those with an adventurous spirit and a thirst for discovery, searching for mysterious ancient ruins can be an exciting and rewarding experience.</p>
+                        <p class="content__text">Ruins, especially the ancient ones, have a special charm for many. They
+                            breathe mystery and the opportunity to discover something new and exciting. For those with
+                            an adventurous spirit and a thirst for discovery, searching for mysterious ancient ruins can
+                            be an exciting and rewarding experience.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
-                        <img src="/dist/img/first-island/sea-wave.jpg" alt="Surfer on the sea wave" class="content__img">
+                        <img src="/dist/img/first-island/sea-wave.jpg" alt="Surfer on the sea wave"
+                            class="content__img">
                     </div>
                     <div class="content__box-text content__box-text--right">
                         <h3 class="content__title">Amazing ocean waves</h3>
-                        <p class="content__text">The amazing waves of the ocean are a natural wonder that can evoke a sense of awe and wonder in those who witness them. From the gentle lapping of waves on a calm beach to the violent waves of a stormy sea, ocean waves come in many different forms, each with its own unique beauty.
+                        <p class="content__text">The amazing waves of the ocean are a natural wonder that can evoke a
+                            sense of awe and wonder in those who witness them. From the gentle lapping of waves on a
+                            calm beach to the violent waves of a stormy sea, ocean waves come in many different forms,
+                            each with its own unique beauty.
                         </p>
                     </div>
                 </div>
@@ -78,7 +139,11 @@
                     </div>
                     <div class="content__box-text">
                         <h3 class="content__title">Our capital city</h3>
-                        <p class="content__text">The capital is the heart of the country, the most vibrant and dynamic city in Toca Toca. At the heart of the island are museums, art galleries, theaters and universities, making it a center of learning and creativity. It is also a bustling shopping mall with markets, shops and restaurants, offering visitors a taste of the country's cuisine and culture.</p>
+                        <p class="content__text">The capital is the heart of the country, the most vibrant and dynamic
+                            city in Toca Toca. At the heart of the island are museums, art galleries, theaters and
+                            universities, making it a center of learning and creativity. It is also a bustling shopping
+                            mall with markets, shops and restaurants, offering visitors a taste of the country's cuisine
+                            and culture.</p>
                     </div>
                 </div>
             </div>
@@ -106,21 +171,28 @@
                     </div>
                     <div class="content__box-text">
                         <h3 class="content__title">Epic parties!</h3>
-                        <p class="content__text">Partying on the island is a unique and unforgettable experience. The combination of stunning scenery, warm weather and a relaxing atmosphere creates the perfect setting for a joyful and festive celebration. The sound of the waves, the touch of sand under your feet and the warmth of the sun add magic to this events.</p>
+                        <p class="content__text">Partying on the island is a unique and unforgettable experience. The
+                            combination of stunning scenery, warm weather and a relaxing atmosphere creates the perfect
+                            setting for a joyful and festive celebration. The sound of the waves, the touch of sand
+                            under your feet and the warmth of the sun add magic to this events.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
-                        <img src="/dist/img/first-island/campfire.jpg" alt="Campfire in the forest" class="content__img">
+                        <img src="/dist/img/first-island/campfire.jpg" alt="Campfire in the forest"
+                            class="content__img">
                     </div>
                     <div class="content__box-text content__box-text--right">
                         <h3 class="content__title">Mysterious campfires..</h3>
-                        <p class="content__text">The sound of crackling flames and the warm glow of the fire create a cozy atmosphere, perfect for relaxing after a long day exploring the natural beauty of the island. As the night progresses, the bonfires continue to burn, casting flickering shadows across the sand and creating a sense of serenity.
+                        <p class="content__text">The sound of crackling flames and the warm glow of the fire create a
+                            cozy atmosphere, perfect for relaxing after a long day exploring the natural beauty of the
+                            island. As the night progresses, the bonfires continue to burn, casting flickering shadows
+                            across the sand and creating a sense of serenity.
                         </p>
                     </div>
                 </div>
                 <div class="content__special">
-                    <a class="content__special-btn btn-special-animation" href="../html/book-it.html">Book it!</a>
+                    <button class="content__special-btn btn-special-animation">Book it!</button>
                     <p class="content__special-text">or <a href="/">go back</a> and choose different island :)</p>
                 </div>
             </div>
@@ -150,7 +222,8 @@
         <div class="wrapper">
             <div class="footer__boxes">
                 <div class="footer__box">
-                    <h3 class="footer__box-title"><a href="#"><img src="/dist/img/icons/sun_white.svg" alt="move to the top of the page"></a> jp co.
+                    <h3 class="footer__box-title"><a href="#"><img src="/dist/img/icons/sun_white.svg"
+                                alt="move to the top of the page"></a> jp co.
                     </h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <div class="footer__box-social">
@@ -189,6 +262,7 @@
     <script src="/dist/js/aos.min.js"></script>
     <script src="/dist/js/navScript.min.js"></script>
     <script src="/dist/js/weatherApp.min.js"></script>
+    <script src="/dist/js/bookingForm.min.js"></script>
     <script src="/dist/js/contactAndFooter.min.js"></script>
 </body>
 

@@ -1,13 +1,6 @@
 @use 'colors';
 
 @media (min-width: 992px) {
-	.popup {
-		&__box {
-			width: 600px;
-			height: 200px;
-		}
-	}
-
 	.nav {
 		.burger-btn {
 			display: none;
@@ -99,10 +92,6 @@
 		background-image: colors.$shadow, url('../img/header-images/tunga_big.jpg');
 	}
 
-	.header-img-book {
-		background-image: colors.$shadow, url('../img/header-images/book-it_big.jpg');
-	}
-
 	.header-img-aboutus {
 		background-image: colors.$shadow, url('../img/header-images/about-us_big.jpg');
 	}
@@ -139,6 +128,14 @@
 
 		&__text {
 			font-size: 1.6rem;
+		}
+	}
+
+	.popup {
+		&__message {
+			&-container {
+				width: 600px;
+			}
 		}
 	}
 
