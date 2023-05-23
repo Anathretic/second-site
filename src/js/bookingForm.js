@@ -168,7 +168,6 @@ const checkErrors = () => {
 		clearAll()
 		POPUP_MESSAGE.style.display = 'block'
 		POPUP_FORM.style.display = 'none'
-		POPUP.style.overflow = 'hidden'
 	}
 }
 
@@ -176,6 +175,7 @@ const scrollBlock = () => {
 	const documentWidth = document.documentElement.clientWidth
 	const windowWidth = window.innerWidth
 	const scrollBarWidth = windowWidth - documentWidth
+	document.documentElement.style.setProperty('--padding-space', scrollBarWidth + 'px')
 
 	if (POPUP.classList.contains('popup--active')) {
 		if (BODY.classList.contains('scroll-block')) {
@@ -185,7 +185,7 @@ const scrollBlock = () => {
 		}
 	}
 
-	if (scrollBarWidth === 17) {
+	if (scrollBarWidth > 0) {
 		BODY.classList.add('scroll-block-padding')
 		NAV.classList.add('scroll-block-padding')
 	}

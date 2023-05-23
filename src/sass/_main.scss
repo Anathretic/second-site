@@ -27,7 +27,7 @@ body {
 }
 
 .scroll-block-padding {
-	padding-right: 17px;
+	padding-right: var(--padding-space);
 }
 
 .wrapper {
