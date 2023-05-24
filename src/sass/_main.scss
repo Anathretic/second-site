@@ -105,7 +105,7 @@ body {
 	width: 100%;
 	height: 80px;
 	transition: background-color 0.3s, border-bottom 0.4s, box-shadow 0.5s;
-	z-index: 990;
+	z-index: 10;
 
 	&__wrapper {
 		position: relative;
@@ -119,7 +119,7 @@ body {
 		top: 8px;
 		left: 2rem;
 		padding: 1em;
-		z-index: 1000;
+		z-index: 11;
 
 		img {
 			display: block;
@@ -135,7 +135,7 @@ body {
 		background: none;
 		border: 1px solid transparent;
 		cursor: pointer;
-		z-index: 1000;
+		z-index: 12;
 
 		&:focus {
 			border-radius: 8px;
@@ -376,6 +376,7 @@ body {
 			font-family: 'Montserrat', sans-serif;
 			font-size: 1.6rem;
 			text-transform: uppercase;
+			text-decoration: none;
 			cursor: pointer;
 
 			&::before {
@@ -560,7 +561,7 @@ body {
 	color: colors.$white-color;
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	text-align: center;
 	overflow: hidden;
 
@@ -600,19 +601,20 @@ body {
 			padding: 2em;
 			height: 100%;
 			background-size: cover;
+			background-position: center;
 			border-radius: 8px;
 			transition: transform 1s, opacity 1s;
 
 			&--first {
-				background-image: colors.$shadow, url('../img/header-images/toca-toca_small.jpg');
+				background-image: colors.$shadow, url('../img/homepage/toca-toca_small.jpg');
 			}
 
 			&--second {
-				background-image: colors.$shadow, url('../img/header-images/bora_small.jpg');
+				background-image: colors.$shadow, url('../img/homepage/bora_small.jpg');
 			}
 
 			&--third {
-				background-image: colors.$shadow, url('../img/header-images/tunga_small.jpg');
+				background-image: colors.$shadow, url('../img/homepage/tunga_small.jpg');
 			}
 
 			&-title {

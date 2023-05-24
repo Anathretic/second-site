@@ -38,6 +38,7 @@ const popupPrepareDOMElements = () => {
 }
 
 const popupPrepareDOMEvents = () => {
+	POPUP.addEventListener('touchstart', showPopup, {passive: true})
 	CONTENT_BOOK_BTN.addEventListener('click', showPopup)
 	POPUP_ICON.addEventListener('click', closePopup)
 	POPUP_FORM_BTN.addEventListener('click', e => {

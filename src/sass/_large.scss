@@ -79,27 +79,27 @@
 	.header-img {
 		background-image: colors.$shadow, url('../img/header-images/homepage_big.jpg');
 	}
-
+	
 	.header-img-first {
 		background-image: colors.$shadow, url('../img/header-images/toca-toca_big.jpg');
 	}
-
+	
 	.header-img-second {
 		background-image: colors.$shadow, url('../img/header-images/bora_big.jpg');
 	}
-
+	
 	.header-img-third {
 		background-image: colors.$shadow, url('../img/header-images/tunga_big.jpg');
 	}
-
+	
 	.header-img-aboutus {
 		background-image: colors.$shadow, url('../img/header-images/about-us_big.jpg');
 	}
-
+	
 	.header-img-team {
 		background-image: colors.$shadow, url('../img/header-images/team_big.jpg');
 	}
-
+	
 	.header-img-work {
 		background-image: colors.$shadow, url('../img/header-images/work-with-us_big.jpg');
 	}
@@ -142,7 +142,7 @@
 	.hero-img {
 		background-image: colors.$shadow, url('../img/hero-images/hero-img_big.jpg');
 	}
-
+	
 	.hero-img--second {
 		background-image: colors.$shadow, url('../img/hero-images/hero-img-2_big.jpg');
 	}
@@ -150,6 +150,7 @@
 	.hero-img,
 	.hero-img--second {
 		padding: 40rem 2em;
+		background-attachment: fixed;
 
 		&__title {
 			font-size: 7.2rem;
