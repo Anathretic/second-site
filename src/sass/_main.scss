@@ -505,6 +505,7 @@ body {
 			background-color: colors.$white-color;
 			border-radius: 8px;
 			border: 2px solid colors.$black-color;
+			animation: show-it 0.3s 1;
 			z-index: 1000;
 		}
 
