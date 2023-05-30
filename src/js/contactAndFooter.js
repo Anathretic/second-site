@@ -31,16 +31,16 @@ const conFooPrepareDOMEvents = () => {
 
 const msgBtnAction = () => {
 	if (CONTACT_USERNAME.value !== '' && CONTACT_USER_MSG.value !== '' && EMAIL_CHECK.test(CONTACT_USER_EMAIL.value)) {
-		CONTACT_BTN.textContent = 'SENT!'
+		CONTACT_BTN.textContent = 'wysłane!'
 		INPUTS_ARR.forEach(el => {
 			el.value = ''
 		})
 	} else {
-		CONTACT_BTN.textContent = 'Something is wrong.. Check the form!'
+		CONTACT_BTN.textContent = 'sprawdź formularz...'
 	}
 
 	setTimeout(() => {
-		CONTACT_BTN.textContent = 'Send it!'
+		CONTACT_BTN.textContent = 'wyślij'
 	}, 2500)
 }
 

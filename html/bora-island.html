@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Do you love offroad racing through wild forests? We have something for you!">
-    <meta name="keywords" content="old town sightseeing, beautiful beach, offroad races">
-    <title>Bora Island - Just Paradise</title>
+    <meta name="description" content="Lubisz wyścigi terenowe przez dzikie lasy? Mamy coś dla Ciebie!">
+    <meta name="keywords" content="stare miasto, piękne plaże, wyścigi offroad">
+    <title>Wyspa Bora - Just Paradise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/e3d334fd4a.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/dist/img/icons/sun_white.svg">
+    <link rel="icon" href="/dist/img/icons/sun_white.svg">
     <link rel="stylesheet" href="/dist/css/style.min.css">
 </head>
 
@@ -25,39 +25,39 @@
     <div class="popup">
         <div class="popup__message">
             <div class="popup__message-container">
-                <div class="popup__message-text">It's just a website design!</div>
+                <div class="popup__message-text">To tylko projekt strony!</div>
                 <a class="popup__message-btn btn-special-animation" href="/">ok</a>
             </div>
         </div>
         <div class="popup__form">
             <form class="popup__wrapper">
-                <div class="popup__title">booking form</div>
+                <div class="popup__title">formularz rezerwacji</div>
                 <div class="popup__box">
-                    <label for="popup-name" class="popup__box-label">Name:</label>
-                    <input type="text" class="popup__box-input" id="popup-name" placeholder="Enter your name..">
+                    <label for="popup-name" class="popup__box-label">Imię:</label>
+                    <input type="text" class="popup__box-input" id="popup-name" placeholder="Wprowadź swoje imię..">
                     <p class="popup__box-error"></p>
                 </div>
                 <div class="popup__box">
-                    <label for="popup-last-name" class="popup__box-label">Last name:</label>
+                    <label for="popup-last-name" class="popup__box-label">Nazwisko:</label>
                     <input type="text" class="popup__box-input" id="popup-last-name"
-                        placeholder="Enter your last name..">
+                        placeholder="Wprowadź swoje nazwisko..">
                     <p class="popup__box-error"></p>
                 </div>
                 <div class="popup__box">
-                    <label for="popup-phone-number" class="popup__box-label">Phone number:</label>
+                    <label for="popup-phone-number" class="popup__box-label">Nr telefonu:</label>
                     <input type="text" class="popup__box-input" id="popup-phone-number"
-                        placeholder="Enter your phone number..">
+                        placeholder="Podaj swój numer telefonu..">
                     <p class="popup__box-error"></p>
                 </div>
                 <div class="popup__box">
                     <label for="popup-email" class="popup__box-label">E-mail:</label>
-                    <input type="text" class="popup__box-input" id="popup-email" placeholder="Enter your e-mail..">
+                    <input type="text" class="popup__box-input" id="popup-email" placeholder="Wprowadź swój adres e-mail..">
                     <p class="popup__box-error"></p>
                 </div>
                 <div class="popup__box">
-                    <label for="popup-island" class="popup__box-label">Select island:</label>
+                    <label for="popup-island" class="popup__box-label">Wybierz wyspę:</label>
                     <select id="popup-island" class="popup__box-select">
-                        <option value="0" disabled selected>- select island -</option>
+                        <option value="0" disabled selected>- wybierz wyspę -</option>
                         <option value="1">Toca Toca</option>
                         <option value="2">Bora</option>
                         <option value="3">Tunga</option>
@@ -65,20 +65,20 @@
                     <p class="popup__box-error"></p>
                 </div>
                 <div class="popup__box">
-                    <label for="popup-company" class="popup__box-label">Amount of people:</label>
-                    <input type="number" class="popup__box-input" id="popup-amount" placeholder="Enter the numbers..">
+                    <label for="popup-company" class="popup__box-label">Ilość osób:</label>
+                    <input type="number" class="popup__box-input" id="popup-amount" placeholder="Podaj liczbę..">
                     <p class="popup__box-error"></p>
                 </div>
             </form>
             <div class="popup__box-icon"><i class="fa-solid fa-xmark"></i></div>
-            <button type="button" class="popup__box-btn btn-special-animation">Submit</button>
+            <button type="button" class="popup__box-btn btn-special-animation">Wyślij</button>
         </div>
     </div>
 
     <nav class="nav">
         <div class="nav__wrapper">
             <a onclick="mobileBlock()" class="nav__icon" href="#"><img src="/dist/img/icons/sun_nav.svg"
-                    alt="move to the top of the page"></a>
+                    alt="Przenosi na górę strony"></a>
             <button class="burger-btn">
                 <div class="burger-btn__box">
                     <div class="burger-btn__bars"></div>
@@ -86,60 +86,52 @@
             </button>
             <ul class="nav__list">
                 <li class="nav__item"><a class="nav__link" href="/">home</a></li>
-                <li class="nav__item"><a class="nav__link" href="#sights">sights</a></li>
-                <li class="nav__item"><a class="nav__link" href="#weather">weather</a></li>
-                <li class="nav__item"><a class="nav__link" href="#contact">contact</a></li>
+                <li class="nav__item"><a class="nav__link" href="#sights">atrakcje</a></li>
+                <li class="nav__item"><a class="nav__link" href="#weather">pogoda</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contact">kontakt</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="header header-img-second">
-        <h1 class="header__heading">Bora Island</h1>
-        <p class="header__text">Warm and cozy!</p>
-        <a href="#sights" class="header__btn btn-special-animation">Check it!</a>
+        <h1 class="header__heading">Wyspa Bora</h1>
+        <p class="header__text">Ciepło i przytulnie!</p>
+        <a href="#sights" class="header__btn btn-special-animation">sprawdź</a>
         <div class="white-block white-block-left"></div>
     </header>
 
     <main class="main">
         <section id="sights" class="content section-padding">
             <div class="wrapper">
-                <h2 class="section-heading">must see!</h2>
+                <h2 class="section-heading">główne atrakcje</h2>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="500">
                     <div class="content__box-img">
-                        <img src="/dist/img/second-island/tropical forest.jpg" alt="Bora tropical forest"
+                        <img src="/dist/img/second-island/tropical forest.jpg" alt="Tropikalne lasy Bora"
                             class="content__img">
                     </div>
                     <div class="content__box-text">
-                        <h3 class="content__title">Tropical forests</h3>
-                        <p class="content__text">A visit to the forest can be a unique and unforgettable experience.
-                            While exploring the rich flora and fauna, from tall trees to colorful birds and elusive
-                            mammals. The sounds of the forest create an immersive environment that is both serene and
-                            exciting.</p>
+                        <h3 class="content__title">Tropikalne lasy</h3>
+                        <p class="content__text">Wizyta w lesie może być wyjątkowym i niezapomnianym przeżyciem. Podczas odkrywania bogatej flory i fauny, od wysokich drzew po kolorowe ptaki i nieuchwytne ssaki, dźwięki lasu tworzą wciągające środowisko, które jest zarówno spokojne, jak i ekscytujące.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
-                        <img src="/dist/img/second-island/architecture.jpg" alt="Alley of the old town of Bora"
+                        <img src="/dist/img/second-island/architecture.jpg" alt="Alejka starego miasta"
                             class="content__img">
                     </div>
                     <div class="content__box-text content__box-text--right">
-                        <h3 class="content__title">Lovely old town</h3>
-                        <p class="content__text">The old town can take you back in time to a bygone era. Wandering the
-                            narrow streets and alleys, you can soak up the history and culture of this place. The
-                            architecture, often characterized by ornate facades and intricate details, speaks of the
-                            craftsmanship and artistry of the past.
+                        <h3 class="content__title">Urocze stare miasto</h3>
+                        <p class="content__text">Stare miasto może przenieść Cię w czasie do minionej epoki. Wędrując wąskimi uliczkami i alejkami można chłonąć historię i kulturę tego miejsca. Architektura, charakteryzująca się ozdobnymi fasadami i misternymi detalami, mówi o kunszcie i artyzmie z przeszłości.
                         </p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="700">
                     <div class="content__box-img">
-                        <img src="/dist/img/second-island/beach.jpg" alt="Sunset at the beach" class="content__img">
+                        <img src="/dist/img/second-island/beach.jpg" alt="Zachód słońca na plaży" class="content__img">
                     </div>
                     <div class="content__box-text">
-                        <h3 class="content__title">Breathtaking beach</h3>
-                        <p class="content__text">The beaches of Bora can charm you with the natural beauty of the world.
-                            Crystal clear water, soft sand and swaying palm trees create a serene and peaceful
-                            environment, perfect for relaxing and rejuvenating.</p>
+                        <h3 class="content__title">Nieziemskie plaże</h3>
+                        <p class="content__text">Plaże Bora mogą oczarować Cię swoim naturalnym pięknem. Krystalicznie czysta woda, miękki piasek i kołyszące się palmy tworzą pogodne oraz spokojne otoczenie, wręcz idealne na relaks.</p>
                     </div>
                 </div>
             </div>
@@ -148,47 +140,41 @@
         <section id="weather" class="hero-img section">
             <div class="white-block white-block-left"></div>
             <div class="white-block white-block-right"></div>
-            <p class="hero-img__title">Actual weather</p>
+            <p class="hero-img__title">Aktualna pogoda</p>
             <hr>
-            <p class="hero-img__text">Temperature: <span class="temperature"></span></p>
+            <p class="hero-img__text">Temperatura: <span class="temperature"></span></p>
             <hr>
-            <p class="hero-img__text">Humidity: <span class="humidity"></span></p>
+            <p class="hero-img__text">Wilgotność: <span class="humidity"></span></p>
             <hr>
-            <p class="hero-img__text">Weather: <span class="weather"></span></p>
+            <p class="hero-img__text">Warunki: <span class="hero-img__icon"><img src="../dist/img/weather-icons/unknown.png" alt="Obrazek przedstawiający pogodę" class="photo"></span></p>
             <hr>
         </section>
 
         <section class="content section-padding">
             <div class="wrapper">
-                <h2 class="section-heading">other events!</h2>
+                <h2 class="section-heading">pozostałe eventy!</h2>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="500">
                     <div class="content__box-img">
-                        <img src="/dist/img/second-island/offroad.jpg" alt="Off-road car" class="content__img">
+                        <img src="/dist/img/second-island/offroad.jpg" alt="Samochód do offroadu" class="content__img">
                     </div>
                     <div class="content__box-text">
-                        <h3 class="content__title">Off-road races!</h3>
-                        <p class="content__text">Off-road racing can be an exciting adrenaline-filled experience. Wide
-                            open spaces and varied terrain, including dunes and rocky outcrops, provide drivers with a
-                            challenging and exciting route. The salty sea air and stunning ocean views create a
-                            picturesque backdrop for an exciting race.</p>
+                        <h3 class="content__title">Wyścigi offroad!</h3>
+                        <p class="content__text">Wyścigi terenowe mogą być ekscytującym przeżyciem pełnym adrenaliny. Szerokie otwarte przestrzenie i zróżnicowany teren, w tym wydmy i skały, zapewniają kierowcom naprawdę ekscytujące trasy.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
-                        <img src="/dist/img/second-island/diving.jpg" alt="Diving in the ocean" class="content__img">
+                        <img src="/dist/img/second-island/diving.jpg" alt="Nurkowanie w oceanie" class="content__img">
                     </div>
                     <div class="content__box-text content__box-text--right">
-                        <h3 class="content__title">Diving in the ocean..</h3>
-                        <p class="content__text">As you descend into the deep blue waters, you can encounter a whole
-                            range of sea creatures, from shoals of colorful fish to graceful sea turtles and majestic
-                            manta rays. The vibrant colors of coral reefs and underwater plants create a surreal and
-                            different environment that is both beautiful and peaceful.
+                        <h3 class="content__title">Nurkowanie w oceanie..</h3>
+                        <p class="content__text">Schodząc do głębokich, błękitnych wód, możesz spotkać całą gamę stworzeń morskich zaczynając od ławic kolorowych ryb po pełne wdzięku żółwie morskie i majestatyczne manty. Żywe kolory raf koralowych i podwodnych roślin tworzą surrealistyczne, odmienne środowisko, które jest zarówno piękne, jak i spokojne.
                         </p>
                     </div>
                 </div>
                 <div class="content__special">
-                    <button class="content__special-btn btn-special-animation">Book it!</button>
-                    <p class="content__special-text">or <a href="/">go back</a> and choose different island :)</p>
+                    <button class="content__special-btn btn-special-animation">rezerwuj</button>
+                    <p class="content__special-text">albo <a href="/">wróć</a> i wybierz inną wyspę :)</p>
                 </div>
             </div>
         </section>
@@ -196,18 +182,18 @@
         <section id="contact" class="contact section-padding">
             <div class="white-block white-block-left"></div>
             <div class="white-block white-block-right"></div>
-            <h2 class="section-heading">Contact us!</h2>
+            <h2 class="section-heading">kontakt</h2>
             <div class="wrapper">
                 <form class="contact__form">
                     <div class="contact__form-top">
-                        <label for="name" class="contact__form-label">Name:</label>
-                        <input type="text" class="contact__form-input" id="name" placeholder="Enter your name..">
+                        <label for="name" class="contact__form-label">Imię:</label>
+                        <input type="text" class="contact__form-input" id="name" placeholder="Wprowadź swoje imię..">
                         <label for="email" class="contact__form-label">E-mail:</label>
-                        <input type="text" class="contact__form-input" id="email" placeholder="Enter your e-mail..">
+                        <input type="text" class="contact__form-input" id="email" placeholder="Wprowadź swój adres e-mail..">
                     </div>
-                    <label for="msg" class="contact__form-label">Your message:</label>
-                    <textarea class="contact__form-textarea" id="msg" placeholder="Write it!"></textarea>
-                    <button type="button" class="contact__form-btn btn-special-animation">Send it!</button>
+                    <label for="msg" class="contact__form-label">Twoja wiadomość:</label>
+                    <textarea class="contact__form-textarea" id="msg" placeholder="Napisz coś!"></textarea>
+                    <button type="button" class="contact__form-btn btn-special-animation">Wyślij</button>
                 </form>
             </div>
         </section>
@@ -218,9 +204,9 @@
             <div class="footer__boxes">
                 <div class="footer__box">
                     <h3 class="footer__box-title"><a href="#"><img src="/dist/img/icons/sun_white.svg"
-                                alt="move to the top of the page"></a> jp co.
+                                alt="Przenosi na górę strony"></a> jp co.
                     </h3>
-                    <p>Want to see the rest of my work? Check out the links below!</p>
+                    <p>Chciałbyś zobaczyć resztę moich projektów? A może myślisz o własnej stronie? Sprawdź moje social-media wraz z repozytorium na GitHub'ie!</p>
                     <div class="footer__box-social">
                         <a href="https://www.instagram.com/r3n7h3r/" target="_blank" class="footer__box-link"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://github.com/Anathretic" target="_blank" class="footer__box-link"><i class="fa-brands fa-github"></i></a>
@@ -229,19 +215,19 @@
                     </div>
                 </div>
                 <div class="footer__box footer__box-desktop">
-                    <h3 class="footer__box-title">islands</h3>
+                    <h3 class="footer__box-title">Oferta</h3>
                     <ul class="footer__box-list">
-                        <li class="footer__box-list-item"><a href="/html/toca-island.html">Toca Toca Island</a></li>
-                        <li class="footer__box-list-item"><a href="/html/bora-island.html">Bora Island</a></li>
-                        <li class="footer__box-list-item"><a href="/html/tunga-island.html">Tunga Island</a></li>
+                        <li class="footer__box-list-item"><a href="/html/toca-island.html">Wyspa Toca Toca</a></li>
+                        <li class="footer__box-list-item"><a href="/html/bora-island.html">Wyspa Bora</a></li>
+                        <li class="footer__box-list-item"><a href="/html/tunga-island.html">Wyspa Tunga</a></li>
                     </ul>
                 </div>
                 <div class="footer__box footer__box-desktop">
-                    <h3 class="footer__box-title">more info</h3>
+                    <h3 class="footer__box-title">Więcej</h3>
                     <ul class="footer__box-list">
-                        <li class="footer__box-list-item"><a href="/html/about-us.html">About Us</a></li>
-                        <li class="footer__box-list-item"><a href="/html/our-team.html">Our Team</a></li>
-                        <li class="footer__box-list-item"><a href="/html/job-offers.html">Work with us!</a></li>
+                        <li class="footer__box-list-item"><a href="/html/about-us.html">O nas</a></li>
+                        <li class="footer__box-list-item"><a href="/html/our-team.html">Zespół</a></li>
+                        <li class="footer__box-list-item"><a href="/html/job-offers.html">Pracuj z nami!</a></li>
                     </ul>
                 </div>
             </div>

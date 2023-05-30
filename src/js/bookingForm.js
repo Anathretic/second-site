@@ -104,7 +104,7 @@ const checkForm = input => {
 
 const checkNumber = (input, min) => {
 	if (input.value.length < min) {
-		showError(input, 'The number consists of 9 characters..')
+		showError(input, 'Numer składa się z przynajmniej 9 cyfr..')
 	}
 }
 
@@ -114,7 +114,7 @@ const checkCharacters = input => {
 	if (checkCharacters.test(input.value)) {
 		clearError(input)
 	} else {
-		showError(input, 'You have to use only numbers!')
+		showError(input, 'Możesz używać samych cyfr!')
 	}
 }
 
@@ -125,7 +125,7 @@ const checkMail = email => {
 	if (re.test(email.value)) {
 		clearError(email)
 	} else {
-		showError(email, 'Enter your e-mail correctly..')
+		showError(email, 'Wprowadź swój e-mail poprawnie..')
 	}
 }
 
@@ -133,7 +133,7 @@ const checkAmount = input => {
 	if (input.value > 0) {
 		clearError(input)
 	} else {
-		showError(input, 'Enter amount of people, please..')
+		showError(input, 'Podaj ilość osób..')
 	}
 }
 
@@ -141,7 +141,7 @@ const checkSelect = select => {
 	if (select.value !== '0') {
 		clearError(select)
 	} else {
-		showError(select, 'Choose the island..')
+		showError(select, 'Wybierz wyspę..')
 	}
 }
 

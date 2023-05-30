@@ -1,6 +1,7 @@
 const tempBox = document.querySelector('.temperature')
 const humBox = document.querySelector('.humidity')
 const weatherBox = document.querySelector('.weather')
+const photo = document.querySelector('.photo')
 
 const API_CORD = 'https://api.openweathermap.org/data/2.5/weather?lat='
 const API_CORD2 = '&lon='
@@ -25,9 +26,26 @@ class WeatherApp {
 				const hum = res.data.main.humidity
 				const status = Object.assign({}, ...res.data.weather)
 
+				if (status.id >= 200 && status.id < 300) {
+					photo.setAttribute('src', '../dist/img/weather-icons/thunderstorm.png')
+				} else if (status.id >= 300 && status.id < 400) {
+					photo.setAttribute('src', '../dist/img/weather-icons/drizzle.png')
+				} else if (status.id >= 500 && status.id < 600) {
+					photo.setAttribute('src', '../dist/img/weather-icons/rain.png')
+				} else if (status.id >= 600 && status.id < 700) {
+					photo.setAttribute('src', '../dist/img/weather-icons/ice.png')
+				} else if (status.id >= 700 && status.id < 800) {
+					photo.setAttribute('src', '../dist/img/weather-iconsfog.png')
+				} else if (status.id === 800) {
+					photo.setAttribute('src', '../dist/img/weather-icons/sun.png')
+				} else if (status.id >= 801 && status.id < 900) {
+					photo.setAttribute('src', '../dist/img/weather-icons/cloud.png')
+				} else {
+					photo.setAttribute('src', './img/unknown.png')
+				}
+
 				tempBox.textContent = Math.floor(temp) + '°C'
 				humBox.textContent = hum + '%'
-				weatherBox.textContent = status.main
 			})
 			.catch()
 	}
