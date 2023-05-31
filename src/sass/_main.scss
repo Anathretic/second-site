@@ -12,6 +12,7 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: var(--scroll-padding, 80px);
 }
 
 body {
@@ -82,7 +83,7 @@ body {
 }
 
 .section-padding {
-	padding: 6em 2em;
+	padding: 4em 2em;
 }
 
 .section-heading {
@@ -240,7 +241,6 @@ body {
 .nav-bg {
 	background-color: colors.$white-color;
 	border-bottom: 1px solid rgb(126, 126, 126);
-	box-shadow: 0 0 10px colors.$black-color;
 }
 
 .header-img {

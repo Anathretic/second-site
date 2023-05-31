@@ -62,4 +62,7 @@ const addShadow = () => {
 	}
 }
 
+const navHeight = document.querySelector('.nav').offsetHeight
+document.documentElement.style.setProperty('--scroll-padding', navHeight - 1 + 'px')
+
 document.addEventListener('DOMContentLoaded', main)
