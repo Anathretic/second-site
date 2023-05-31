@@ -125,7 +125,7 @@ const checkMail = email => {
 	if (re.test(email.value)) {
 		clearError(email)
 	} else {
-		showError(email, 'Wprowadź swój e-mail poprawnie..')
+		showError(email, 'Wprowadź poprawnie swój e-mail..')
 	}
 }
 
