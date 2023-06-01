@@ -1,6 +1,5 @@
 const tempBox = document.querySelector('.temperature')
 const humBox = document.querySelector('.humidity')
-const weatherBox = document.querySelector('.weather')
 const photo = document.querySelector('.photo')
 
 const API_CORD = 'https://api.openweathermap.org/data/2.5/weather?lat='
@@ -47,7 +46,10 @@ class WeatherApp {
 				tempBox.textContent = Math.floor(temp) + '°C'
 				humBox.textContent = hum + '%'
 			})
-			.catch()
+			.catch(() => {
+				tempBox.textContent = 'Err'
+				humBox.textContent = 'Err'
+			})
 	}
 }
 
