@@ -405,7 +405,7 @@ body {
 
 	&__title {
 		margin-top: 1em;
-		padding: 1em;
+		padding: 1em 0.2em;
 		color: colors.$white-color;
 		font-size: 2em;
 		text-align: center;
@@ -457,7 +457,7 @@ body {
 
 		&-btn {
 			margin: 2em;
-			padding: 1em;
+			padding: 0.8em;
 			width: 70%;
 			color: colors.$white-color;
 			background-color: colors.$special-color;
