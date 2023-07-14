@@ -23,6 +23,23 @@
 
 <body>
 
+    <nav class="nav">
+        <div class="nav__wrapper">
+            <a onclick="mobileBlock()" class="nav__icon" href="#"><img src="/dist/img/icons/sun_nav.svg"
+                    alt="Przenosi na górę strony"></a>
+            <button class="burger-btn">
+                <div class="burger-btn__box">
+                    <div class="burger-btn__bars"></div>
+                </div>
+            </button>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="/">home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#vacancies">Posady</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contact">kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="header header-img-work">
         <h1 class="header__heading">Pracuj z nami!</h1>
         <a href="#vacancies" class="header__btn btn-special-animation">wolne posady</a>
@@ -54,9 +71,6 @@
                     </div>
                 </div>
             </div>
-            <div class="content__special">
-                <a class="content__special-btn btn-special-animation" href="/">home</a>
-            </div>
         </section>
 
         <section id="contact" class="contact section-padding">
@@ -65,16 +79,26 @@
             <h2 class="section-heading">kontakt</h2>
             <div class="wrapper">
                 <form class="contact__form">
-                    <div class="contact__form-top">
+                    <div class="contact__form-box">
                         <label for="name" class="contact__form-label">Imię:</label>
                         <input type="text" class="contact__form-input" id="name" placeholder="Wprowadź swoje imię..">
-                        <label for="email" class="contact__form-label">E-mail:</label>
-                        <input type="text" class="contact__form-input" id="email" placeholder="Wprowadź swój adres e-mail..">
                     </div>
-                    <label for="msg" class="contact__form-label">Twoja wiadomość:</label>
-                    <textarea class="contact__form-textarea" id="msg" placeholder="Napisz coś!"></textarea>
+                    <div class="contact__form-box">
+                        <label for="email" class="contact__form-label">E-mail:</label>
+                        <input type="text" class="contact__form-input" id="email"
+                            placeholder="Wprowadź swój adres e-mail..">
+                    </div>
+                    <div class="contact__form-box">
+                        <label for="msg" class="contact__form-label">Twoja wiadomość:</label>
+                        <textarea class="contact__form-textarea" id="msg" placeholder="Napisz coś!"></textarea>
+                    </div>
                     <button type="button" class="contact__form-btn btn-special-animation">Wyślij</button>
                 </form>
+            </div>
+            <div class="contact__popup">
+                <i class="fa-solid fa-circle-check contact__popup-icon" style="color: #2e7114;"></i>
+                <p class="contact__popup-text">Wysłane!</p>
+                <div class="contact__popup-btn"><i class="fa-solid fa-xmark"></i></div>
             </div>
         </section>
     </main>
@@ -117,6 +141,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/dist/js/aos.min.js"></script>
+    <script src="/dist/js/navScript.min.js"></script>
     <script src="/dist/js/contactAndFooter.min.js"></script>
 </body>
 

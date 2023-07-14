@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Poznaj naszą drużynę! Ci ludzie mają jedno zadanie do wykonania - twoje szczęście.">
+    <meta name="description"
+        content="Poznaj naszą drużynę! Ci ludzie mają jedno zadanie do wykonania - twoje szczęście.">
     <meta name="keywords" content="interesujący ludzie, pracujący zespół">
     <title>Zespół - Just Paradise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +24,23 @@
 
 <body>
 
+    <nav class="nav">
+        <div class="nav__wrapper">
+            <a onclick="mobileBlock()" class="nav__icon" href="#"><img src="/dist/img/icons/sun_nav.svg"
+                    alt="Przenosi na górę strony"></a>
+            <button class="burger-btn">
+                <div class="burger-btn__box">
+                    <div class="burger-btn__bars"></div>
+                </div>
+            </button>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="/">home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#crew">Zespół</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contact">kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="header header-img-team">
         <h1 class="header__heading">Zespół</h1>
         <a href="#crew" class="header__btn btn-special-animation">poznaj nas!</a>
@@ -39,8 +57,10 @@
                     </div>
                     <div class="content__box-text">
                         <h3 class="content__title">CEO <a href="https://www.instagram.com/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a></h3>
-                        <p class="content__text">Jest osobą wysoce zorganizowaną i kreatywną, z pozytywnym nastawieniem nawet w sytuacjach kryzysowych. Ma oko do szczegółów, upewniając się, że nic ważnego nie zostanie pominięte.</p>
+                                    class="fa-brands fa-instagram"></i></a></h3>
+                        <p class="content__text">Jest osobą wysoce zorganizowaną i kreatywną, z pozytywnym nastawieniem
+                            nawet w sytuacjach kryzysowych. Ma oko do szczegółów, upewniając się, że nic ważnego nie
+                            zostanie pominięte.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="600">
@@ -49,8 +69,10 @@
                     </div>
                     <div class="content__box-text content__box-text--right">
                         <h3 class="content__title"><a href="https://www.instagram.com/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a> Specjalistka IT</h3>
-                        <p class="content__text">Jest na bieżąco z najnowszymi trendami w branży i pojawiającymi się technologiami. Bardzo szybko wyłapuje problemy i je rozwiązuje. Dzięki umiejętnościom krytycznego i kreatywnego myślenia znajduje rozwiązania w mgnieniu oka.</p>
+                                    class="fa-brands fa-instagram"></i></a> Specjalistka IT</h3>
+                        <p class="content__text">Jest na bieżąco z najnowszymi trendami w branży i pojawiającymi się
+                            technologiami. Bardzo szybko wyłapuje problemy i je rozwiązuje. Dzięki umiejętnościom
+                            krytycznego i kreatywnego myślenia znajduje rozwiązania w mgnieniu oka.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="700">
@@ -58,9 +80,11 @@
                         <img src="/dist/img/our-team/travel-expert.jpg" alt="Robert Obieżyświat" class="content__img">
                     </div>
                     <div class="content__box-text">
-                        <h3 class="content__title">Ekspert ds. Podróży <a href="https://www.instagram.com/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a></h3>
-                        <p class="content__text">On po prostu kocha podróżować! Jego ciekawość świata nieustannie pcha go do poznawania nowych rzeczy. Tym właśnie zajmuje się nasz specjalista ds. podróży. Dopracuje każdy szczegół wyjazdu, zapewni bezpieczeństwo i dobrą zabawę.
+                        <h3 class="content__title">Ekspert ds. Podróży <a href="https://www.instagram.com/"
+                                target="_blank"><i class="fa-brands fa-instagram"></i></a></h3>
+                        <p class="content__text">On po prostu kocha podróżować! Jego ciekawość świata nieustannie pcha
+                            go do poznawania nowych rzeczy. Tym właśnie zajmuje się nasz specjalista ds. podróży.
+                            Dopracuje każdy szczegół wyjazdu, zapewni bezpieczeństwo i dobrą zabawę.
                         </p>
                     </div>
                 </div>
@@ -71,13 +95,15 @@
                     </div>
                     <div class="content__box-text content__box-text--right">
                         <h3 class="content__title"><a href="https://www.instagram.com/" target="_blank"><i
-                            class="fa-brands fa-instagram"></i></a> Helpdesk</h3>
-                        <p class="content__text">Jest empatyczny, przyjacielski i cierpliwy. W każdej sytuacji znajdzie rozwiązanie i pomoże w każdym problemie, nawet jeśli dzielą Was tysiące kilometrów.</p>
+                                    class="fa-brands fa-instagram"></i></a> Helpdesk</h3>
+                        <p class="content__text">Jest empatyczny, przyjacielski i cierpliwy. W każdej sytuacji znajdzie
+                            rozwiązanie i pomoże w każdym problemie, nawet jeśli dzielą Was tysiące kilometrów.</p>
                     </div>
                 </div>
                 <div class="content__special">
-                    <a class="content__special-btn btn-special-animation" href="/">home</a>
-                    <p class="content__special-text">albo <a href="../html/about-us.html">poznaj</a> nasze zasady :)</p>
+                    <a href="../html/about-us.html">
+                        <button class="content__special-btn btn-special-animation">poznaj zasady</button>
+                    </a>
                 </div>
         </section>
 
@@ -87,16 +113,26 @@
             <h2 class="section-heading">kontakt</h2>
             <div class="wrapper">
                 <form class="contact__form">
-                    <div class="contact__form-top">
+                    <div class="contact__form-box">
                         <label for="name" class="contact__form-label">Imię:</label>
                         <input type="text" class="contact__form-input" id="name" placeholder="Wprowadź swoje imię..">
-                        <label for="email" class="contact__form-label">E-mail:</label>
-                        <input type="text" class="contact__form-input" id="email" placeholder="Wprowadź swój adres e-mail..">
                     </div>
-                    <label for="msg" class="contact__form-label">Twoja wiadomość:</label>
-                    <textarea class="contact__form-textarea" id="msg" placeholder="Napisz coś!"></textarea>
+                    <div class="contact__form-box">
+                        <label for="email" class="contact__form-label">E-mail:</label>
+                        <input type="text" class="contact__form-input" id="email"
+                            placeholder="Wprowadź swój adres e-mail..">
+                    </div>
+                    <div class="contact__form-box">
+                        <label for="msg" class="contact__form-label">Twoja wiadomość:</label>
+                        <textarea class="contact__form-textarea" id="msg" placeholder="Napisz coś!"></textarea>
+                    </div>
                     <button type="button" class="contact__form-btn btn-special-animation">Wyślij</button>
                 </form>
+            </div>
+            <div class="contact__popup">
+                <i class="fa-solid fa-circle-check contact__popup-icon" style="color: #2e7114;"></i>
+                <p class="contact__popup-text">Wysłane!</p>
+                <div class="contact__popup-btn"><i class="fa-solid fa-xmark"></i></div>
             </div>
         </section>
     </main>
@@ -108,9 +144,11 @@
                     <h3 class="footer__box-title"><a href="#"><img src="/dist/img/icons/sun_white.svg"
                                 alt="move to the top of the page"></a> jp co.
                     </h3>
-                    <p>Chciałbyś zobaczyć resztę moich projektów? A może myślisz o własnej stronie? Zerknij na moje profile!</p>
+                    <p>Chciałbyś zobaczyć resztę moich projektów? A może myślisz o własnej stronie? Zerknij na moje
+                        profile!</p>
                     <div class="footer__box-social">
-                        <a href="https://github.com/Anathretic" target="_blank" class="footer__box-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://github.com/Anathretic" target="_blank" class="footer__box-link"><i
+                                class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/konrad-wojtylo" target="_blank" class="footer__box-link"><i
                                 class="fa-brands fa-linkedin"></i></a>
                     </div>
@@ -139,6 +177,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/dist/js/aos.min.js"></script>
+    <script src="/dist/js/navScript.min.js"></script>
     <script src="/dist/js/contactAndFooter.min.js"></script>
 </body>
 
