@@ -24,6 +24,23 @@
 
 <body>
 
+    <nav class="nav">
+        <div class="nav__wrapper">
+            <a onclick="mobileBlock()" class="nav__icon" href="#"><img src="/dist/img/icons/sun_nav.svg"
+                    alt="Przenosi na górę strony"></a>
+            <button class="burger-btn">
+                <div class="burger-btn__box">
+                    <div class="burger-btn__bars"></div>
+                </div>
+            </button>
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="/">home</a></li>
+                <li class="nav__item"><a class="nav__link" href="#values">Zasady</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contact">kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="header header-img-aboutus">
         <h1 class="header__heading">O nas</h1>
         <a href="#values" class="header__btn btn-special-animation">zasady</a>
@@ -36,12 +53,14 @@
                 <h2 class="section-heading">nasze wartości</h2>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="500">
                     <div class="content__box-img">
-                        <img src="/dist/img/about-us/creative-work.jpg" alt="Kobieta zapisująca coś w notesie" class="content__img">
+                        <img src="/dist/img/about-us/creative-work.jpg" alt="Kobieta zapisująca coś w notesie"
+                            class="content__img">
                     </div>
                     <div class="content__box-text">
                         <h3 class="content__title">1. Kreatywność</h3>
                         <p class="content__text">Kiedy ludzie podchodzą do swojej pracy z kreatywnym nastawieniem,
-                            częściej wpadają na nowe i innowacyjne pomysły, myślą nieszablonowo oraz potrafią znaleźć unikalne rozwiązania.</p>
+                            częściej wpadają na nowe i innowacyjne pomysły, myślą nieszablonowo oraz potrafią znaleźć
+                            unikalne rozwiązania.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="600">
@@ -52,7 +71,8 @@
                     <div class="content__box-text content__box-text--right">
                         <h3 class="content__title">2. Ciężka praca</h3>
                         <p class="content__text">Jest niezbędnym elementem osiągania sukcesów, ze względu na to, że
-                            wymaga to poświęcenia, wytrwałości i chęci przekraczania własnych granic. Ciężka praca jest trudna i wyczerpująca, a także bardzo satysfakcjonująca.
+                            wymaga to poświęcenia, wytrwałości i chęci przekraczania własnych granic. Ciężka praca jest
+                            trudna i wyczerpująca, a także bardzo satysfakcjonująca.
                         </p>
                     </div>
                 </div>
@@ -70,17 +90,22 @@
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="800">
                     <div class="content__box-img content__box-img--right">
-                        <img src="/dist/img/about-us/work-life-balance.jpg" alt="Trzy kobiety rozmawiające ze sobą" class="content__img">
+                        <img src="/dist/img/about-us/work-life-balance.jpg" alt="Trzy kobiety rozmawiające ze sobą"
+                            class="content__img">
                     </div>
                     <div class="content__box-text content__box-text--right">
                         <h3 class="content__title">4. Work-life balance</h3>
-                        <p class="content__text">Work-life balance odnosi się do równowagi między pracą, a życiem osobistym. Zapobiegamy wypaleniu zawodowemu zawsze wysłuchując z uwagą problemów naszych pracowników, dzięki czemu utrzymujemy dobrą atmosferę w firmie, a także poza nią.</p>
+                        <p class="content__text">Work-life balance odnosi się do równowagi między pracą, a życiem
+                            osobistym. Zapobiegamy wypaleniu zawodowemu zawsze wysłuchując z uwagą problemów naszych
+                            pracowników, dzięki czemu utrzymujemy dobrą atmosferę w firmie, a także poza nią.</p>
                     </div>
                 </div>
             </div>
             <div class="content__special">
-                <a class="content__special-btn btn-special-animation" href="/">home</a>
-                <p class="content__special-text">albo <a href="../html/our-team.html">poznaj</a> nas lepiej :)</p>
+                <a href="../html/our-team.html">
+                    <button class="content__special-btn btn-special-animation">poznaj zespół
+                    </button>
+                </a>
             </div>
         </section>
 
@@ -90,16 +115,26 @@
             <h2 class="section-heading">kontakt</h2>
             <div class="wrapper">
                 <form class="contact__form">
-                    <div class="contact__form-top">
+                    <div class="contact__form-box">
                         <label for="name" class="contact__form-label">Imię:</label>
                         <input type="text" class="contact__form-input" id="name" placeholder="Wprowadź swoje imię..">
-                        <label for="email" class="contact__form-label">E-mail:</label>
-                        <input type="text" class="contact__form-input" id="email" placeholder="Wprowadź swój adres e-mail..">
                     </div>
-                    <label for="msg" class="contact__form-label">Twoja wiadomość:</label>
-                    <textarea class="contact__form-textarea" id="msg" placeholder="Napisz coś!"></textarea>
+                    <div class="contact__form-box">
+                        <label for="email" class="contact__form-label">E-mail:</label>
+                        <input type="text" class="contact__form-input" id="email"
+                            placeholder="Wprowadź swój adres e-mail..">
+                    </div>
+                    <div class="contact__form-box">
+                        <label for="msg" class="contact__form-label">Twoja wiadomość:</label>
+                        <textarea class="contact__form-textarea" id="msg" placeholder="Napisz coś!"></textarea>
+                    </div>
                     <button type="button" class="contact__form-btn btn-special-animation">Wyślij</button>
                 </form>
+            </div>
+            <div class="contact__popup">
+                <i class="fa-solid fa-circle-check contact__popup-icon" style="color: #2e7114;"></i>
+                <p class="contact__popup-text">Wysłane!</p>
+                <div class="contact__popup-btn"><i class="fa-solid fa-xmark"></i></div>
             </div>
         </section>
     </main>
@@ -111,9 +146,11 @@
                     <h3 class="footer__box-title"><a href="#"><img src="/dist/img/icons/sun_white.svg"
                                 alt="move to the top of the page"></a> jp co.
                     </h3>
-                    <p>Chciałbyś zobaczyć resztę moich projektów? A może myślisz o własnej stronie? Zerknij na moje profile!</p>
+                    <p>Chciałbyś zobaczyć resztę moich projektów? A może myślisz o własnej stronie? Zerknij na moje
+                        profile!</p>
                     <div class="footer__box-social">
-                        <a href="https://github.com/Anathretic" target="_blank" class="footer__box-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://github.com/Anathretic" target="_blank" class="footer__box-link"><i
+                                class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/konrad-wojtylo" target="_blank" class="footer__box-link"><i
                                 class="fa-brands fa-linkedin"></i></a>
                     </div>
@@ -142,6 +179,7 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/dist/js/aos.min.js"></script>
+    <script src="/dist/js/navScript.min.js"></script>
     <script src="/dist/js/contactAndFooter.min.js"></script>
 </body>
 
