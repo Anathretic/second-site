@@ -398,8 +398,66 @@ body {
 		opacity: 1;
 	}
 
+	&__header {
+		display: flex;
+		justify-content: center;
+
+		ul {
+			display: flex;
+			list-style-type: none;
+			text-align: center;
+		}
+
+		&-progressbar {
+			position: relative;
+			padding: 1em;
+		}
+
+		&-progressbar::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: -50%;
+			width: 100%;
+			height: 2px;
+			background-color: colors.$white-color;
+			z-index: -1;
+		}
+
+		&-progressbar:first-child::before {
+			display: none;
+		}
+
+		&-text {
+			width: 50px;
+			height: 50px;
+			background-color: colors.$white-color;
+			color: colors.$black-color;
+			border: 1px solid colors.$special-color;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 50px;
+
+			&--active {
+				background-color: colors.$special-color;
+				color: colors.$white-color;
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 8px;
+		right: 1rem;
+		padding: 0.5em;
+		font-size: 2em;
+		color: colors.$white-color;
+		cursor: pointer;
+	}
+
 	&__title {
-		margin-top: 1em;
+		margin-top: 2em;
 		padding: 1em 0.2em;
 		color: colors.$white-color;
 		font-size: 2em;
@@ -418,24 +476,39 @@ body {
 		justify-content: center;
 		flex-direction: column;
 		padding: 1em;
+
+		&--second {
+			display: none;
+		}
+
+		&--third {
+			display: none;
+		}
+
+		h4 {
+			padding: 2em 1em;
+			color: colors.$white-color;
+			font-size: 1.4em;
+		}
 	}
 
 	&__box {
+		position: relative;
+
 		&-label {
 			color: colors.$white-color;
 			text-transform: uppercase;
 		}
 
 		&-input,
-		&-select,
-		&-btn {
+		&-select {
 			font-family: 'Montserrat', sans-serif;
 			font-size: 1.6rem;
 		}
 
 		&-input,
 		&-select {
-			margin: 0.5em 0;
+			margin: 0.5em 0 3em;
 			padding: 0.7em 1.2em;
 			width: 100%;
 			background-color: #fff;
@@ -443,19 +516,46 @@ body {
 			border-radius: 8px;
 		}
 
+		&-select {
+			border-right: 20px solid transparent;
+			cursor: pointer;
+		}
+
 		&-error {
-			margin-bottom: 2em;
+			position: absolute;
+			bottom: 20%;
 			color: colors.$error-color;
-			font-size: 0.9em;
 			visibility: hidden;
+		}
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding: 1em;
+
+		&-box {
+			display: flex;
+			justify-content: space-between;
+			padding: 1em;
+
+			&--first {
+				justify-content: flex-end;
+			}
 		}
 
 		&-btn {
-			margin: 2em;
-			padding: 0.8em;
-			width: 70%;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			padding: 1em;
+			width: 50px;
 			color: colors.$white-color;
 			background-color: colors.$special-color;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.6rem;
 			border: none;
 			border-radius: 8px;
 			text-transform: uppercase;
@@ -464,71 +564,46 @@ body {
 			&::before {
 				background-color: colors.$special-btn-color;
 			}
-		}
-
-		&-icon {
-			position: absolute;
-			top: 8px;
-			right: 1rem;
-			padding: 0.5em;
-			font-size: 2em;
-			color: colors.$white-color;
-			cursor: pointer;
 		}
 	}
 
 	&__message {
-		display: none;
 		position: fixed;
-		width: 100%;
-		height: 100%;
-		background: rgba(46, 46, 46, 0.2);
-		overflow: hidden;
-		z-index: 999;
+		top: -100px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		max-width: 435px;
+		height: 120px;
+		background-color: colors.$white-color;
+		border-radius: 8px;
+		box-shadow: 20px 20px 10px rgba(46, 46, 46, 0.4);
+		transition: opacity 0.5s, top 0.5s;
+		opacity: 0;
+		z-index: 5;
 
-		&-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
+		&-text {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			width: 300px;
-			height: 150px;
-			background-color: colors.$white-color;
-			border-radius: 8px;
-			border: 2px solid colors.$black-color;
-			animation: show-it 0.3s 1;
-			z-index: 1000;
-		}
-
-		&-text {
-			margin: 1em;
-			font-size: 1.6rem;
+			font-size: 1.2em;
 			text-align: center;
 		}
 
-		&-btn {
-			margin: 1em;
-			padding: 0.5em;
-			width: 40%;
-			color: colors.$white-color;
-			background-color: colors.$special-color;
-			border: none;
-			border-radius: 8px;
-			font-size: 1.5rem;
-			text-align: center;
-			text-decoration: none;
-			text-transform: uppercase;
-			cursor: pointer;
-
-			&::before {
-				background-color: colors.$special-btn-color;
-			}
+		&-icon {
+			position: absolute;
+			top: 50%;
+			left: 10%;
+			transform: translate(-50%, -50%);
+			font-size: 2em;
 		}
 	}
+}
+
+.book-submit-message {
+	top: 50%;
+	opacity: 1;
 }
 
 .warning {

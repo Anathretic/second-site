@@ -51,11 +51,9 @@
 	}
 
 	.popup {
-		&__box {
-			&-icon {
-				right: 2rem;
-				padding: 1em;
-			}
+		&__icon {
+			right: 2rem;
+			padding: 1em;
 		}
 
 		&__message {
