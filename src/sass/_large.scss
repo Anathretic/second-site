@@ -132,6 +132,12 @@
 	}
 
 	.popup {
+		&__btns {
+			&-btn {
+				width: 90px;
+			}
+		}
+
 		&__message {
 			&-container {
 				width: 600px;

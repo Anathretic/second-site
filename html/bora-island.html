@@ -25,53 +25,127 @@
     <div class="popup">
         <div class="popup__message">
             <div class="popup__message-container">
-                <div class="popup__message-text">To tylko projekt strony!</div>
-                <a class="popup__message-btn btn-special-animation" href="/">ok</a>
+                <p class="popup__message-text">Wysłane! Zostaniesz przekierowany..</p>
+                <div class="popup__message-icon"><i class="fa-solid fa-circle-check" style="color: #2b8424;"></i></div>
             </div>
         </div>
-        <div class="popup__form">
-            <form class="popup__wrapper">
-                <div class="popup__title">formularz rezerwacji</div>
-                <div class="popup__box">
-                    <label for="popup-name" class="popup__box-label">Imię:</label>
-                    <input type="text" class="popup__box-input" id="popup-name" placeholder="Wprowadź swoje imię..">
-                    <p class="popup__box-error"></p>
+
+        <div class="popup__title">formularz</div>
+        <div class="popup__icon"><i class="fa-solid fa-xmark"></i></div>
+
+        <div class="popup__header">
+            <ul>
+                <li class="popup__header-progressbar popup__header-progressbar--first">
+                    <div>
+                        <p class="popup__header-text popup__header-text--active">1</p>
+                    </div>
+                </li>
+                <li class="popup__header-progressbar popup__header-progressbar--second">
+                    <div>
+                        <p class="popup__header-text">2</p>
+                    </div>
+                </li>
+                <li class="popup__header-progressbar popup__header-progressbar--third">
+                    <div>
+                        <p class="popup__header-text">3</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="popup__container">
+            <div class="popup__form popup__form--first">
+                <h4>Dane osobowe</h4>
+                <form class="popup__wrapper">
+                    <div class="popup__box">
+                        <label for="popup-name" class="popup__box-label">Imię:</label>
+                        <input type="text" class="popup__box-input" id="popup-name" placeholder="Wprowadź swoje imię..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                    <div class="popup__box">
+                        <label for="popup-last-name" class="popup__box-label">Nazwisko:</label>
+                        <input type="text" class="popup__box-input" id="popup-last-name"
+                            placeholder="Wprowadź swoje nazwisko..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <div class="popup__wrapper">
+                        <div class="popup__btns-box popup__btns-box--first">
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--first-next btn-special-animation">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="popup__box">
-                    <label for="popup-last-name" class="popup__box-label">Nazwisko:</label>
-                    <input type="text" class="popup__box-input" id="popup-last-name"
-                        placeholder="Wprowadź swoje nazwisko..">
-                    <p class="popup__box-error"></p>
+            </div>
+            <div class="popup__form popup__form--second">
+                <h4>Dane kontaktowe</h4>
+                <form class="popup__wrapper">
+                    <div class="popup__box">
+                        <label for="popup-phone-number" class="popup__box-label">Nr telefonu:</label>
+                        <input type="text" class="popup__box-input" id="popup-phone-number"
+                            placeholder="Podaj swój numer telefonu..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                    <div class="popup__box">
+                        <label for="popup-email" class="popup__box-label">E-mail:</label>
+                        <input type="text" class="popup__box-input" id="popup-email"
+                            placeholder="Wprowadź swój adres e-mail..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <div class="popup__wrapper">
+                        <div class="popup__btns-box popup__btns-box--second">
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--second-back btn-special-animation">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--second-next btn-special-animation">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="popup__box">
-                    <label for="popup-phone-number" class="popup__box-label">Nr telefonu:</label>
-                    <input type="text" class="popup__box-input" id="popup-phone-number"
-                        placeholder="Podaj swój numer telefonu..">
-                    <p class="popup__box-error"></p>
+            </div>
+            <div class="popup__form popup__form--third">
+                <h4>Wybór wyspy</h4>
+                <form class="popup__wrapper">
+                    <div class="popup__box">
+                        <label for="popup-island" class="popup__box-label">Wybierz wyspę:</label>
+                        <select id="popup-island" class="popup__box-select">
+                            <option value="0" disabled selected>- wybierz wyspę -</option>
+                            <option value="1">Toca Toca</option>
+                            <option value="2">Bora</option>
+                            <option value="3">Tunga</option>
+                        </select>
+                        <p class="popup__box-error"></p>
+                    </div>
+                    <div class="popup__box">
+                        <label for="popup-company" class="popup__box-label">Ilość osób:</label>
+                        <input type="number" min="1" max="20" onkeyup="limitAmount()" class="popup__box-input"
+                            id="popup-amount" placeholder="Podaj liczbę..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <div class="popup__wrapper">
+                        <div class="popup__btns-box popup__btns-box--third">
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--third-back btn-special-animation">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--third-send btn-special-animation">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="popup__box">
-                    <label for="popup-email" class="popup__box-label">E-mail:</label>
-                    <input type="text" class="popup__box-input" id="popup-email" placeholder="Wprowadź swój adres e-mail..">
-                    <p class="popup__box-error"></p>
-                </div>
-                <div class="popup__box">
-                    <label for="popup-island" class="popup__box-label">Wybierz wyspę:</label>
-                    <select id="popup-island" class="popup__box-select">
-                        <option value="0" disabled selected>- wybierz wyspę -</option>
-                        <option value="1">Toca Toca</option>
-                        <option value="2">Bora</option>
-                        <option value="3">Tunga</option>
-                    </select>
-                    <p class="popup__box-error"></p>
-                </div>
-                <div class="popup__box">
-                    <label for="popup-company" class="popup__box-label">Ilość osób:</label>
-                    <input type="number" class="popup__box-input" id="popup-amount" placeholder="Podaj liczbę..">
-                    <p class="popup__box-error"></p>
-                </div>
-            </form>
-            <div class="popup__box-icon"><i class="fa-solid fa-xmark"></i></div>
-            <button type="button" class="popup__box-btn btn-special-animation">Wyślij</button>
+            </div>
         </div>
     </div>
 

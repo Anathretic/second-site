@@ -11,8 +11,21 @@ let INPUT_EMAIL
 let SELECT_ISLAND
 let INPUT_AMOUNT
 let POPUP_ICON
-let POPUP_FORM_BTN
 let INPUTS_ARRAY
+
+let SECOND_PROGRESS_BAR
+let THIRD_PROGRESS_BAR
+let FIRST_FORM
+let SECOND_FORM
+let THIRD_FORM
+let FIRST_FORM_NEXT_BTN
+let SECOND_FORM_BACK_BTN
+let SECOND_FORM_NEXT_BTN
+let THIRD_FORM_BACK_BTN
+let THIRD_FORM_SEND_BTN
+
+let ALL_INPUTS
+let ERROR_COUNT = 0
 
 const popupMain = () => {
 	popupPrepareDOMElements()
@@ -32,35 +45,88 @@ const popupPrepareDOMElements = () => {
 	INPUT_EMAIL = document.querySelector('#popup-email')
 	SELECT_ISLAND = document.querySelector('#popup-island')
 	INPUT_AMOUNT = document.querySelector('#popup-amount')
-	POPUP_ICON = document.querySelector('.popup__box-icon')
-	POPUP_FORM_BTN = document.querySelector('.popup__box-btn')
+	POPUP_ICON = document.querySelector('.popup__icon')
 	INPUTS_ARRAY = [INPUT_NAME, INPUT_LAST_NAME, INPUT_PHONE_NUMBER, INPUT_EMAIL, INPUT_AMOUNT]
+	SECOND_PROGRESS_BAR = document.querySelector('.popup__header-progressbar--second p')
+	THIRD_PROGRESS_BAR = document.querySelector('.popup__header-progressbar--third p')
+	FIRST_FORM = document.querySelector('.popup__form--first')
+	SECOND_FORM = document.querySelector('.popup__form--second')
+	THIRD_FORM = document.querySelector('.popup__form--third')
+	FIRST_FORM_NEXT_BTN = document.querySelector('.popup__btns-btn--first-next')
+	SECOND_FORM_BACK_BTN = document.querySelector('.popup__btns-btn--second-back')
+	SECOND_FORM_NEXT_BTN = document.querySelector('.popup__btns-btn--second-next')
+	THIRD_FORM_BACK_BTN = document.querySelector('.popup__btns-btn--third-back')
+	THIRD_FORM_SEND_BTN = document.querySelector('.popup__btns-btn--third-send')
+	ALL_INPUTS = document.querySelectorAll('.popup__box')
 }
 
 const popupPrepareDOMEvents = () => {
-	POPUP.addEventListener('touchstart', showPopup, {passive: true})
-	CONTENT_BOOK_BTN.addEventListener('click', showPopup)
-	POPUP_ICON.addEventListener('click', closePopup)
-	POPUP_FORM_BTN.addEventListener('click', e => {
+	POPUP.addEventListener('touchstart', showBookForm, { passive: true })
+	CONTENT_BOOK_BTN.addEventListener('click', showBookForm)
+	POPUP_ICON.addEventListener('click', closeBookForm)
+	FIRST_FORM_NEXT_BTN.addEventListener('click', e => {
 		e.preventDefault()
+		checkForm(INPUT_NAME)
+		checkForm(INPUT_LAST_NAME)
+		checkErrors()
 
-		checkForm(INPUTS_ARRAY)
+		if (ERROR_COUNT === 0) {
+			forwardToSecondForm()
+		}
+	})
+	SECOND_FORM_BACK_BTN.addEventListener('click', () => {
+		ALL_INPUTS.forEach(el => {
+			el.classList.remove('warning')
+		})
+		backToFirstForm()
+	})
+	SECOND_FORM_NEXT_BTN.addEventListener('click', e => {
+		e.preventDefault()
 		checkCharacters(INPUT_PHONE_NUMBER)
 		checkNumber(INPUT_PHONE_NUMBER, 9)
 		checkMail(INPUT_EMAIL)
-		checkSelect(SELECT_ISLAND)
+		checkErrors()
+
+		if (ERROR_COUNT === 0) {
+			forwardToThirdForm()
+		}
+	})
+	THIRD_FORM_BACK_BTN.addEventListener('click', () => {
+		ALL_INPUTS.forEach(el => {
+			el.classList.remove('warning')
+		})
+		backToSecondForm()
+	})
+	THIRD_FORM_SEND_BTN.addEventListener('click', e => {
+		e.preventDefault()
+
 		checkAmount(INPUT_AMOUNT)
 		checkErrors()
+
+		if (ERROR_COUNT === 0) {
+			INPUTS_ARRAY.forEach(el => {
+				el.value = ''
+			})
+
+			SELECT_ISLAND.value = '0'
+			SELECT_ISLAND.style.border = 'none'
+
+			POPUP_MESSAGE.classList.add('book-submit-message')
+
+			setTimeout(() => {
+				window.location.href = '/'
+			}, 2000)
+		}
 	})
 	selectHelper()
 }
 
-const showPopup = () => {
+const showBookForm = () => {
 	POPUP.classList.add('popup--active')
 	scrollBlock()
 }
 
-const closePopup = () => {
+const closeBookForm = () => {
 	POPUP.classList.remove('popup--active')
 	setTimeout(() => {
 		BODY.classList.remove('scroll-block')
@@ -69,42 +135,31 @@ const closePopup = () => {
 	}, 150)
 }
 
-const showError = (input, msg) => {
+const showBookError = (input, msg) => {
 	const formBox = input.parentElement
 	const errorMsg = formBox.querySelector('.popup__box-error')
 	formBox.classList.add('warning')
 	errorMsg.textContent = msg
 }
 
-const clearError = input => {
+const clearBookError = input => {
 	const formBox = input.parentElement
 	const errorMsg = formBox.querySelector('.popup__box-error')
 	formBox.classList.remove('warning')
 	errorMsg.textContent = ''
 }
 
-const clearAll = () => {
-	INPUTS_ARRAY.forEach(el => {
-		el.value = ''
-		el.classList.remove('warning')
-	})
-	SELECT_ISLAND.value = '0'
-	SELECT_ISLAND.style.border = 'none'
-}
-
-const checkForm = input => {
-	input.forEach(el => {
-		if (el.value === '') {
-			showError(el, el.placeholder)
-		} else {
-			clearError(el)
-		}
-	})
+const checkForm = el => {
+	if (el.value === '') {
+		showBookError(el, el.placeholder)
+	} else {
+		clearBookError(el)
+	}
 }
 
 const checkNumber = (input, min) => {
 	if (input.value.length < min) {
-		showError(input, 'Numer składa się z przynajmniej 9 cyfr..')
+		showBookError(input, 'Numer składa się z min. 9 cyfr..')
 	}
 }
 
@@ -112,9 +167,9 @@ const checkCharacters = input => {
 	const checkCharacters = new RegExp('^[0-9]*$')
 
 	if (checkCharacters.test(input.value)) {
-		clearError(input)
+		clearBookError(input)
 	} else {
-		showError(input, 'Możesz używać samych cyfr!')
+		showBookError(input, 'Możesz używać samych cyfr!')
 	}
 }
 
@@ -123,25 +178,23 @@ const checkMail = email => {
 		/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 	if (re.test(email.value)) {
-		clearError(email)
+		clearBookError(email)
 	} else {
-		showError(email, 'Wprowadź poprawnie swój e-mail..')
+		showBookError(email, 'Wprowadź poprawnie e-mail..')
 	}
 }
 
 const checkAmount = input => {
 	if (input.value > 0) {
-		clearError(input)
+		clearBookError(input)
 	} else {
-		showError(input, 'Podaj ilość osób..')
+		showBookError(input, 'Podaj ilość osób..')
 	}
 }
 
-const checkSelect = select => {
-	if (select.value !== '0') {
-		clearError(select)
-	} else {
-		showError(select, 'Wybierz wyspę..')
+const limitAmount = () => {
+	if (INPUT_AMOUNT.value > 20) {
+		INPUT_AMOUNT.value = '20'
 	}
 }
 
@@ -156,20 +209,37 @@ const selectHelper = () => {
 }
 
 const checkErrors = () => {
-	const allInputs = document.querySelectorAll('.popup__box')
-	let errorCount = 0
+	ERROR_COUNT = 0
 
-	allInputs.forEach(el => {
+	ALL_INPUTS.forEach(el => {
 		if (el.classList.contains('warning')) {
-			errorCount++
+			ERROR_COUNT++
 		}
 	})
+}
 
-	if (errorCount === 0) {
-		clearAll()
-		POPUP_MESSAGE.style.display = 'block'
-		POPUP_FORM.style.display = 'none'
-	}
+const backToFirstForm = () => {
+	FIRST_FORM.style.display = 'flex'
+	SECOND_FORM.style.display = 'none'
+	SECOND_PROGRESS_BAR.classList.remove('popup__header-text--active')
+}
+
+const forwardToSecondForm = () => {
+	FIRST_FORM.style.display = 'none'
+	SECOND_FORM.style.display = 'flex'
+	SECOND_PROGRESS_BAR.classList.add('popup__header-text--active')
+}
+
+const backToSecondForm = () => {
+	SECOND_FORM.style.display = 'flex'
+	THIRD_FORM.style.display = 'none'
+	THIRD_PROGRESS_BAR.classList.remove('popup__header-text--active')
+}
+
+const forwardToThirdForm = () => {
+	SECOND_FORM.style.display = 'none'
+	THIRD_FORM.style.display = 'flex'
+	THIRD_PROGRESS_BAR.classList.add('popup__header-text--active')
 }
 
 const scrollBlock = () => {
@@ -191,6 +261,5 @@ const scrollBlock = () => {
 		NAV.classList.add('scroll-block-padding')
 	}
 }
-
 
 document.addEventListener('DOMContentLoaded', popupMain)

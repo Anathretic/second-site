@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Interesują Cię starożytne ruiny i uwielbiasz surfować? Sprawdź tę ofertę!">
+    <meta name="description" content="Interesują Cię starożytne ruiny i uwielbiasz surfować? Sprawdź tę ofertę!">
     <meta name="keywords" content="surferski raj, starożytne ruiny, epickie imprezy">
     <title>Wyspa Toca Toca - Just Paradise</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,53 +25,127 @@
     <div class="popup">
         <div class="popup__message">
             <div class="popup__message-container">
-                <div class="popup__message-text">To tylko projekt strony!</div>
-                <a class="popup__message-btn btn-special-animation" href="/">ok</a>
+                <p class="popup__message-text">Wysłane! Zostaniesz przekierowany..</p>
+                <div class="popup__message-icon"><i class="fa-solid fa-circle-check" style="color: #2b8424;"></i></div>
             </div>
         </div>
-        <div class="popup__form">
-            <form class="popup__wrapper">
-                <div class="popup__title">formularz rezerwacji</div>
-                <div class="popup__box">
-                    <label for="popup-name" class="popup__box-label">Imię:</label>
-                    <input type="text" class="popup__box-input" id="popup-name" placeholder="Wprowadź swoje imię..">
-                    <p class="popup__box-error"></p>
+
+        <div class="popup__title">formularz</div>
+        <div class="popup__icon"><i class="fa-solid fa-xmark"></i></div>
+
+        <div class="popup__header">
+            <ul>
+                <li class="popup__header-progressbar popup__header-progressbar--first">
+                    <div>
+                        <p class="popup__header-text popup__header-text--active">1</p>
+                    </div>
+                </li>
+                <li class="popup__header-progressbar popup__header-progressbar--second">
+                    <div>
+                        <p class="popup__header-text">2</p>
+                    </div>
+                </li>
+                <li class="popup__header-progressbar popup__header-progressbar--third">
+                    <div>
+                        <p class="popup__header-text">3</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="popup__container">
+            <div class="popup__form popup__form--first">
+                <h4>Dane osobowe</h4>
+                <form class="popup__wrapper">
+                    <div class="popup__box">
+                        <label for="popup-name" class="popup__box-label">Imię:</label>
+                        <input type="text" class="popup__box-input" id="popup-name" placeholder="Wprowadź swoje imię..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                    <div class="popup__box">
+                        <label for="popup-last-name" class="popup__box-label">Nazwisko:</label>
+                        <input type="text" class="popup__box-input" id="popup-last-name"
+                            placeholder="Wprowadź swoje nazwisko..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <div class="popup__wrapper">
+                        <div class="popup__btns-box popup__btns-box--first">
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--first-next btn-special-animation">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="popup__box">
-                    <label for="popup-last-name" class="popup__box-label">Nazwisko:</label>
-                    <input type="text" class="popup__box-input" id="popup-last-name"
-                        placeholder="Wprowadź swoje nazwisko..">
-                    <p class="popup__box-error"></p>
+            </div>
+            <div class="popup__form popup__form--second">
+                <h4>Dane kontaktowe</h4>
+                <form class="popup__wrapper">
+                    <div class="popup__box">
+                        <label for="popup-phone-number" class="popup__box-label">Nr telefonu:</label>
+                        <input type="text" class="popup__box-input" id="popup-phone-number"
+                            placeholder="Podaj swój numer telefonu..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                    <div class="popup__box">
+                        <label for="popup-email" class="popup__box-label">E-mail:</label>
+                        <input type="text" class="popup__box-input" id="popup-email"
+                            placeholder="Wprowadź swój adres e-mail..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <div class="popup__wrapper">
+                        <div class="popup__btns-box popup__btns-box--second">
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--second-back btn-special-animation">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--second-next btn-special-animation">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="popup__box">
-                    <label for="popup-phone-number" class="popup__box-label">Nr telefonu:</label>
-                    <input type="text" class="popup__box-input" id="popup-phone-number"
-                        placeholder="Podaj swój numer telefonu..">
-                    <p class="popup__box-error"></p>
+            </div>
+            <div class="popup__form popup__form--third">
+                <h4>Wybór wyspy</h4>
+                <form class="popup__wrapper">
+                    <div class="popup__box">
+                        <label for="popup-island" class="popup__box-label">Wybierz wyspę:</label>
+                        <select id="popup-island" class="popup__box-select">
+                            <option value="0" disabled selected>- wybierz wyspę -</option>
+                            <option value="1">Toca Toca</option>
+                            <option value="2">Bora</option>
+                            <option value="3">Tunga</option>
+                        </select>
+                        <p class="popup__box-error"></p>
+                    </div>
+                    <div class="popup__box">
+                        <label for="popup-company" class="popup__box-label">Ilość osób:</label>
+                        <input type="number" min="1" max="20" onkeyup="limitAmount()" class="popup__box-input"
+                            id="popup-amount" placeholder="Podaj liczbę..">
+                        <p class="popup__box-error"></p>
+                    </div>
+                </form>
+                <div class="popup__btns">
+                    <div class="popup__wrapper">
+                        <div class="popup__btns-box popup__btns-box--third">
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--third-back btn-special-animation">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button type="button"
+                                class="popup__btns-btn popup__btns-btn--third-send btn-special-animation">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="popup__box">
-                    <label for="popup-email" class="popup__box-label">E-mail:</label>
-                    <input type="text" class="popup__box-input" id="popup-email" placeholder="Wprowadź swój adres e-mail..">
-                    <p class="popup__box-error"></p>
-                </div>
-                <div class="popup__box">
-                    <label for="popup-island" class="popup__box-label">Wybierz wyspę:</label>
-                    <select id="popup-island" class="popup__box-select">
-                        <option value="0" disabled selected>- wybierz wyspę -</option>
-                        <option value="1">Toca Toca</option>
-                        <option value="2">Bora</option>
-                        <option value="3">Tunga</option>
-                    </select>
-                    <p class="popup__box-error"></p>
-                </div>
-                <div class="popup__box">
-                    <label for="popup-company" class="popup__box-label">Ilość osób:</label>
-                    <input type="number" class="popup__box-input" id="popup-amount" placeholder="Podaj liczbę..">
-                    <p class="popup__box-error"></p>
-                </div>
-            </form>
-            <div class="popup__box-icon"><i class="fa-solid fa-xmark"></i></div>
-            <button type="button" class="popup__box-btn btn-special-animation">Wyślij</button>
+            </div>
         </div>
     </div>
 
@@ -112,28 +185,35 @@
                     </div>
                     <div class="content__box-text">
                         <h3 class="content__title">Tajemnicze ruiny</h3>
-                        <p class="content__text">Dla wielu ruiny mają szczególny urok. Zioną tajemnicą i możliwością odkrycia czegoś nowego, a zarazem ekscytującego. Dla tych, którzy mają ducha przygody i pragnienie odkrywania, przeczesywanie takich miejsc może być satysfakcjonującym doświadczeniem.</p>
+                        <p class="content__text">Dla wielu ruiny mają szczególny urok. Zioną tajemnicą i możliwością
+                            odkrycia czegoś nowego, a zarazem ekscytującego. Dla tych, którzy mają ducha przygody i
+                            pragnienie odkrywania, przeczesywanie takich miejsc może być satysfakcjonującym
+                            doświadczeniem.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
-                        <img src="/dist/img/first-island/sea-wave.jpg" alt="Surfer na fali"
-                            class="content__img">
+                        <img src="/dist/img/first-island/sea-wave.jpg" alt="Surfer na fali" class="content__img">
                     </div>
                     <div class="content__box-text content__box-text--right">
                         <h3 class="content__title">Niesamowite fale</h3>
-                        <p class="content__text">Fale są cudem natury, który może wywołać podziw i zdumienie u tych, którzy są ich świadkami. Od delikatnego plusku fal na spokojnej plaży po gwałtowne fale wzburzonego morza czy fale oceanu mające wiele różnych form, z których każda ma swoje niepowtarzalne piękno.
+                        <p class="content__text">Fale są cudem natury, który może wywołać podziw i zdumienie u tych,
+                            którzy są ich świadkami. Od delikatnego plusku fal na spokojnej plaży po gwałtowne fale
+                            wzburzonego morza czy fale oceanu mające wiele różnych form, z których każda ma swoje
+                            niepowtarzalne piękno.
                         </p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="700">
                     <div class="content__box-img">
-                        <img src="/dist/img/first-island/capital-city.jpg" alt="Wahiwaha"
-                            class="content__img">
+                        <img src="/dist/img/first-island/capital-city.jpg" alt="Wahiwaha" class="content__img">
                     </div>
                     <div class="content__box-text">
                         <h3 class="content__title">Piękna stolica - Wahiwaha</h3>
-                        <p class="content__text">Wahiwaha, jako stolica kraju, jest najbardziej tętniącym życiem i dynamicznym miastem w Toca Toca. Znajdują się tam muzea, galerie sztuki, teatry oraz uniwersytety. Jest tam również centrum handlowe z przeróżnymi sklepami i restauracjami, oferujące odwiedzającym smaki kuchni, i kultury tego kraju.</p>
+                        <p class="content__text">Wahiwaha, jako stolica kraju, jest najbardziej tętniącym życiem i
+                            dynamicznym miastem w Toca Toca. Znajdują się tam muzea, galerie sztuki, teatry oraz
+                            uniwersytety. Jest tam również centrum handlowe z przeróżnymi sklepami i restauracjami,
+                            oferujące odwiedzającym smaki kuchni, i kultury tego kraju.</p>
                     </div>
                 </div>
             </div>
@@ -148,7 +228,9 @@
             <hr>
             <p class="hero-img__text">Wilgotność: <span class="humidity"></span></p>
             <hr>
-            <p class="hero-img__text">Warunki: <span class="hero-img__icon"><img src="../dist/img/weather-icons/unknown.png" alt="Obrazek przedstawiający pogodę" class="photo"></span></p>
+            <p class="hero-img__text">Warunki: <span class="hero-img__icon"><img
+                        src="../dist/img/weather-icons/unknown.png" alt="Obrazek przedstawiający pogodę"
+                        class="photo"></span></p>
             <hr>
         </section>
 
@@ -161,23 +243,26 @@
                     </div>
                     <div class="content__box-text">
                         <h3 class="content__title">Epickie imprezy!</h3>
-                        <p class="content__text">Imprezowanie na wyspie to wyjątkowe i niezapomniane przeżycie. Połączenie zachwycającej scenerii, ciepłej pogody i relaksującej atmosfery, gdzie szum fal, dotyk piasku pod stopami i ciepło słońca dodają magii tym wydarzeniom.</p>
+                        <p class="content__text">Imprezowanie na wyspie to wyjątkowe i niezapomniane przeżycie.
+                            Połączenie zachwycającej scenerii, ciepłej pogody i relaksującej atmosfery, gdzie szum fal,
+                            dotyk piasku pod stopami i ciepło słońca dodają magii tym wydarzeniom.</p>
                     </div>
                 </div>
                 <div class="content__box" data-aos="fade-up" data-aos-duration="600">
                     <div class="content__box-img content__box-img--right">
-                        <img src="/dist/img/first-island/campfire.jpg" alt="Ognisko w lesie"
-                            class="content__img">
+                        <img src="/dist/img/first-island/campfire.jpg" alt="Ognisko w lesie" class="content__img">
                     </div>
                     <div class="content__box-text content__box-text--right">
                         <h3 class="content__title">Wieczorne ogniska..</h3>
-                        <p class="content__text">Dźwięk trzaskających płomieni i ciepły blask ognia tworzą przytulną atmosferę, idealną na relaks po długim dniu zwiedzania naturalnego piękna wyspy. W miarę upływu nocy ogniska nadal płoną, rzucając migoczące cienie na piasek i tworząc poczucie spokoju.
+                        <p class="content__text">Dźwięk trzaskających płomieni i ciepły blask ognia tworzą przytulną
+                            atmosferę, idealną na relaks po długim dniu zwiedzania naturalnego piękna wyspy. W miarę
+                            upływu nocy ogniska nadal płoną, rzucając migoczące cienie na piasek i tworząc poczucie
+                            spokoju.
                         </p>
                     </div>
                 </div>
                 <div class="content__special">
                     <button class="content__special-btn btn-special-animation">rezerwuj</button>
-                    <p class="content__special-text">albo <a href="/">wróć</a> i wybierz inną wyspę :)</p>
                 </div>
             </div>
         </section>
@@ -219,9 +304,11 @@
                     <h3 class="footer__box-title"><a href="#"><img src="/dist/img/icons/sun_white.svg"
                                 alt="Przenosi na górę strony"></a> jp co.
                     </h3>
-                    <p>Chciałbyś zobaczyć resztę moich projektów? A może myślisz o własnej stronie? Zerknij na moje profile!</p>
+                    <p>Chciałbyś zobaczyć resztę moich projektów? A może myślisz o własnej stronie? Zerknij na moje
+                        profile!</p>
                     <div class="footer__box-social">
-                        <a href="https://github.com/Anathretic" target="_blank" class="footer__box-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://github.com/Anathretic" target="_blank" class="footer__box-link"><i
+                                class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/konrad-wojtylo" target="_blank" class="footer__box-link"><i
                                 class="fa-brands fa-linkedin"></i></a>
                     </div>

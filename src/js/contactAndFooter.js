@@ -78,8 +78,6 @@ const checkContactErrors = () => {
 	const allInputs = document.querySelectorAll('.contact__form-box')
 	let errorCount = 0
 
-	console.log(allInputs);
-
 	allInputs.forEach(el => {
 		if (el.classList.contains('warning')) {
 			errorCount++
