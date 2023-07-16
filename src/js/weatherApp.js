@@ -34,7 +34,7 @@ class WeatherApp {
 				} else if (status.id >= 600 && status.id < 700) {
 					photo.setAttribute('src', '../dist/img/weather-icons/ice.png')
 				} else if (status.id >= 700 && status.id < 800) {
-					photo.setAttribute('src', '../dist/img/weather-iconsfog.png')
+					photo.setAttribute('src', '../dist/img/weather-icons/fog.png')
 				} else if (status.id === 800) {
 					photo.setAttribute('src', '../dist/img/weather-icons/sun.png')
 				} else if (status.id >= 801 && status.id < 900) {

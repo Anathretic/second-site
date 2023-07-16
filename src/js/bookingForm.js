@@ -47,16 +47,16 @@ const popupPrepareDOMElements = () => {
 	INPUT_AMOUNT = document.querySelector('#popup-amount')
 	POPUP_ICON = document.querySelector('.popup__icon')
 	INPUTS_ARRAY = [INPUT_NAME, INPUT_LAST_NAME, INPUT_PHONE_NUMBER, INPUT_EMAIL, INPUT_AMOUNT]
-	SECOND_PROGRESS_BAR = document.querySelector('.popup__header-progressbar--second p')
-	THIRD_PROGRESS_BAR = document.querySelector('.popup__header-progressbar--third p')
+	SECOND_PROGRESS_BAR = document.querySelector('.popup__header-progressbar--second')
+	THIRD_PROGRESS_BAR = document.querySelector('.popup__header-progressbar--third')
 	FIRST_FORM = document.querySelector('.popup__form--first')
 	SECOND_FORM = document.querySelector('.popup__form--second')
 	THIRD_FORM = document.querySelector('.popup__form--third')
-	FIRST_FORM_NEXT_BTN = document.querySelector('.popup__btns-btn--first-next')
-	SECOND_FORM_BACK_BTN = document.querySelector('.popup__btns-btn--second-back')
-	SECOND_FORM_NEXT_BTN = document.querySelector('.popup__btns-btn--second-next')
-	THIRD_FORM_BACK_BTN = document.querySelector('.popup__btns-btn--third-back')
-	THIRD_FORM_SEND_BTN = document.querySelector('.popup__btns-btn--third-send')
+	FIRST_FORM_NEXT_BTN = document.querySelector('.popup__buttons-btn--first-next')
+	SECOND_FORM_BACK_BTN = document.querySelector('.popup__buttons-btn--second-back')
+	SECOND_FORM_NEXT_BTN = document.querySelector('.popup__buttons-btn--second-next')
+	THIRD_FORM_BACK_BTN = document.querySelector('.popup__buttons-btn--third-back')
+	THIRD_FORM_SEND_BTN = document.querySelector('.popup__buttons-btn--third-send')
 	ALL_INPUTS = document.querySelectorAll('.popup__box')
 }
 
@@ -64,8 +64,7 @@ const popupPrepareDOMEvents = () => {
 	POPUP.addEventListener('touchstart', showBookForm, { passive: true })
 	CONTENT_BOOK_BTN.addEventListener('click', showBookForm)
 	POPUP_ICON.addEventListener('click', closeBookForm)
-	FIRST_FORM_NEXT_BTN.addEventListener('click', e => {
-		e.preventDefault()
+	FIRST_FORM_NEXT_BTN.addEventListener('click', () => {
 		checkForm(INPUT_NAME)
 		checkForm(INPUT_LAST_NAME)
 		checkErrors()
@@ -75,13 +74,10 @@ const popupPrepareDOMEvents = () => {
 		}
 	})
 	SECOND_FORM_BACK_BTN.addEventListener('click', () => {
-		ALL_INPUTS.forEach(el => {
-			el.classList.remove('warning')
-		})
+		clearAllErrors()
 		backToFirstForm()
 	})
-	SECOND_FORM_NEXT_BTN.addEventListener('click', e => {
-		e.preventDefault()
+	SECOND_FORM_NEXT_BTN.addEventListener('click', () => {
 		checkCharacters(INPUT_PHONE_NUMBER)
 		checkNumber(INPUT_PHONE_NUMBER, 9)
 		checkMail(INPUT_EMAIL)
@@ -92,9 +88,7 @@ const popupPrepareDOMEvents = () => {
 		}
 	})
 	THIRD_FORM_BACK_BTN.addEventListener('click', () => {
-		ALL_INPUTS.forEach(el => {
-			el.classList.remove('warning')
-		})
+		clearAllErrors()
 		backToSecondForm()
 	})
 	THIRD_FORM_SEND_BTN.addEventListener('click', e => {
@@ -111,11 +105,12 @@ const popupPrepareDOMEvents = () => {
 			SELECT_ISLAND.value = '0'
 			SELECT_ISLAND.style.border = 'none'
 
-			POPUP_MESSAGE.classList.add('book-submit-message')
+			THIRD_FORM.style.display = 'none'
+			POPUP_MESSAGE.style.display = 'block'
 
 			setTimeout(() => {
 				window.location.href = '/'
-			}, 2000)
+			}, 2500)
 		}
 	})
 	selectHelper()
@@ -149,8 +144,16 @@ const clearBookError = input => {
 	errorMsg.textContent = ''
 }
 
+const clearAllErrors = () => {
+	ALL_INPUTS.forEach(el => {
+		el.classList.remove('warning')
+	})
+}
+
 const checkForm = el => {
-	if (el.value === '') {
+	const numbers = /[0-9]/
+
+	if (el.value === '' || el.value.match(numbers)) {
 		showBookError(el, el.placeholder)
 	} else {
 		clearBookError(el)
@@ -221,25 +224,25 @@ const checkErrors = () => {
 const backToFirstForm = () => {
 	FIRST_FORM.style.display = 'flex'
 	SECOND_FORM.style.display = 'none'
-	SECOND_PROGRESS_BAR.classList.remove('popup__header-text--active')
+	SECOND_PROGRESS_BAR.classList.remove('popup-progressbar-active')
 }
 
 const forwardToSecondForm = () => {
 	FIRST_FORM.style.display = 'none'
 	SECOND_FORM.style.display = 'flex'
-	SECOND_PROGRESS_BAR.classList.add('popup__header-text--active')
+	SECOND_PROGRESS_BAR.classList.add('popup-progressbar-active')
 }
 
 const backToSecondForm = () => {
 	SECOND_FORM.style.display = 'flex'
 	THIRD_FORM.style.display = 'none'
-	THIRD_PROGRESS_BAR.classList.remove('popup__header-text--active')
+	THIRD_PROGRESS_BAR.classList.remove('popup-progressbar-active')
 }
 
 const forwardToThirdForm = () => {
 	SECOND_FORM.style.display = 'none'
 	THIRD_FORM.style.display = 'flex'
-	THIRD_PROGRESS_BAR.classList.add('popup__header-text--active')
+	THIRD_PROGRESS_BAR.classList.add('popup-progressbar-active')
 }
 
 const scrollBlock = () => {

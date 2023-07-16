@@ -35,20 +35,14 @@
 
         <div class="popup__header">
             <ul>
-                <li class="popup__header-progressbar popup__header-progressbar--first">
-                    <div>
-                        <p class="popup__header-text popup__header-text--active">1</p>
-                    </div>
+                <li class="popup__header-progressbar popup__header-progressbar--first popup-progressbar-active">
+                    <p class="popup__header-text">1</p>
                 </li>
                 <li class="popup__header-progressbar popup__header-progressbar--second">
-                    <div>
-                        <p class="popup__header-text">2</p>
-                    </div>
+                    <p class="popup__header-text">2</p>
                 </li>
                 <li class="popup__header-progressbar popup__header-progressbar--third">
-                    <div>
-                        <p class="popup__header-text">3</p>
-                    </div>
+                    <p class="popup__header-text">3</p>
                 </li>
             </ul>
         </div>
@@ -69,11 +63,11 @@
                         <p class="popup__box-error"></p>
                     </div>
                 </form>
-                <div class="popup__btns">
+                <div class="popup__buttons">
                     <div class="popup__wrapper">
-                        <div class="popup__btns-box popup__btns-box--first">
+                        <div class="popup__buttons-box popup__buttons-box--first">
                             <button type="button"
-                                class="popup__btns-btn popup__btns-btn--first-next btn-special-animation">
+                                class="popup__buttons-btn popup__buttons-btn--first-next btn-special-animation">
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -96,15 +90,15 @@
                         <p class="popup__box-error"></p>
                     </div>
                 </form>
-                <div class="popup__btns">
+                <div class="popup__buttons">
                     <div class="popup__wrapper">
-                        <div class="popup__btns-box popup__btns-box--second">
+                        <div class="popup__buttons-box popup__buttons-box--second">
                             <button type="button"
-                                class="popup__btns-btn popup__btns-btn--second-back btn-special-animation">
+                                class="popup__buttons-btn popup__buttons-btn--second-back btn-special-animation">
                                 <i class="fa-solid fa-arrow-left"></i>
                             </button>
                             <button type="button"
-                                class="popup__btns-btn popup__btns-btn--second-next btn-special-animation">
+                                class="popup__buttons-btn popup__buttons-btn--second-next btn-special-animation">
                                 <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
@@ -125,21 +119,21 @@
                         <p class="popup__box-error"></p>
                     </div>
                     <div class="popup__box">
-                        <label for="popup-company" class="popup__box-label">Ilość osób:</label>
+                        <label for="popup-amount" class="popup__box-label">Ilość osób:</label>
                         <input type="number" min="1" max="20" onkeyup="limitAmount()" class="popup__box-input"
                             id="popup-amount" placeholder="Podaj liczbę..">
                         <p class="popup__box-error"></p>
                     </div>
                 </form>
-                <div class="popup__btns">
+                <div class="popup__buttons">
                     <div class="popup__wrapper">
-                        <div class="popup__btns-box popup__btns-box--third">
+                        <div class="popup__buttons-box popup__buttons-box--third">
                             <button type="button"
-                                class="popup__btns-btn popup__btns-btn--third-back btn-special-animation">
+                                class="popup__buttons-btn popup__buttons-btn--third-back btn-special-animation">
                                 <i class="fa-solid fa-arrow-left"></i>
                             </button>
                             <button type="button"
-                                class="popup__btns-btn popup__btns-btn--third-send btn-special-animation">
+                                class="popup__buttons-btn popup__buttons-btn--third-send btn-special-animation">
                                 <i class="fa-solid fa-paper-plane"></i>
                             </button>
                         </div>
@@ -248,7 +242,6 @@
                 </div>
                 <div class="content__special">
                     <button class="content__special-btn btn-special-animation">rezerwuj</button>
-                    <p class="content__special-text">albo <a href="/">wróć</a> i wybierz inną wyspę :)</p>
                 </div>
             </div>
         </section>
