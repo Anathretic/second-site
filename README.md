@@ -1,7 +1,15 @@
-# second-site
+# Just-paradise (Website project)
 
-An example website with several modules like weather app.
+## About
 
-Used: HTML5, CSS (Flexbox layout), SASS, JavaScript (API, axios & object-oriented programming), Gulp (with modules like babel), AOS, BEM Methodology, RWD.
+An example of a travel agency website with a well-planned UI that allows to quickly guide a potential customer through the trip booking process.
 
-If you want to see it - https://www.just-paradise.pl
+In addition, the website has a contact form and a booking form which has been planned with great care to make the UX as high as possible.
+
+## Links & Tools
+
+**API:** [WeatherAPI](https://openweathermap.org/api)
+
+**Used:** HTML, CSS (incl. SASS preprocessor), JavaScript (incl. REST API, axios, object-oriented programming), Gulp, AOS
+
+**URL:** Coming soon
