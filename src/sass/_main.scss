@@ -120,7 +120,9 @@ body {
 		top: 8px;
 		left: 2rem;
 		padding: 1em;
-		z-index: 11;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
 
 		img {
 			display: block;
@@ -179,6 +181,12 @@ body {
 				top: 26px;
 				width: 40%;
 				transition-delay: 0.1s;
+			}
+
+			&--active,
+			&--active::after,
+			&--active::before {
+				width: 100%;
 			}
 		}
 	}

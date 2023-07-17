@@ -2,6 +2,7 @@ let BODY
 let NAV
 let NAV_LIST
 let NAV_LIST_BTN
+let NAV_LIST_BTN_BAR
 let ALL_NAV_ITEMS
 let NAV_ICON
 let DELAY_TIME
@@ -16,6 +17,7 @@ const prepareDOMElements = () => {
 	NAV = document.querySelector('.nav')
 	NAV_LIST = document.querySelector('.nav__list')
 	NAV_LIST_BTN = document.querySelector('.burger-btn')
+	NAV_LIST_BTN_BAR = document.querySelector('.burger-btn__bars')
 	ALL_NAV_ITEMS = document.querySelectorAll('.nav__item')
 	NAV_ICON = document.querySelector('.nav__icon')
 	DELAY_TIME = 1
@@ -23,21 +25,20 @@ const prepareDOMElements = () => {
 
 const prepareDOMEvents = () => {
 	window.addEventListener('scroll', addShadow)
-	NAV_ICON.addEventListener('click', () => {
-		NAV_LIST.classList.remove('nav__list--active')
-		mobileBlock()
-	})
+	NAV_ICON.addEventListener('click', moveToTheTop)
 	NAV_LIST_BTN.addEventListener('click', handleNav)
 }
 
 const handleNav = () => {
 	NAV_LIST.classList.toggle('nav__list--active')
 	BODY.classList.remove('scroll-block')
+	NAV_LIST_BTN_BAR.classList.toggle('burger-btn__bars--active')
 
 	ALL_NAV_ITEMS.forEach(item => {
 		item.addEventListener('click', () => {
 			NAV_LIST.classList.remove('nav__list--active')
 			BODY.classList.remove('scroll-block')
+			NAV_LIST_BTN_BAR.classList.remove('burger-btn__bars--active')
 		})
 	})
 
@@ -60,6 +61,10 @@ const addShadow = () => {
 	} else {
 		NAV.classList.remove('nav-bg')
 	}
+}
+
+const moveToTheTop = () => {
+	window.scrollTo(0, 0)
 }
 
 const navHeight = document.querySelector('.nav').offsetHeight
