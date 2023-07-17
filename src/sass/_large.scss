@@ -2,6 +2,10 @@
 
 @media (min-width: 992px) {
 	.nav {
+		&__icon {
+			z-index: 1;
+		}
+
 		.burger-btn {
 			display: none;
 		}
