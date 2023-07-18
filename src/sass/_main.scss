@@ -498,16 +498,12 @@ body {
 
 		&-input,
 		&-select {
-			font-family: 'Montserrat', sans-serif;
-			font-size: 1.6rem;
-		}
-
-		&-input,
-		&-select {
 			margin: 0.5em 0 3em;
 			padding: 0.7em 1.2em;
 			width: 100%;
 			background-color: #fff;
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.6rem;
 			border: none;
 			border-radius: 8px;
 		}
@@ -871,23 +867,34 @@ body {
 		flex-direction: column;
 
 		&-box {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 		}
 
 		&-label {
-			margin-bottom: 0.5em;
-			text-transform: uppercase;
+			position: absolute;
+			top: 9px;
+			left: 22px;
+			font-size: 18px;
+			color: #999999;
+			transition: 0.2s all;
+			cursor: text;
 		}
 
 		&-input,
 		&-textarea {
-			margin-bottom: 2em;
+			margin-bottom: 3em;
 			padding: 0.6em 1.2em;
-			border: none;
+			border: 1px solid transparent;
 			border-radius: 8px;
 			font-family: 'Montserrat', sans-serif;
 			font-size: 1.6rem;
+
+			&:focus {
+				outline: none;
+				border: 1px solid colors.$special-color;
+			}
 		}
 
 		&-textarea {
@@ -895,6 +902,15 @@ body {
 			max-height: 500px;
 			min-width: 100%;
 			resize: vertical;
+		}
+
+		&-input:focus ~ label,
+		&-input:valid ~ label,
+		&-textarea:focus ~ label,
+		&-textarea:valid ~ label {
+			top: -24px;
+			left: 0;
+			color: colors.$special-color;
 		}
 
 		&-btn {
@@ -964,7 +980,7 @@ body {
 .warning {
 	.contact__form-input,
 	.contact__form-textarea {
-		border: 1px solid red;
+		border-bottom: 1px solid red;
 	}
 }
 
