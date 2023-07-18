@@ -236,17 +236,16 @@
             <div class="wrapper">
                 <form class="contact__form">
                     <div class="contact__form-box">
+                        <input type="text" class="contact__form-input" id="name" required>
                         <label for="name" class="contact__form-label">Imię:</label>
-                        <input type="text" class="contact__form-input" id="name" placeholder="Wprowadź swoje imię..">
                     </div>
                     <div class="contact__form-box">
+                        <input type="text" class="contact__form-input" id="email" required>
                         <label for="email" class="contact__form-label">E-mail:</label>
-                        <input type="text" class="contact__form-input" id="email"
-                            placeholder="Wprowadź swój adres e-mail..">
                     </div>
                     <div class="contact__form-box">
+                        <textarea class="contact__form-textarea" id="msg" required></textarea>
                         <label for="msg" class="contact__form-label">Twoja wiadomość:</label>
-                        <textarea class="contact__form-textarea" id="msg" placeholder="Napisz coś!"></textarea>
                     </div>
                     <button type="button" class="contact__form-btn btn-special-animation">Wyślij</button>
                 </form>
