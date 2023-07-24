@@ -12,4 +12,4 @@ In addition, the website has a contact form and a booking form which has been pl
 
 **Used:** HTML, CSS (incl. SASS preprocessor), JavaScript (incl. REST API, axios, object-oriented programming), Gulp, AOS
 
-**URL:** Coming soon
+**URL:** [Just Paradise](https://just-paradise.pl/)
