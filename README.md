@@ -14,8 +14,8 @@ Basic project didn't have:
 - WeatherApp that shows weather on a given island,
 - Booking form,
 - And many more, like subpages, notfound page, meta tags etc.
-So as you can see, I've been working really hard on this site and I've learned a lot by making these changes.
 
+So as you can see, I've been working really hard on this site and I've learned a lot by making these changes.
 
 ## Links & Tools
 
