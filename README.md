@@ -24,5 +24,3 @@ So as you can see, I had to add a lot of new things and functionality to make th
 **API:** [WeatherAPI](https://openweathermap.org/api)
 
 **Used:** HTML, SASS (CSS preprocessor), JavaScript (incl. REST API, axios, object-oriented programming), Gulp, AOS
-
-**URL:** [Just Paradise](https://just-paradise.pl/)
