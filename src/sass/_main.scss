@@ -242,31 +242,31 @@ body {
 }
 
 .header-img {
-	background-image: colors.$shadow, url('img/header-images/homepage_small.jpg');
+	background-image: colors.$shadow, url('dist/img/header-images/homepage_small.jpg');
 }
 
 .header-img-first {
-	background-image: colors.$shadow, url('img/header-images/toca-toca_small.jpg');
+	background-image: colors.$shadow, url('dist/img/header-images/toca-toca_small.jpg');
 }
 
 .header-img-second {
-	background-image: colors.$shadow, url('img/header-images/bora_small.jpg');
+	background-image: colors.$shadow, url('dist/img/header-images/bora_small.jpg');
 }
 
 .header-img-third {
-	background-image: colors.$shadow, url('img/header-images/tunga_small.jpg');
+	background-image: colors.$shadow, url('dist/img/header-images/tunga_small.jpg');
 }
 
 .header-img-aboutus {
-	background-image: colors.$shadow, url('img/header-images/about-us_small.jpg');
+	background-image: colors.$shadow, url('dist/img/header-images/about-us_small.jpg');
 }
 
 .header-img-team {
-	background-image: colors.$shadow, url('img/header-images/team_small.jpg');
+	background-image: colors.$shadow, url('dist/img/header-images/team_small.jpg');
 }
 
 .header-img-work {
-	background-image: colors.$shadow, url('img/header-images/work-with-us_small.jpg');
+	background-image: colors.$shadow, url('dist/img/header-images/work-with-us_small.jpg');
 }
 
 .header {
@@ -625,11 +625,11 @@ body {
 }
 
 .hero-img {
-	background-image: colors.$shadow, url('img/hero-images/hero-img_small.jpg');
+	background-image: colors.$shadow, url('dist/img/hero-images/hero-img_small.jpg');
 }
 
 .hero-img--second {
-	background-image: colors.$shadow, url('img/hero-images/hero-img-2_small.jpg');
+	background-image: colors.$shadow, url('dist/img/hero-images/hero-img-2_small.jpg');
 }
 
 .hero-img,
@@ -709,15 +709,15 @@ body {
 			transition: transform 1s, opacity 1s;
 
 			&--first {
-				background-image: colors.$shadow, url('img/homepage/toca-toca_small.jpg');
+				background-image: colors.$shadow, url('dist/img/homepage/toca-toca_small.jpg');
 			}
 
 			&--second {
-				background-image: colors.$shadow, url('img/homepage/bora_small.jpg');
+				background-image: colors.$shadow, url('dist/img/homepage/bora_small.jpg');
 			}
 
 			&--third {
-				background-image: colors.$shadow, url('img/homepage/tunga_small.jpg');
+				background-image: colors.$shadow, url('dist/img/homepage/tunga_small.jpg');
 			}
 
 			&-title {
